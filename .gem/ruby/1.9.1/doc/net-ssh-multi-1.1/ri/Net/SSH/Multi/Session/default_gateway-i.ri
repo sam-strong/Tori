@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"default_gateway:EFI"-Net::SSH::Multi::Session#default_gateway;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MThe default Net::SSH::Gateway instance to use to connect to the servers.;TI"/If +nil+, no default gateway will be used.;T:
+@file0FI"!lib/net/ssh/multi/session.rb;T

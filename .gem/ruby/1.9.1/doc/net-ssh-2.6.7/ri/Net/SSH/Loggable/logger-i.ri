@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"logger:EFI"Net::SSH::Loggable#logger;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThe logger instance that will be used to log messages. If nil, nothing;TI"will be logged.;T:
+@file0FI"lib/net/ssh/loggable.rb;T

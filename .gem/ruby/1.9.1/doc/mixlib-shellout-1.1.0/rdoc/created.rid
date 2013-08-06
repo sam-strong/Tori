@@ -1,0 +1,9 @@
+Wed, 19 Jun 2013 10:08:02 +0000
+lib/mixlib/shellout.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/shellout/windows/core_ext.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/shellout/version.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/shellout/windows.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/shellout/exceptions.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/shellout/unix.rb	Wed, 19 Jun 2013 10:06:22 +0000
+README.md	Wed, 19 Jun 2013 10:06:22 +0000
+LICENSE	Wed, 19 Jun 2013 10:06:22 +0000

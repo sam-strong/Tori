@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"banner:EFI"Mixlib::CLI#banner;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LBanner for the option parser. If the option parser is printed, e.g., by;TI"C`puts opt_parser`, this string will be used as the first line.;T:
+@file0FI"lib/mixlib/cli.rb;T

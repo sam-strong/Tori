@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mixlib::Authentication::SignedHeaderAuth</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/mixlib/authentication/signedheaderauth_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/authentication/signedheaderauth.rb">lib/mixlib/authentication/signedheaderauth.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-signing_object">::signing_object</a></li>
+          
+          <li><a href="#method-i-algorithm">#algorithm</a></li>
+          
+          <li><a href="#method-i-canonicalize_request">#canonicalize_request</a></li>
+          
+          <li><a href="#method-i-hashed_body">#hashed_body</a></li>
+          
+          <li><a href="#method-i-proto_version">#proto_version</a></li>
+          
+          <li><a href="#method-i-sign">#sign</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="../../Mixlib/Authentication.html">Mixlib::Authentication</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/AuthenticationError.html">Mixlib::Authentication::AuthenticationError</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/Digester.html">Mixlib::Authentication::Digester</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/HTTPAuthenticationRequest.html">Mixlib::Authentication::HTTPAuthenticationRequest</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/Log.html">Mixlib::Authentication::Log</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/MissingAuthenticationHeader.html">Mixlib::Authentication::MissingAuthenticationHeader</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/SignatureVerification.html">Mixlib::Authentication::SignatureVerification</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/SignedHeaderAuth.html">Mixlib::Authentication::SignedHeaderAuth</a></li>
+        
+          <li><a href="../../Mixlib/Authentication/SigningObject.html">Mixlib::Authentication::SigningObject</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mixlib::Authentication::SignedHeaderAuth</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DEFAULT_PROTO_VERSION">DEFAULT_PROTO_VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_SIGN_ALGORITHM">DEFAULT_SIGN_ALGORITHM</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NULL_ARG">NULL_ARG</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SUPPORTED_ALGORITHMS">SUPPORTED_ALGORITHMS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SUPPORTED_VERSIONS">SUPPORTED_VERSIONS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="signing_object-method" class="method-detail ">
+          <a name="method-c-signing_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">signing_object</span><span
+              class="method-args">(args={ })</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <h3><a href="SignedHeaderAuth.html#method-c-signing_object">signing_object</a></h3>
+
+<p>This is the intended interface for signing requests with the Opscode/Chef
+signed header protocol. This wraps the constructor for a Struct that
+contains the relevant information about your request.</p>
+
+<h4>Signature Parameters:</h4>
+
+<p>These parameters are used to generate the canonical representation of the
+request, which is then hashed and encrypted to generate the request’s
+signature. These options are all required, with the exception of `:body`
+and `:file`, which are alternate ways to specify the request body (you must
+specify one of these).</p>
+<ul><li>
+<p>`:http_method`: HTTP method as a lowercase symbol, e.g., `:get | :put |
+:post | :delete`</p>
+</li><li>
+<p>`:path`: The path part of the URI, e.g., `URI.parse(uri).path`</p>
+</li><li>
+<p>`:body`: An object representing the body of the request. Use an empty
+String for bodiless requests.</p>
+</li><li>
+<p>`:timestamp`: A String representing the time in any format understood by
+`Time.parse`. The server may reject the request if the timestamp is not
+close to the server’s current time.</p>
+</li><li>
+<p>`:user_id`: The user or client name. This is used by the server to lookup
+the public key necessary to verify the signature.</p>
+</li><li>
+<p>`:file`: An IO object (must respond to `:read`) to be used as the request
+body.</p>
+</li></ul>
+
+<h4>Protocol Versioning Parameters:</h4>
+<ul><li>
+<p>`:<a
+href="SignedHeaderAuth.html#method-i-proto_version">proto_version</a>`: The
+version of the signing protocol to use. Currently defaults to 1.0, but
+version 1.1 is also available.</p>
+</li></ul>
+
+<h4>Other Parameters:</h4>
+
+<p>These parameters are accepted but not used in the computation of the
+signature.</p>
+<ul><li>
+<p>`:host`: The host part of the URI</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="signing_object-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">signing_object</span>(<span class="ruby-identifier">args</span>={ })
+  <span class="ruby-constant">SigningObject</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">:http_method</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:path</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:body</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:host</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:timestamp</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:file</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:proto_version</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- signing_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- signing_object-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="algorithm-method" class="method-detail ">
+          <a name="method-i-algorithm"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">algorithm</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="algorithm-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">algorithm</span>
+  <span class="ruby-constant">DEFAULT_SIGN_ALGORITHM</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- algorithm-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- algorithm-method -->
+
+      
+        <div id="canonicalize_request-method" class="method-detail ">
+          <a name="method-i-canonicalize_request"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">canonicalize_request</span><span
+              class="method-args">(sign_algorithm=algorithm, sign_version=proto_version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Takes HTTP request method &amp; headers and creates a canonical form to
+create the signature</p>
+
+<h4>Parameters</h4>
+            
+
+            
+            <div class="method-source-code" id="canonicalize_request-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">canonicalize_request</span>(<span class="ruby-identifier">sign_algorithm</span>=<span class="ruby-identifier">algorithm</span>, <span class="ruby-identifier">sign_version</span>=<span class="ruby-identifier">proto_version</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">SUPPORTED_ALGORITHMS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">sign_algorithm</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">SUPPORTED_VERSIONS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">sign_version</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">AuthenticationError</span>, <span class="ruby-node">&quot;Bad algorithm '#{sign_algorithm}' (allowed: #{SUPPORTED_ALGORITHMS.inspect}) or version '#{sign_version}' (allowed: #{SUPPORTED_VERSIONS.inspect})&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">canonical_x_ops_user_id</span> = <span class="ruby-identifier">canonicalize_user_id</span>(<span class="ruby-identifier">user_id</span>, <span class="ruby-identifier">sign_version</span>)
+  <span class="ruby-node">&quot;Method:#{http_method.to_s.upcase}\nHashed Path:#{digester.hash_string(canonical_path)}\nX-Ops-Content-Hash:#{hashed_body}\nX-Ops-Timestamp:#{canonical_time}\nX-Ops-UserId:#{canonical_x_ops_user_id}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- canonicalize_request-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- canonicalize_request-method -->
+
+      
+        <div id="hashed_body-method" class="method-detail ">
+          <a name="method-i-hashed_body"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hashed_body</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hashed_body-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hashed_body</span>
+  <span class="ruby-comment"># Hash the file object if it was passed in, otherwise hash based on</span>
+  <span class="ruby-comment"># the body.</span>
+  <span class="ruby-comment"># TODO: tim 2009-12-28: It'd be nice to just remove this special case,</span>
+  <span class="ruby-comment"># always sign the entire request body, using the expanded multipart</span>
+  <span class="ruby-comment"># body in the case of a file being include.</span>
+  <span class="ruby-ivar">@hashed_body</span> <span class="ruby-operator">||=</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">file</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:read</span>)) <span class="ruby-operator">?</span> <span class="ruby-identifier">digester</span>.<span class="ruby-identifier">hash_file</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">file</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">digester</span>.<span class="ruby-identifier">hash_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hashed_body-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hashed_body-method -->
+
+      
+        <div id="proto_version-method" class="method-detail ">
+          <a name="method-i-proto_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">proto_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="proto_version-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">proto_version</span>
+  <span class="ruby-constant">DEFAULT_PROTO_VERSION</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- proto_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- proto_version-method -->
+
+      
+        <div id="sign-method" class="method-detail ">
+          <a name="method-i-sign"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sign</span><span
+              class="method-args">(private_key, sign_algorithm=algorithm, sign_version=proto_version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Build the canonicalized request based on the method, other headers, etc.
+compute the signature from the request, using the looked-up user secret</p>
+
+<h4>Parameters</h4>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>private_key&lt;OpenSSL::PKey::RSA&gt;</p></td>
+<td>
+<p>user’s RSA private key.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="sign-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/authentication/signedheaderauth.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sign</span>(<span class="ruby-identifier">private_key</span>, <span class="ruby-identifier">sign_algorithm</span>=<span class="ruby-identifier">algorithm</span>, <span class="ruby-identifier">sign_version</span>=<span class="ruby-identifier">proto_version</span>)
+  <span class="ruby-comment"># Our multiline hash for authorization will be encoded in multiple header</span>
+  <span class="ruby-comment"># lines - X-Ops-Authorization-1, ... (starts at 1, not 0!)</span>
+  <span class="ruby-identifier">header_hash</span> = {
+    <span class="ruby-string">&quot;X-Ops-Sign&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;algorithm=#{sign_algorithm};version=#{sign_version};&quot;</span>,
+    <span class="ruby-string">&quot;X-Ops-Userid&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user_id</span>,
+    <span class="ruby-string">&quot;X-Ops-Timestamp&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">canonical_time</span>,
+    <span class="ruby-string">&quot;X-Ops-Content-Hash&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">hashed_body</span>,
+  }
+
+  <span class="ruby-identifier">string_to_sign</span> = <span class="ruby-identifier">canonicalize_request</span>(<span class="ruby-identifier">sign_algorithm</span>, <span class="ruby-identifier">sign_version</span>)
+  <span class="ruby-identifier">signature</span> = <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">encode64</span>(<span class="ruby-identifier">private_key</span>.<span class="ruby-identifier">private_encrypt</span>(<span class="ruby-identifier">string_to_sign</span>)).<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">signature_lines</span> = <span class="ruby-identifier">signature</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>)
+  <span class="ruby-identifier">signature_lines</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-node">&quot;X-Ops-Authorization-#{idx + 1}&quot;</span>
+    <span class="ruby-identifier">header_hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">signature_lines</span>[<span class="ruby-identifier">idx</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">Mixlib</span><span class="ruby-operator">::</span><span class="ruby-constant">Authentication</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;String to sign: '#{string_to_sign}'\nHeader hash: #{header_hash.inspect}&quot;</span>
+
+  <span class="ruby-identifier">header_hash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sign-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sign-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

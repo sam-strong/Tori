@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: DMI</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/ohai/plugins/dmi_common_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ohai/plugins/dmi_common.rb">lib/ohai/plugins/dmi_common.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-convenience_keys">::convenience_keys</a></li>
+          
+          <li><a href="#method-c-id_lookup">::id_lookup</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Ohai.html">Ohai</a></li>
+        
+          <li><a href="./Ohai/Application.html">Ohai::Application</a></li>
+        
+          <li><a href="./Ohai/Config.html">Ohai::Config</a></li>
+        
+          <li><a href="./Ohai/Exceptions.html">Ohai::Exceptions</a></li>
+        
+          <li><a href="./Ohai/Exceptions/Exec.html">Ohai::Exceptions::Exec</a></li>
+        
+          <li><a href="./Ohai/Log.html">Ohai::Log</a></li>
+        
+          <li><a href="./Ohai/Mixin.html">Ohai::Mixin</a></li>
+        
+          <li><a href="./Ohai/Mixin/Command.html">Ohai::Mixin::Command</a></li>
+        
+          <li><a href="./Ohai/Mixin/Ec2Metadata.html">Ohai::Mixin::Ec2Metadata</a></li>
+        
+          <li><a href="./Ohai/Mixin/FromFile.html">Ohai::Mixin::FromFile</a></li>
+        
+          <li><a href="./Ohai/System.html">Ohai::System</a></li>
+        
+          <li><a href="./DMI.html">DMI</a></li>
+        
+          <li><a href="./Mash.html">Mash</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">DMI</h1>
+
+    <div id="description" class="description">
+      <table class="rdoc-list"><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Kurt Yoder (ktyopscode@yoderhome.com)</p>
+</td></tr><tr><td class="rdoc-term"><p>Copyright</p></td>
+<td>
+<p>Copyright © 2010 Kurt Yoder</p>
+</td></tr><tr><td class="rdoc-term"><p>License</p></td>
+<td>
+<p>Apache License, Version 2.0</p>
+</td></tr></table>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="IdToCapture">IdToCapture</a></dt>
+          
+          <dd class="description"><p>list of IDs to collect, otherwise we generate pages of hashes about cache
+chip size and whatnot See OHAI-260. When we can give the user a choice,
+this will be a default.</p></dd>
+          
+        
+          <dt><a name="IdToDescription">IdToDescription</a></dt>
+          
+          <dd class="description"><p>List of IDs and what they translate to from ‘man 8 dmidecode’
+all-lowercase, all non-alphanumeric converted to ‘_’ 128-255 are ‘<a
+href="http://id">oem_data_</a>’ Everything else is ‘unknown’</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="convenience_keys-method" class="method-detail ">
+          <a name="method-c-convenience_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convenience_keys</span><span
+              class="method-args">(dmi)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>create simplified convenience access keys for each record type for single
+occurrences of one type, copy to top level all fields and values for
+multiple occurrences of same type, copy to top level all fields and values
+that are common to all records</p>
+            
+
+            
+            <div class="method-source-code" id="convenience_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/plugins/dmi_common.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DMI</span>.<span class="ruby-identifier">convenience_keys</span>(<span class="ruby-identifier">dmi</span>)
+  <span class="ruby-identifier">dmi</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">records</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">in_common</span> = <span class="ruby-constant">Mash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'Mash'</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'all_records'</span>)
+    <span class="ruby-identifier">records</span>[<span class="ruby-value">:all_records</span>].<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span> 
+      <span class="ruby-identifier">record</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> 
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'Mash'</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'application_identifier'</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'size'</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'record_id'</span>
+        <span class="ruby-identifier">translated</span> = <span class="ruby-identifier">field</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^a-z0-9]/</span>, <span class="ruby-string">'_'</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_common</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">translated</span>)
+          <span class="ruby-identifier">in_common</span>[<span class="ruby-identifier">translated</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">in_common</span>[<span class="ruby-identifier">translated</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">in_common</span>[<span class="ruby-identifier">translated</span>] = <span class="ruby-identifier">value</span>
+        <span class="ruby-keyword">end</span>
+      }
+    }
+    <span class="ruby-identifier">in_common</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">dmi</span>[<span class="ruby-identifier">type</span>][<span class="ruby-identifier">field</span>] = <span class="ruby-identifier">value</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convenience_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convenience_keys-method -->
+
+      
+        <div id="id_lookup-method" class="method-detail ">
+          <a name="method-c-id_lookup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">id_lookup</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>look up <a href="DMI.html">DMI</a> ID</p>
+            
+
+            
+            <div class="method-source-code" id="id_lookup-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/plugins/dmi_common.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DMI</span>.<span class="ruby-identifier">id_lookup</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">id</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">128</span>) <span class="ruby-keyword">and</span> (<span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">255</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-node">&quot;oem_data_#{id}&quot;</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">DMI</span><span class="ruby-operator">::</span><span class="ruby-constant">IdToDescription</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">id</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-constant">DMI</span><span class="ruby-operator">::</span><span class="ruby-constant">IdToDescription</span>[<span class="ruby-identifier">id</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Ohai</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-string">&quot;unrecognized header id; falling back to 'unknown'&quot;</span>)
+      <span class="ruby-identifier">id</span> = <span class="ruby-string">'unknown'</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-constant">Ohai</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;failed to look up id #{id}, returning unchanged&quot;</span>)
+    <span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- id_lookup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- id_lookup-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

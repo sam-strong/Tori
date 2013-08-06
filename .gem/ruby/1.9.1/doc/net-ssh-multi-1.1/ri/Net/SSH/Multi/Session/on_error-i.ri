@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"on_error:EFI"&Net::SSH::Multi::Session#on_error;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IHow connection errors should be handled. This defaults to :fail, but;TI"Emay be set to :ignore if connection errors should be ignored, or;TI"7:warn if connection errors should cause a warning.;T:
+@file0FI"!lib/net/ssh/multi/session.rb;T

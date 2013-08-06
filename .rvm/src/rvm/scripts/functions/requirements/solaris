@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+requirements_solaris_lib_installed()
+{
+        pkg info "$1" >/dev/null  2>&1 || return $?
+}
+
+requirements_solaris_libs_install()
+{
+        __rvm_try_sudo pkg install "$@" || return $?
+}
+
+requirements_solaris_update_system()
+{
+  __rvm_try_sudo pkg refresh && __rvm_try_sudo pkg update ||
+  {
+    typeset ret=$?
+    case $ret in
+      (4) return 0 ;; # means nothing to install
+    esac
+    return $ret
+  }
+}
+
+requirements_solaris_define()
+{
+  case "$1" in
+    (rvm)
+      requirements_check bash curl git text/gnu-patch
+      ;;
+    (jruby-head*)
+      requirements_check jdk apache-ant git
+      ;;
+    (jruby*)
+      requirements_check jdk
+      ;;
+    (ir*)
+      requirements_check mono
+      ;;
+    (opal)
+      requirements_check node-devel
+      ;;
+    (*-head)
+      requirements_check text/gnu-patch developer/gcc-45 system/header system/library/math/header-math file/gnu-coreutils git
+      ;;
+    (*)
+      requirements_check text/gnu-patch developer/gcc-45 system/header system/library/math file/gnu-coreutils
+      ;;
+  esac
+}

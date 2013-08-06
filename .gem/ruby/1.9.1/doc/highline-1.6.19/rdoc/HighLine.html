@@ -1,0 +1,2129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: HighLine</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/highline_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline.rb">lib/highline.rb</a></li>
+          
+            <li><a href="./lib/highline/simulate_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/simulate.rb">lib/highline/simulate.rb</a></li>
+          
+            <li><a href="./lib/highline/style_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/style.rb">lib/highline/style.rb</a></li>
+          
+            <li><a href="./lib/highline/string_extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/string_extensions.rb">lib/highline/string_extensions.rb</a></li>
+          
+            <li><a href="./lib/highline/color_scheme_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/color_scheme.rb">lib/highline/color_scheme.rb</a></li>
+          
+            <li><a href="./lib/highline/question_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/question.rb">lib/highline/question.rb</a></li>
+          
+            <li><a href="./lib/highline/system_extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/system_extensions.rb">lib/highline/system_extensions.rb</a></li>
+          
+            <li><a href="./lib/highline/menu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/menu.rb">lib/highline/menu.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="HighLine/HighLine.html">HighLine::HighLine</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="HighLine/StringExtensions.html">HighLine::StringExtensions</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="HighLine/SystemExtensions.html">HighLine::SystemExtensions</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/ColorScheme.html">HighLine::ColorScheme</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/Menu.html">HighLine::Menu</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/Question.html">HighLine::Question</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/QuestionError.html">HighLine::QuestionError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/SampleColorScheme.html">HighLine::SampleColorScheme</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/Simulate.html">HighLine::Simulate</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="HighLine/Style.html">HighLine::Style</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-String">::String</a></li>
+          
+          <li><a href="#method-c-Style">::Style</a></li>
+          
+          <li><a href="#method-c-color">::color</a></li>
+          
+          <li><a href="#method-c-color_code">::color_code</a></li>
+          
+          <li><a href="#method-c-color_scheme">::color_scheme</a></li>
+          
+          <li><a href="#method-c-color_scheme-3D">::color_scheme=</a></li>
+          
+          <li><a href="#method-c-colorize_strings">::colorize_strings</a></li>
+          
+          <li><a href="#method-c-const_missing">::const_missing</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-supports_rgb_color-3F">::supports_rgb_color?</a></li>
+          
+          <li><a href="#method-c-track_eof-3D">::track_eof=</a></li>
+          
+          <li><a href="#method-c-track_eof-3F">::track_eof?</a></li>
+          
+          <li><a href="#method-c-uncolor">::uncolor</a></li>
+          
+          <li><a href="#method-c-use_color-3D">::use_color=</a></li>
+          
+          <li><a href="#method-c-use_color-3F">::use_color?</a></li>
+          
+          <li><a href="#method-c-using_color_scheme-3F">::using_color_scheme?</a></li>
+          
+          <li><a href="#method-i-agree">#agree</a></li>
+          
+          <li><a href="#method-i-ask">#ask</a></li>
+          
+          <li><a href="#method-i-choose">#choose</a></li>
+          
+          <li><a href="#method-i-color">#color</a></li>
+          
+          <li><a href="#method-i-color_code">#color_code</a></li>
+          
+          <li><a href="#method-i-indent">#indent</a></li>
+          
+          <li><a href="#method-i-indentation">#indentation</a></li>
+          
+          <li><a href="#method-i-list">#list</a></li>
+          
+          <li><a href="#method-i-newline">#newline</a></li>
+          
+          <li><a href="#method-i-output_cols">#output_cols</a></li>
+          
+          <li><a href="#method-i-output_rows">#output_rows</a></li>
+          
+          <li><a href="#method-i-page_at-3D">#page_at=</a></li>
+          
+          <li><a href="#method-i-say">#say</a></li>
+          
+          <li><a href="#method-i-uncolor">#uncolor</a></li>
+          
+          <li><a href="#method-i-wrap_at-3D">#wrap_at=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="HighLine/SystemExtensions.html">HighLine::SystemExtensions</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+        
+          <li class="file"><a href="./INSTALL.html">INSTALL</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+          <li class="file"><a href="./TODO.html">TODO</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./HighLine.html">HighLine</a></li>
+        
+          <li><a href="./HighLine/ColorScheme.html">HighLine::ColorScheme</a></li>
+        
+          <li><a href="./HighLine/HighLine.html">HighLine::HighLine</a></li>
+        
+          <li><a href="./HighLine/HighLine/HighLine.html">HighLine::HighLine::HighLine</a></li>
+        
+          <li><a href="./HighLine/HighLine/HighLine/String.html">HighLine::HighLine::HighLine::String</a></li>
+        
+          <li><a href="./HighLine/Menu.html">HighLine::Menu</a></li>
+        
+          <li><a href="./HighLine/Question.html">HighLine::Question</a></li>
+        
+          <li><a href="./HighLine/Question/NoAutoCompleteMatch.html">HighLine::Question::NoAutoCompleteMatch</a></li>
+        
+          <li><a href="./HighLine/QuestionError.html">HighLine::QuestionError</a></li>
+        
+          <li><a href="./HighLine/SampleColorScheme.html">HighLine::SampleColorScheme</a></li>
+        
+          <li><a href="./HighLine/Simulate.html">HighLine::Simulate</a></li>
+        
+          <li><a href="./HighLine/StringExtensions.html">HighLine::StringExtensions</a></li>
+        
+          <li><a href="./HighLine/Style.html">HighLine::Style</a></li>
+        
+          <li><a href="./HighLine/SystemExtensions.html">HighLine::SystemExtensions</a></li>
+        
+          <li><a href="./HighLine/SystemExtensions/WinAPI.html">HighLine::SystemExtensions::WinAPI</a></li>
+        
+          <li><a href="./IO.html">IO</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./StringIO.html">StringIO</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">HighLine</h1>
+
+    <div id="description" class="description">
+      
+<p>A <a href="HighLine/HighLine.html">HighLine</a> object is a “high-level
+line oriented” shell over an input and an output stream.  <a
+href="HighLine/HighLine.html">HighLine</a> simplifies common console
+interaction, effectively replacing puts() and gets().  User code can simply
+specify the question to ask and any details about user interaction, then
+leave the rest of the work to <a
+href="HighLine/HighLine.html">HighLine</a>.  When HighLine.ask() returns,
+you’ll have the answer you requested, even if <a
+href="HighLine/HighLine.html">HighLine</a> had to ask many times, validate
+results, perform range checking, convert types, etc.</p>
+<hr style="height: 1px">
+
+<p>simulate.rb</p>
+
+<pre>Created by Andy Rossmeissl on 2012-04-29.
+Copyright 2005 Gray Productions. All rights reserved.
+
+This is Free Software.  See LICENSE and COPYING for details.</pre>
+
+<p>adapted from <a
+href="https://gist.github.com/194554">gist.github.com/194554</a></p>
+<hr style="height: 1px">
+
+<p>color_scheme.rb</p>
+
+<p>Created by Richard LeBer on 2011-06-27. Copyright 2011.  All rights
+reserved</p>
+
+<p>This is Free Software.  See <a href="LICENSE.html">LICENSE</a> and COPYING
+for details</p>
+<hr style="height: 1px">
+
+<p>Extensions for class <a href="String.html">String</a></p>
+
+<p>HighLine::String is a subclass of <a href="String.html">String</a> with
+convenience methods added for colorization.</p>
+
+<p>Available convenience methods include:</p>
+
+<pre>* 'color' method         e.g.  highline_string.color(:bright_blue, :underline)
+* colors                 e.g.  highline_string.magenta
+* RGB colors             e.g.  highline_string.rgb_ff6000
+                          or   highline_string.rgb(255,96,0)
+* background colors      e.g.  highline_string.on_magenta
+* RGB background colors  e.g.  highline_string.on_rgb_ff6000
+                          or   highline_string.on_rgb(255,96,0)
+* styles                 e.g.  highline_string.underline</pre>
+
+<p>Additionally, convenience methods can be chained, for instance the
+following are equivalent:</p>
+
+<pre>highline_string.bright_blue.blink.underline
+highline_string.color(:bright_blue, :blink, :underline)
+HighLine.color(highline_string, :bright_blue, :blink, :underline)</pre>
+
+<p>For those less squeamish about possible conflicts, the same convenience
+methods can be added to the built-in <a href="String.html">String</a>
+class, as follows:</p>
+
+<pre>require 'highline'
+Highline.colorize_strings</pre>
+<hr style="height: 1px">
+
+<p>color_scheme.rb</p>
+
+<p>Created by Jeremy Hinegardner on 2007-01-24 Copyright 2007.  All rights
+reserved</p>
+
+<p>This is Free Software.  See <a href="LICENSE.html">LICENSE</a> and COPYING
+for details</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="BASIC_COLORS">BASIC_COLORS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="BLACK_STYLE">BLACK_STYLE</a></dt>
+          
+          <dd class="description"><p>These RGB colors are approximate; see <a
+href="http://en.wikipedia.org/wiki/ANSI_escape_code">en.wikipedia.org/wiki/ANSI_escape_code</a></p></dd>
+          
+        
+          <dt><a name="BLINK_STYLE">BLINK_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="BLUE_STYLE">BLUE_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="BOLD_STYLE">BOLD_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CLEAR_STYLE">CLEAR_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="COLORS">COLORS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CONCEALED_STYLE">CONCEALED_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CYAN_STYLE">CYAN_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DARK_STYLE">DARK_STYLE</a></dt>
+          
+          <dd class="description"><p>for example bold black. Bold without a color displays the system-defined
+bold color (e.g. red on Mac iTerm)</p></dd>
+          
+        
+          <dt><a name="ERASE_CHAR_STYLE">ERASE_CHAR_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="ERASE_LINE_STYLE">ERASE_LINE_STYLE</a></dt>
+          
+          <dd class="description"><p>Embed in a <a href="String.html">String</a> to clear all previous ANSI
+sequences.  This <b>MUST</b> be done before the program exits!</p></dd>
+          
+        
+          <dt><a name="GRAY_STYLE">GRAY_STYLE</a></dt>
+          
+          <dd class="description"><p>Alias for WHITE, since WHITE is actually a light gray on Macs</p></dd>
+          
+        
+          <dt><a name="GREEN_STYLE">GREEN_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="MAGENTA_STYLE">MAGENTA_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NONE_STYLE">NONE_STYLE</a></dt>
+          
+          <dd class="description"><p>On Mac OSX Terminal, this is black foreground, or bright white background.
+Also used as base for RGB colors, if available</p></dd>
+          
+        
+          <dt><a name="RED_STYLE">RED_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RESET_STYLE">RESET_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="REVERSE_STYLE">REVERSE_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="STYLES">STYLES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="UNDERLINE_STYLE">UNDERLINE_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="UNDERSCORE_STYLE">UNDERSCORE_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"><p>The version of the installed library.</p></dd>
+          
+        
+          <dt><a name="WHITE_STYLE">WHITE_STYLE</a></dt>
+          
+          <dd class="description"><p>On Mac OSX Terminal, white is actually gray</p></dd>
+          
+        
+          <dt><a name="YELLOW_STYLE">YELLOW_STYLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="indent_level-attribute-method" class="method-detail">
+          <a name="indent_level"></a>
+          
+          <a name="indent_level="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">indent_level</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The indentation level</p>
+          
+          </div>
+        </div>
+        
+        <div id="indent_size-attribute-method" class="method-detail">
+          <a name="indent_size"></a>
+          
+          <a name="indent_size="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">indent_size</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The indentation size</p>
+          
+          </div>
+        </div>
+        
+        <div id="multi_indent-attribute-method" class="method-detail">
+          <a name="multi_indent"></a>
+          
+          <a name="multi_indent="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">multi_indent</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Indentation over multiple lines</p>
+          
+          </div>
+        </div>
+        
+        <div id="page_at-attribute-method" class="method-detail">
+          <a name="page_at"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">page_at</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The current row setting for paging output.</p>
+          
+          </div>
+        </div>
+        
+        <div id="wrap_at-attribute-method" class="method-detail">
+          <a name="wrap_at"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">wrap_at</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The current column setting for wrapping output.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="String-method" class="method-detail ">
+          <a name="method-c-String"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">String</span><span
+              class="method-args">(s)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="String-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/string_extensions.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-constant">String</span>(<span class="ruby-identifier">s</span>)
+  <span class="ruby-constant">HighLine</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- String-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- String-method -->
+
+      
+        <div id="Style-method" class="method-detail ">
+          <a name="method-c-Style"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">Style</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="Style-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-constant">Style</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">flatten</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+    <span class="ruby-identifier">arg</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Style</span>)
+      <span class="ruby-constant">Style</span>.<span class="ruby-identifier">list</span>[<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">name</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Style</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">arg</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\e\[/</span> <span class="ruby-comment"># arg is a code</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">styles</span> = <span class="ruby-constant">Style</span>.<span class="ruby-identifier">code_index</span>[<span class="ruby-identifier">arg</span>]
+        <span class="ruby-identifier">styles</span>.<span class="ruby-identifier">first</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">Style</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:code=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">arg</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">style</span> = <span class="ruby-constant">Style</span>.<span class="ruby-identifier">list</span>[<span class="ruby-identifier">arg</span>]
+      <span class="ruby-identifier">style</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">HighLine</span>.<span class="ruby-identifier">color_scheme</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">HighLine</span>.<span class="ruby-identifier">color_scheme</span>[<span class="ruby-identifier">arg</span>]
+      <span class="ruby-constant">HighLine</span>.<span class="ruby-identifier">color_scheme</span>[<span class="ruby-identifier">arg</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-constant">Style</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^rgb_([a-f0-9]{6})$/</span>
+      <span class="ruby-constant">Style</span>.<span class="ruby-identifier">rgb</span>(<span class="ruby-node">$1</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^on_rgb_([a-f0-9]{6})$/</span>
+      <span class="ruby-constant">Style</span>.<span class="ruby-identifier">rgb</span>(<span class="ruby-node">$1</span>).<span class="ruby-identifier">on</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">NameError</span>, <span class="ruby-node">&quot;#{arg.inspect} is not a defined Style&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">args</span>
+    <span class="ruby-constant">Style</span>.<span class="ruby-identifier">list</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Style</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:list=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- Style-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- Style-method -->
+
+      
+        <div id="color-method" class="method-detail ">
+          <a name="method-c-color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color</span><span
+              class="method-args">( string, *colors )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method provides easy access to ANSI color sequences, without the user
+needing to remember to CLEAR at the end of each sequence.  Just pass the
+<em>string</em> to color, followed by a list of <em>colors</em> you would
+like it to be affected by.  The <em>colors</em> can be <a
+href="HighLine/HighLine.html">HighLine</a> class constants, or symbols
+(:blue for BLUE, for example).  A CLEAR will automatically be embedded to
+the end of the returned <a href="String.html">String</a>.</p>
+
+<p>This method returns the original <em>string</em> unchanged if
+HighLine::use_color? is <tt>false</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="color-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>( <span class="ruby-identifier">string</span>, *<span class="ruby-identifier">colors</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">string</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">use_color?</span>
+  <span class="ruby-constant">Style</span>(*<span class="ruby-identifier">colors</span>).<span class="ruby-identifier">color</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color-method -->
+
+      
+        <div id="color_code-method" class="method-detail ">
+          <a name="method-c-color_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_code</span><span
+              class="method-args">(*colors)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>In case you just want the color code, without the embedding and the CLEAR</p>
+            
+
+            
+            <div class="method-source-code" id="color_code-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 382</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color_code</span>(*<span class="ruby-identifier">colors</span>)
+  <span class="ruby-constant">Style</span>(*<span class="ruby-identifier">colors</span>).<span class="ruby-identifier">code</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_code-method -->
+
+      
+        <div id="color_scheme-method" class="method-detail ">
+          <a name="method-c-color_scheme"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_scheme</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current color scheme.</p>
+            
+
+            
+            <div class="method-source-code" id="color_scheme-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color_scheme</span>
+  <span class="ruby-identifier">@@color_scheme</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_scheme-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_scheme-method -->
+
+      
+        <div id="color_scheme-3D-method" class="method-detail ">
+          <a name="method-c-color_scheme-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_scheme=</span><span
+              class="method-args">( setting )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pass <a href="HighLine/ColorScheme.html">ColorScheme</a> to
+<em>setting</em> to set a <a href="HighLine/HighLine.html">HighLine</a>
+color scheme.</p>
+            
+
+            
+            <div class="method-source-code" id="color_scheme-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color_scheme=</span>( <span class="ruby-identifier">setting</span> )
+  <span class="ruby-identifier">@@color_scheme</span> = <span class="ruby-identifier">setting</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_scheme-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_scheme-3D-method -->
+
+      
+        <div id="colorize_strings-method" class="method-detail ">
+          <a name="method-c-colorize_strings"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">colorize_strings</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="colorize_strings-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/string_extensions.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">colorize_strings</span>
+  <span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:include</span>, <span class="ruby-constant">StringExtensions</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- colorize_strings-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- colorize_strings-method -->
+
+      
+        <div id="const_missing-method" class="method-detail ">
+          <a name="method-c-const_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">const_missing</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>For RGB colors:</p>
+            
+
+            
+            <div class="method-source-code" id="const_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">const_missing</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(ON_)?(RGB_)([A-F0-9]{6})(_STYLE)?$/</span> <span class="ruby-comment"># RGB color</span>
+    <span class="ruby-identifier">on</span> = <span class="ruby-node">$1</span>
+    <span class="ruby-identifier">suffix</span> = <span class="ruby-node">$4</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">suffix</span>
+      <span class="ruby-identifier">code_name</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-node">$2</span> <span class="ruby-operator">+</span> <span class="ruby-node">$3</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">code_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">style_name</span> = <span class="ruby-identifier">code_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'_STYLE'</span>
+    <span class="ruby-identifier">style</span> = <span class="ruby-constant">Style</span>.<span class="ruby-identifier">rgb</span>(<span class="ruby-node">$3</span>)
+    <span class="ruby-identifier">style</span> = <span class="ruby-identifier">style</span>.<span class="ruby-identifier">on</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">on</span>
+    <span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">style_name</span>, <span class="ruby-identifier">style</span>)
+    <span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">code_name</span>, <span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">suffix</span>
+      <span class="ruby-identifier">style</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NameError</span>, <span class="ruby-node">&quot;Bad color or uninitialized constant #{name}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- const_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- const_missing-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">( input = $stdin, output = $stdout, wrap_at = nil, page_at = nil, indent_size=3, indent_level=0 )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create an instance of <a href="HighLine/HighLine.html">HighLine</a>,
+connected to the streams <em>input</em> and <em>output</em>.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">input</span> = <span class="ruby-identifier">$stdin</span>, <span class="ruby-identifier">output</span> = <span class="ruby-identifier">$stdout</span>,
+                <span class="ruby-identifier">wrap_at</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">page_at</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">indent_size</span>=<span class="ruby-value">3</span>, <span class="ruby-identifier">indent_level</span>=<span class="ruby-value">0</span> )
+  <span class="ruby-ivar">@input</span>   = <span class="ruby-identifier">input</span>
+  <span class="ruby-ivar">@output</span>  = <span class="ruby-identifier">output</span>
+
+  <span class="ruby-ivar">@multi_indent</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@indent_size</span> = <span class="ruby-identifier">indent_size</span>
+  <span class="ruby-ivar">@indent_level</span> = <span class="ruby-identifier">indent_level</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">wrap_at</span> = <span class="ruby-identifier">wrap_at</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_at</span> = <span class="ruby-identifier">page_at</span>
+
+  <span class="ruby-ivar">@question</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@answer</span>   = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@menu</span>     = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@header</span>   = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@prompt</span>   = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@gather</span>   = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@answers</span>  = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@key</span>      = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">initialize_system_extensions</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:initialize_system_extensions</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="supports_rgb_color-3F-method" class="method-detail ">
+          <a name="method-c-supports_rgb_color-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supports_rgb_color?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>For checking if the current version of <a
+href="HighLine/HighLine.html">HighLine</a> supports RGB colors Usage:
+HighLine.supports_rgb_color? rescue false   # rescue for compatibility with
+older versions Note: color usage also depends on HighLine.use_color being
+set</p>
+            
+
+            
+            <div class="method-source-code" id="supports_rgb_color-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">supports_rgb_color?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supports_rgb_color-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supports_rgb_color-3F-method -->
+
+      
+        <div id="track_eof-3D-method" class="method-detail ">
+          <a name="method-c-track_eof-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">track_eof=</span><span
+              class="method-args">( setting )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pass <tt>false</tt> to <em>setting</em> to turn off HighLine’s EOF
+tracking.</p>
+            
+
+            
+            <div class="method-source-code" id="track_eof-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">track_eof=</span>( <span class="ruby-identifier">setting</span> )
+  <span class="ruby-identifier">@@track_eof</span> = <span class="ruby-identifier">setting</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- track_eof-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- track_eof-3D-method -->
+
+      
+        <div id="track_eof-3F-method" class="method-detail ">
+          <a name="method-c-track_eof-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">track_eof?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if <a href="HighLine/HighLine.html">HighLine</a> is currently
+tracking EOF for input.</p>
+            
+
+            
+            <div class="method-source-code" id="track_eof-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">track_eof?</span>
+  <span class="ruby-identifier">@@track_eof</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- track_eof-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- track_eof-3F-method -->
+
+      
+        <div id="uncolor-method" class="method-detail ">
+          <a name="method-c-uncolor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uncolor</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove color codes from a string</p>
+            
+
+            
+            <div class="method-source-code" id="uncolor-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">uncolor</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-constant">Style</span>.<span class="ruby-identifier">uncolor</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uncolor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uncolor-method -->
+
+      
+        <div id="use_color-3D-method" class="method-detail ">
+          <a name="method-c-use_color-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_color=</span><span
+              class="method-args">( setting )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pass <tt>false</tt> to <em>setting</em> to turn off HighLine’s color
+escapes.</p>
+            
+
+            
+            <div class="method-source-code" id="use_color-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">use_color=</span>( <span class="ruby-identifier">setting</span> )
+  <span class="ruby-identifier">@@use_color</span> = <span class="ruby-identifier">setting</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_color-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_color-3D-method -->
+
+      
+        <div id="use_color-3F-method" class="method-detail ">
+          <a name="method-c-use_color-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_color?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if <a href="HighLine/HighLine.html">HighLine</a> is currently
+using color escapes.</p>
+            
+
+            
+            <div class="method-source-code" id="use_color-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">use_color?</span>
+  <span class="ruby-identifier">@@use_color</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_color-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_color-3F-method -->
+
+      
+        <div id="using_color_scheme-3F-method" class="method-detail ">
+          <a name="method-c-using_color_scheme-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">using_color_scheme?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns <tt>true</tt> if <a href="HighLine/HighLine.html">HighLine</a> is
+currently using a color scheme.</p>
+            
+
+            
+            <div class="method-source-code" id="using_color_scheme-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">using_color_scheme?</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-identifier">@@color_scheme</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- using_color_scheme-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- using_color_scheme-3F-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="agree-method" class="method-detail ">
+          <a name="method-i-agree"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">agree</span><span
+              class="method-args">( yes_or_no_question, character = nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>A shortcut to HighLine.ask() a question that only accepts “yes” or “no”
+answers (“y” and “n” are allowed) and returns <tt>true</tt> or
+<tt>false</tt> (<tt>true</tt> for “yes”).  If provided a <tt>true</tt>
+value, <em>character</em> will cause <a
+href="HighLine/HighLine.html">HighLine</a> to fetch a single character
+response. A block can be provided to further configure the question as in
+HighLine.ask()</p>
+
+<p>Raises EOFError if input is exhausted.</p>
+            
+
+            
+            <div class="method-source-code" id="agree-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">agree</span>( <span class="ruby-identifier">yes_or_no_question</span>, <span class="ruby-identifier">character</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">ask</span>(<span class="ruby-identifier">yes_or_no_question</span>, <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">yn</span><span class="ruby-operator">|</span> <span class="ruby-identifier">yn</span>.<span class="ruby-identifier">downcase</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">yy</span>}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">validate</span>                 = <span class="ruby-regexp">/\Ay(?:es)?|no?\Z/</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">responses</span>[<span class="ruby-value">:not_valid</span>]    = <span class="ruby-string">'Please enter &quot;yes&quot; or &quot;no&quot;.'</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">responses</span>[<span class="ruby-value">:ask_on_error</span>] = <span class="ruby-value">:question</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">character</span>                = <span class="ruby-identifier">character</span>
+
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- agree-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- agree-method -->
+
+      
+        <div id="ask-method" class="method-detail ">
+          <a name="method-i-ask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ask</span><span
+              class="method-args">( question, answer_type = String )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method is the primary interface for user input.  Just provide a
+<em>question</em> to ask the user, the <em>answer_type</em> you want
+returned, and optionally a code block setting up details of how you want
+the question handled.  See HighLine.say() for details on the format of
+<em>question</em>, and <a
+href="HighLine/Question.html">HighLine::Question</a> for more information
+about <em>answer_type</em> and what’s valid in the code block.</p>
+
+<p>If <tt>@question</tt> is set before ask() is called, parameters are ignored
+and that object (must be a <a
+href="HighLine/Question.html">HighLine::Question</a>) is used to drive the
+process instead.</p>
+
+<p>Raises EOFError if input is exhausted.</p>
+            
+
+            
+            <div class="method-source-code" id="ask-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ask</span>( <span class="ruby-identifier">question</span>, <span class="ruby-identifier">answer_type</span> = <span class="ruby-constant">String</span>, &amp;<span class="ruby-identifier">details</span> ) <span class="ruby-comment"># :yields: question</span>
+  <span class="ruby-ivar">@question</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Question</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">question</span>, <span class="ruby-identifier">answer_type</span>, &amp;<span class="ruby-identifier">details</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">gather</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">gather</span>
+
+  <span class="ruby-comment"># readline() needs to handle its own output, but readline only supports</span>
+  <span class="ruby-comment"># full line reading.  Therefore if @question.echo is anything but true,</span>
+  <span class="ruby-comment"># the prompt will not be issued. And we have to account for that now.</span>
+  <span class="ruby-comment"># Also, JRuby-1.7's ConsoleReader.readLine() needs to be passed the prompt</span>
+  <span class="ruby-comment"># to handle line editing properly.</span>
+  <span class="ruby-identifier">say</span>(<span class="ruby-ivar">@question</span>) <span class="ruby-keyword">unless</span> ((<span class="ruby-constant">JRUBY</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">readline</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">echo</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@answer</span> = <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">answer_or_default</span>(<span class="ruby-identifier">get_response</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">valid_answer?</span>(<span class="ruby-ivar">@answer</span>)
+      <span class="ruby-identifier">explain_error</span>(<span class="ruby-value">:not_valid</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">QuestionError</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@answer</span> = <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">convert</span>(<span class="ruby-ivar">@answer</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">in_range?</span>(<span class="ruby-ivar">@answer</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">confirm</span>
+        <span class="ruby-comment"># need to add a layer of scope to ask a question inside a</span>
+        <span class="ruby-comment"># question, without destroying instance data</span>
+        <span class="ruby-identifier">context_change</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@input</span>, <span class="ruby-ivar">@output</span>, <span class="ruby-ivar">@wrap_at</span>, <span class="ruby-ivar">@page_at</span>, <span class="ruby-ivar">@indent_size</span>, <span class="ruby-ivar">@indent_level</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@question</span>.<span class="ruby-identifier">confirm</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+          <span class="ruby-identifier">confirm_question</span> = <span class="ruby-string">&quot;Are you sure?  &quot;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># evaluate ERb under initial scope, so it will have</span>
+          <span class="ruby-comment"># access to @question and @answer</span>
+          <span class="ruby-identifier">template</span>  = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@question</span>.<span class="ruby-identifier">confirm</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&quot;%&quot;</span>)
+          <span class="ruby-identifier">confirm_question</span> = <span class="ruby-identifier">template</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">context_change</span>.<span class="ruby-identifier">agree</span>(<span class="ruby-identifier">confirm_question</span>)
+          <span class="ruby-identifier">explain_error</span>(<span class="ruby-keyword">nil</span>)
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">QuestionError</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-ivar">@answer</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">explain_error</span>(<span class="ruby-value">:not_in_range</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">QuestionError</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">QuestionError</span>
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-constant">NameError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">NoMethodError</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/ambiguous/</span>
+      <span class="ruby-comment"># the assumption here is that OptionParser::Completion#complete</span>
+      <span class="ruby-comment"># (used for ambiguity resolution) throws exceptions containing</span>
+      <span class="ruby-comment"># the word 'ambiguous' whenever resolution fails</span>
+      <span class="ruby-identifier">explain_error</span>(<span class="ruby-value">:ambiguous_completion</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">explain_error</span>(<span class="ruby-value">:invalid_type</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Question</span><span class="ruby-operator">::</span><span class="ruby-constant">NoAutoCompleteMatch</span>
+    <span class="ruby-identifier">explain_error</span>(<span class="ruby-value">:no_completion</span>)
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-ivar">@question</span> = <span class="ruby-keyword">nil</span>    <span class="ruby-comment"># Reset Question object.</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ask-method -->
+
+      
+        <div id="choose-method" class="method-detail ">
+          <a name="method-i-choose"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">choose</span><span
+              class="method-args">( *items, &details )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method is HighLine’s menu handler.  For simple usage, you can just
+pass all the menu items you wish to display.  At that point, choose() will
+build and display a menu, walk the user through selection, and return their
+choice among the provided items.  You might use this in a case statement
+for quick and dirty menus.</p>
+
+<p>However, choose() is capable of much more.  If provided, a block will be
+passed a <a href="HighLine/Menu.html">HighLine::Menu</a> object to
+configure.  Using this method, you can customize all the details of menu
+handling from index display, to building a complete shell-like menuing
+system.  See <a href="HighLine/Menu.html">HighLine::Menu</a> for all the
+methods it responds to.</p>
+
+<p>Raises EOFError if input is exhausted.</p>
+            
+
+            
+            <div class="method-source-code" id="choose-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">choose</span>( *<span class="ruby-identifier">items</span>, &amp;<span class="ruby-identifier">details</span> )
+  <span class="ruby-ivar">@menu</span> = <span class="ruby-ivar">@question</span> = <span class="ruby-constant">Menu</span>.<span class="ruby-identifier">new</span>(&amp;<span class="ruby-identifier">details</span>)
+  <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">choices</span>(*<span class="ruby-identifier">items</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-comment"># Set auto-completion</span>
+  <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">completion</span> = <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">options</span>
+  <span class="ruby-comment"># Set _answer_type_ so we can double as the Question for ask().</span>
+  <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">answer_type</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">shell</span>
+    <span class="ruby-identifier">lambda</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">command</span><span class="ruby-operator">|</span>    <span class="ruby-comment"># shell-style selection</span>
+      <span class="ruby-identifier">first_word</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;&quot;</span>
+
+      <span class="ruby-identifier">options</span> = <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">options</span>
+      <span class="ruby-identifier">options</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">Completion</span>)
+      <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">complete</span>(<span class="ruby-identifier">first_word</span>)
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Question</span><span class="ruby-operator">::</span><span class="ruby-constant">NoAutoCompleteMatch</span>
+      <span class="ruby-keyword">end</span>
+
+      [<span class="ruby-identifier">answer</span>.<span class="ruby-identifier">last</span>, <span class="ruby-identifier">command</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-node">/^\s*#{first_word}\s*/</span>, <span class="ruby-string">&quot;&quot;</span>)]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">options</span>          <span class="ruby-comment"># normal menu selection, by index or name</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Provide hooks for ERb layouts.</span>
+  <span class="ruby-ivar">@header</span>   = <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">header</span>
+  <span class="ruby-ivar">@prompt</span>   = <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">prompt</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">shell</span>
+    <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Ignored&quot;</span>, <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">answer_type</span>)
+    <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">select</span>(<span class="ruby-keyword">self</span>, *<span class="ruby-identifier">selected</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">selected</span> = <span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Ignored&quot;</span>, <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">answer_type</span>)
+    <span class="ruby-ivar">@menu</span>.<span class="ruby-identifier">select</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">selected</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- choose-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- choose-method -->
+
+      
+        <div id="color-method" class="method-detail ">
+          <a name="method-i-color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works as an instance method, same as the class method</p>
+            
+
+            
+            <div class="method-source-code" id="color-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 392</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">color</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color-method -->
+
+      
+        <div id="color_code-method" class="method-detail ">
+          <a name="method-i-color_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color_code</span><span
+              class="method-args">(*colors)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works as an instance method, same as the class method</p>
+            
+
+            
+            <div class="method-source-code" id="color_code-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color_code</span>(*<span class="ruby-identifier">colors</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">color_code</span>(*<span class="ruby-identifier">colors</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color_code-method -->
+
+      
+        <div id="indent-method" class="method-detail ">
+          <a name="method-i-indent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">indent</span><span
+              class="method-args">(increase=1, statement=nil, multiline=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Executes block or outputs statement with indentation</p>
+            
+
+            
+            <div class="method-source-code" id="indent-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 671</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indent</span>(<span class="ruby-identifier">increase</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">statement</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">multiline</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@indent_level</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">increase</span>
+  <span class="ruby-identifier">multi</span> = <span class="ruby-ivar">@multi_indent</span>
+  <span class="ruby-ivar">@multi_indent</span> = <span class="ruby-identifier">multiline</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">multiline</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">say</span>(<span class="ruby-identifier">statement</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@multi_indent</span> = <span class="ruby-identifier">multi</span>
+  <span class="ruby-ivar">@indent_level</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">increase</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- indent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- indent-method -->
+
+      
+        <div id="indentation-method" class="method-detail ">
+          <a name="method-i-indentation"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">indentation</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Outputs indentation with current settings</p>
+            
+
+            
+            <div class="method-source-code" id="indentation-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 664</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indentation</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">' '</span>*<span class="ruby-ivar">@indent_size</span>*<span class="ruby-ivar">@indent_level</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- indentation-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- indentation-method -->
+
+      
+        <div id="list-method" class="method-detail ">
+          <a name="method-i-list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list</span><span
+              class="method-args">( items, mode = :rows, option = nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method is a utility for quickly and easily laying out lists.  It can
+be accessed within ERb replacements of any text that will be sent to the
+user.</p>
+
+<p>The only required parameter is <em>items</em>, which should be the Array of
+items to list.  A specified <em>mode</em> controls how that list is formed
+and <em>option</em> has different effects, depending on the <em>mode</em>. 
+Recognized modes are:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>:columns_across</tt></p></td>
+<td>
+<p><em>items</em> will be placed in columns, flowing from left to right.  If
+given, <em>option</em> is the number of columns to be used.  When absent,
+columns will be determined based on <em><a
+href="HighLine.html#attribute-i-wrap_at">wrap_at</a></em> or a default of
+80 characters.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:columns_down</tt></p></td>
+<td>
+<p>Identical to <tt>:columns_across</tt>, save flow goes down.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:uneven_columns_across</tt></p></td>
+<td>
+<p>Like <tt>:columns_across</tt> but each column is sized independently.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:uneven_columns_down</tt></p></td>
+<td>
+<p>Like <tt>:columns_down</tt> but each column is sized independently.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:inline</tt></p></td>
+<td>
+<p>All <em>items</em> are placed on a single line. The last two <em>items</em>
+are separated by <em>option</em> or a default of “ or ”.  All other
+<em>items</em> are separated by “, ”.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>:rows</tt></p></td>
+<td>
+<p>The default mode.  Each of the <em>items</em> is placed on its own line. 
+The <em>option</em> parameter is ignored in this mode.</p>
+</td></tr></table>
+
+<p>Each member of the <em>items</em> Array is passed through ERb and thus can
+contain their own expansions.  Color escape expansions do not contribute to
+the final field width.</p>
+            
+
+            
+            <div class="method-source-code" id="list-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list</span>( <span class="ruby-identifier">items</span>, <span class="ruby-identifier">mode</span> = <span class="ruby-value">:rows</span>, <span class="ruby-identifier">option</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">items</span> = <span class="ruby-identifier">items</span>.<span class="ruby-identifier">to_ary</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">item</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&quot;%&quot;</span>).<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">mode</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:inline</span>
+      <span class="ruby-identifier">option</span> = <span class="ruby-string">&quot; or &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">nil?</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">first</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">items</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{option}#{items.last}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:columns_across</span>, <span class="ruby-value">:columns_down</span>
+      <span class="ruby-identifier">max_length</span> = <span class="ruby-identifier">actual_length</span>(
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">max</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">b</span>) }
+      )
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">limit</span>  = <span class="ruby-ivar">@wrap_at</span> <span class="ruby-operator">||</span> <span class="ruby-value">80</span>
+        <span class="ruby-identifier">option</span> = (<span class="ruby-identifier">limit</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>) <span class="ruby-operator">/</span> (<span class="ruby-identifier">max_length</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">items</span> = <span class="ruby-identifier">items</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">pad</span> = <span class="ruby-identifier">max_length</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">item</span>))
+        <span class="ruby-node">&quot;%-#{pad}s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">item</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">row_count</span> = (<span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:columns_across</span>
+        <span class="ruby-identifier">rows</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">row_count</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">rows</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">option</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> }.<span class="ruby-identifier">join</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">columns</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">option</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">columns</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">row_count</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">list</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span><span class="ruby-operator">|</span> <span class="ruby-identifier">column</span>[<span class="ruby-identifier">index</span>] }.
+                          <span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">list</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:uneven_columns_across</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">limit</span> = <span class="ruby-ivar">@wrap_at</span> <span class="ruby-operator">||</span> <span class="ruby-value">80</span>
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column_count</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">row_count</span> = (<span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">column_count</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>
+          <span class="ruby-identifier">rows</span>      = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">row_count</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+          <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">rows</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">column_count</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">widths</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">column_count</span>, <span class="ruby-value">0</span>)
+          <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">row</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">column</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">size</span>           = <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">field</span>)
+              <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">column</span>] = <span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">column</span>]
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">column_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword">or</span>
+             <span class="ruby-identifier">widths</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span> } <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">row</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">widths</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-node">&quot;%-#{i + (field.to_s.length - actual_length(field))}s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">field</span>
+              }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+            }.<span class="ruby-identifier">join</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">row_count</span> = (<span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">rows</span>      = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">row_count</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">rows</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">option</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">widths</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">option</span>, <span class="ruby-value">0</span>)
+        <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">row</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">column</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">size</span>           = <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">field</span>)
+            <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">column</span>] = <span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">column</span>]
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">row</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">widths</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+            <span class="ruby-node">&quot;%-#{i + (field.to_s.length - actual_length(field))}s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">field</span>
+          }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+        }.<span class="ruby-identifier">join</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:uneven_columns_down</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">limit</span> = <span class="ruby-ivar">@wrap_at</span> <span class="ruby-operator">||</span> <span class="ruby-value">80</span>
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column_count</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">row_count</span> = (<span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">column_count</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>
+          <span class="ruby-identifier">columns</span>   = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">column_count</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+          <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">columns</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">row_count</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">widths</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">column_count</span>, <span class="ruby-value">0</span>)
+          <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">column</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">size</span>      = <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">field</span>)
+              <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">i</span>]
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">column_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword">or</span>
+             <span class="ruby-identifier">widths</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span> } <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>
+            <span class="ruby-identifier">list</span> = <span class="ruby-string">&quot;&quot;</span>
+            <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">widths</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span>, <span class="ruby-identifier">width</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">field</span> = <span class="ruby-identifier">column</span>[<span class="ruby-identifier">index</span>]
+                <span class="ruby-node">&quot;%-#{width + (field.to_s.length - actual_length(field))}s&quot;</span> <span class="ruby-operator">%</span>
+                <span class="ruby-identifier">field</span>
+              }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>).<span class="ruby-identifier">strip</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">list</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">row_count</span> = (<span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">columns</span>   = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">option</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">columns</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">row_count</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">widths</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">option</span>, <span class="ruby-value">0</span>)
+        <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">column</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">column</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">size</span>      = <span class="ruby-identifier">actual_length</span>(<span class="ruby-identifier">field</span>)
+            <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">widths</span>[<span class="ruby-identifier">i</span>]
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">list</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">columns</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">widths</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span>, <span class="ruby-identifier">width</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">field</span> = <span class="ruby-identifier">column</span>[<span class="ruby-identifier">index</span>]
+            <span class="ruby-node">&quot;%-#{width + (field.to_s.length - actual_length(field))}s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">field</span>
+          }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;  &quot;</span>).<span class="ruby-identifier">strip</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">list</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">items</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{i}\n&quot;</span> }.<span class="ruby-identifier">join</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list-method -->
+
+      
+        <div id="newline-method" class="method-detail ">
+          <a name="method-i-newline"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">newline</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Outputs newline</p>
+            
+
+            
+            <div class="method-source-code" id="newline-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 687</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">newline</span>
+  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- newline-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- newline-method -->
+
+      
+        <div id="output_cols-method" class="method-detail ">
+          <a name="method-i-output_cols"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">output_cols</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the number of columns for the console, or a default it they cannot
+be determined.</p>
+            
+
+            
+            <div class="method-source-code" id="output_cols-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 695</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">output_cols</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">80</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">tty?</span>
+  <span class="ruby-identifier">terminal_size</span>.<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">80</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- output_cols-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- output_cols-method -->
+
+      
+        <div id="output_rows-method" class="method-detail ">
+          <a name="method-i-output_rows"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">output_rows</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the number of rows for the console, or a default if they cannot be
+determined.</p>
+            
+
+            
+            <div class="method-source-code" id="output_rows-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 706</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">output_rows</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">24</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">tty?</span>
+  <span class="ruby-identifier">terminal_size</span>.<span class="ruby-identifier">last</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">24</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- output_rows-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- output_rows-method -->
+
+      
+        <div id="page_at-3D-method" class="method-detail ">
+          <a name="method-i-page_at-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">page_at=</span><span
+              class="method-args">( setting )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set to an integer value to cause <a
+href="HighLine/HighLine.html">HighLine</a> to page output lines over the
+indicated line limit.  When <tt>nil</tt>, the default, no paging occurs. 
+If set to <tt>:auto</tt>, <a href="HighLine/HighLine.html">HighLine</a>
+will attempt to determine the rows available for the <tt>@output</tt> or
+use a sensible default.</p>
+            
+
+            
+            <div class="method-source-code" id="page_at-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 657</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_at=</span>( <span class="ruby-identifier">setting</span> )
+  <span class="ruby-ivar">@page_at</span> = <span class="ruby-identifier">setting</span> <span class="ruby-operator">==</span> <span class="ruby-value">:auto</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">output_rows</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">setting</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- page_at-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- page_at-3D-method -->
+
+      
+        <div id="say-method" class="method-detail ">
+          <a name="method-i-say"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">say</span><span
+              class="method-args">( statement )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The basic output method for <a href="HighLine/HighLine.html">HighLine</a>
+objects.  If the provided <em>statement</em> ends with a space or tab
+character, a newline will not be appended (output will be flush()ed).  All
+other cases are passed straight to Kernel.puts().</p>
+
+<p>The <em>statement</em> parameter is processed as an ERb template,
+supporting embedded Ruby code.  The template is evaluated with a binding
+inside the <a href="HighLine/HighLine.html">HighLine</a> instance,
+providing easy access to the ANSI color constants and the HighLine.color()
+method.</p>
+            
+
+            
+            <div class="method-source-code" id="say-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 615</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">say</span>( <span class="ruby-identifier">statement</span> )
+  <span class="ruby-identifier">statement</span> = <span class="ruby-identifier">statement</span>.<span class="ruby-identifier">to_str</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">statement</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-comment"># Allow non-ascii menu prompts in ruby &gt; 1.9.2. ERB eval the menu statement</span>
+  <span class="ruby-comment"># with the environment's default encoding(usually utf8)</span>
+  <span class="ruby-identifier">statement</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">default_external</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">Encoding</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">default_external</span>
+
+  <span class="ruby-identifier">template</span>  = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">statement</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&quot;%&quot;</span>)
+  <span class="ruby-identifier">statement</span> = <span class="ruby-identifier">template</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+
+  <span class="ruby-identifier">statement</span> = <span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">statement</span>) <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@wrap_at</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">statement</span> = <span class="ruby-identifier">page_print</span>(<span class="ruby-identifier">statement</span>) <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@page_at</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">statement</span> = <span class="ruby-identifier">statement</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\n(?!$)/</span>,<span class="ruby-node">&quot;\n#{indentation}&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@multi_indent</span>
+
+  <span class="ruby-comment"># Don't add a newline if statement ends with whitespace, OR</span>
+  <span class="ruby-comment"># if statement ends with whitespace before a color escape code.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">/[ \t](\e\[\d+(;\d+)*m)?\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">statement</span>
+    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">indentation</span><span class="ruby-operator">+</span><span class="ruby-identifier">statement</span>)
+    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">indentation</span><span class="ruby-operator">+</span><span class="ruby-identifier">statement</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- say-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- say-method -->
+
+      
+        <div id="uncolor-method" class="method-detail ">
+          <a name="method-i-uncolor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uncolor</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works as an instance method, same as the class method</p>
+            
+
+            
+            <div class="method-source-code" id="uncolor-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uncolor</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">uncolor</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uncolor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uncolor-method -->
+
+      
+        <div id="wrap_at-3D-method" class="method-detail ">
+          <a name="method-i-wrap_at-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wrap_at=</span><span
+              class="method-args">( setting )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set to an integer value to cause <a
+href="HighLine/HighLine.html">HighLine</a> to wrap output lines at the
+indicated character limit.  When <tt>nil</tt>, the default, no wrapping
+occurs.  If set to <tt>:auto</tt>, <a
+href="HighLine/HighLine.html">HighLine</a> will attempt to determine the
+columns available for the <tt>@output</tt> or use a sensible default.</p>
+            
+
+            
+            <div class="method-source-code" id="wrap_at-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/highline.rb, line 647</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wrap_at=</span>( <span class="ruby-identifier">setting</span> )
+  <span class="ruby-ivar">@wrap_at</span> = <span class="ruby-identifier">setting</span> <span class="ruby-operator">==</span> <span class="ruby-value">:auto</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">output_cols</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">setting</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wrap_at-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wrap_at-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

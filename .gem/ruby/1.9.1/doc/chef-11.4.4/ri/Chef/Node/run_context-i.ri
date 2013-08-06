@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"run_context:EFI"Chef::Node#run_context;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"CRunContext will set itself as run_context via this setter when;TI"Iinitialized. This is needed so DSL::IncludeAttribute (in particular,;TI"N#include_recipe) can access the run_context to determine if an attributes;TI"file has been seen yet.;T:
+@file0FI"lib/chef/node.rb;T

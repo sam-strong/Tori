@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"script:EFI""Net::SSH::Test::Socket#script;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThe Net::SSH::Test::Script object in use by this socket. This is the;TI"Lcanonical script instance that should be used for any test depending on;TI"this socket instance.;T:
+@file0FI"lib/net/ssh/test/socket.rb;T

@@ -1,0 +1,6 @@
+[2013-07-30 03:35:49] gem
+current path: /home/action
+command(7): env GEM_HOME=/home/action/.rvm/gems/ruby-2.0.0-p247@global GEM_PATH=/home/action/.rvm/gems/ruby-2.0.0-p247@global gem install --remote rubygems-bundler
+Successfully installed bundler-unload-1.0.1
+Successfully installed rubygems-bundler-1.2.2
+2 gems installed

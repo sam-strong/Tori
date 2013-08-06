@@ -1,0 +1,14 @@
+Wed, 19 Jun 2013 10:08:37 +0000
+lib/net/ssh/multi/dynamic_server.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/subsession.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/version.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/server_list.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/channel_proxy.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/pending_connection.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/session_actions.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/server.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/session.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi/channel.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/net/ssh/multi.rb	Wed, 19 Jun 2013 10:06:38 +0000
+README.rdoc	Wed, 19 Jun 2013 10:06:38 +0000
+CHANGELOG.rdoc	Wed, 19 Jun 2013 10:06:38 +0000

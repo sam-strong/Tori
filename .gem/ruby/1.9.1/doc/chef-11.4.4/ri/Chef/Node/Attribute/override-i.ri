@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"override:EFI"#Chef::Node::Attribute#override;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I";return the cookbook level override attribute component;T:
+@file0FI"lib/chef/node/attribute.rb;T

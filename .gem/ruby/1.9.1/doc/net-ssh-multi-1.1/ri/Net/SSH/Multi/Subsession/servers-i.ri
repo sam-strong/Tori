@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"servers:EFI"(Net::SSH::Multi::Subsession#servers;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=The list of servers that this subsession can operate on.;T:
+@file0FI"$lib/net/ssh/multi/subsession.rb;T

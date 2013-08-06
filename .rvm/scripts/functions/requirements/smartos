@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+requirements_smartos_lib_installed()
+{
+  pkgin ls | grep "^$1" >/dev/null 2>&1|| return $?
+}
+
+requirements_smartos_libs_install()
+{
+  __rvm_try_sudo pkgin -y install "$@" || return $?
+}
+
+requirements_smartos_update_system()
+{
+  __rvm_try_sudo pkgin full-upgrade || return $?
+}
+
+requirements_smartos_define()
+{
+  case "$1" in
+    (rvm)
+      requirements_check bash curl scmgit-base patch
+      ;;
+    (jruby-head*)
+      requirements_check jdk apache-ant scmgit-base
+      ;;
+    (jruby*)
+      requirements_check jdk
+      ;;
+    (ir*)
+      requirements_check mono
+      ;;
+    (opal)
+      requirements_check node-devel
+      ;;
+    (*-head)
+      requirements_check coreutils gcc47 gmake readline sqlite3 ncurses autoconf automake scmgit-base
+      ;;
+    (*)
+      requirements_check coreutils gcc47 gmake readline sqlite3 ncurses autoconf automake
+      ;;
+  esac
+}

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"master:EFI"*Net::SSH::Multi::DynamicServer#master;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PThe Net::SSH::Multi::Session instance that owns this dynamic server record.;T:
+@file0FI"(lib/net/ssh/multi/dynamic_server.rb;T

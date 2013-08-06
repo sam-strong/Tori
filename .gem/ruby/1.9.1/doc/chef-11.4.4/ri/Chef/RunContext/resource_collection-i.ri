@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resource_collection:EFI")Chef::RunContext#resource_collection;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GThe Chef::ResourceCollection for this run. Populated by evaluating;TI"Grecipes, which is triggered by #load. (See also: CookbookCompiler);T:
+@file0FI"lib/chef/run_context.rb;T

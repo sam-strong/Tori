@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Net::SSH::Multi::ServerList</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/net/ssh/multi/server_list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/net/ssh/multi/server_list.rb">lib/net/ssh/multi/server_list.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add">#add</a></li>
+          
+          <li><a href="#method-i-concat">#concat</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-flatten">#flatten</a></li>
+          
+          <li><a href="#method-i-select">#select</a></li>
+          
+          <li><a href="#method-i-to_ary">#to_ary</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">Enumerable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="../../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Net.html">Net</a></li>
+        
+          <li><a href="../../../Net/SSH.html">Net::SSH</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi.html">Net::SSH::Multi</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Channel.html">Net::SSH::Multi::Channel</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ChannelProxy.html">Net::SSH::Multi::ChannelProxy</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/DynamicServer.html">Net::SSH::Multi::DynamicServer</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/PendingConnection.html">Net::SSH::Multi::PendingConnection</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Server.html">Net::SSH::Multi::Server</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ServerList.html">Net::SSH::Multi::ServerList</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Session.html">Net::SSH::Multi::Session</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/SessionActions.html">Net::SSH::Multi::SessionActions</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Subsession.html">Net::SSH::Multi::Subsession</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Version.html">Net::SSH::Multi::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Net::SSH::Multi::ServerList</h1>
+
+    <div id="description" class="description">
+      
+<p>Encapsulates a list of server objects, both dynamic (<a
+href="DynamicServer.html">Net::SSH::Multi::DynamicServer</a>) and static
+(<a href="Server.html">Net::SSH::Multi::Server</a>). It attempts to make it
+transparent whether a dynamic server set has been evaluated or not. Note
+that a <a href="ServerList.html">ServerList</a> is NOT an Array, though it
+is Enumerable.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(list=[])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="ServerList.html">ServerList</a> that wraps the given
+server list. Duplicate entries will be discarded.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">list</span>=[])
+  <span class="ruby-ivar">@list</span> = <span class="ruby-identifier">list</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add-method" class="method-detail ">
+          <a name="method-i-add"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add</span><span
+              class="method-args">(server)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Adds the given server to the list, and returns the argument. If an
+identical server definition already exists in the collection, the argument
+is <em>not</em> added, and the existing server record is returned instead.</p>
+            
+
+            
+            <div class="method-source-code" id="add-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">server</span>)
+  <span class="ruby-identifier">index</span> = <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">server</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-identifier">server</span> = <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">server</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">server</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add-method -->
+
+      
+        <div id="concat-method" class="method-detail ">
+          <a name="method-i-concat"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">concat</span><span
+              class="method-args">(servers)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Adds an array (or otherwise Enumerable list) of servers to this list, by
+calling <a href="ServerList.html#method-i-add">add</a> for each argument.
+Returns <tt>self</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="concat-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">concat</span>(<span class="ruby-identifier">servers</span>)
+  <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">server</span>) }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- concat-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- concat-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterates over each distinct server record in the collection. This will
+correctly iterate over server records instantiated by a <a
+href="DynamicServer.html">DynamicServer</a> as well, but only if the
+dynamic server has been “evaluated” (see <a
+href="DynamicServer.html#method-i-evaluate-21">Net::SSH::Multi::DynamicServer#evaluate!</a>).</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>
+  <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">server</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Server</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">server</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">DynamicServer</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">item</span> }
+    <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;server list contains non-server: #{server.class}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="flatten-method" class="method-detail ">
+          <a name="method-i-flatten"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flatten</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an array of all servers in the list, with dynamic server records
+expanded. The result is an array of distinct server records (duplicates are
+removed from the result).</p>
+            
+
+            
+            <div class="method-source-code" id="flatten-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flatten</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aggregator</span>, <span class="ruby-identifier">server</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">server</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Server</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">aggregator</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">server</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">DynamicServer</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">aggregator</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">server</span>)
+    <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;server list contains non-server: #{server.class}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flatten-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="ServerList.html#method-i-to_ary">to_ary</a>
+          </div>
+          
+
+          
+        </div><!-- flatten-method -->
+
+      
+        <div id="select-method" class="method-detail ">
+          <a name="method-i-select"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">select</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works exactly as Enumerable#select, but returns the result as a new <a
+href="ServerList.html">ServerList</a> instance.</p>
+            
+
+            
+            <div class="method-source-code" id="select-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/server_list.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">select</span>
+  <span class="ruby-identifier">subset</span> = <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">i</span> }
+  <span class="ruby-constant">ServerList</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">subset</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- select-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- select-method -->
+
+      
+        <div id="to_ary-method" class="method-detail method-alias">
+          <a name="method-i-to_ary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_ary</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="ServerList.html#method-i-flatten">flatten</a>
+          </div>
+          
+        </div><!-- to_ary-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+U:RDoc::Attr[iI"run_list_items:EFI"!Chef::RunList#run_list_items;FI"R;F:publico:RDoc::Markup::Document:@parts[	o:RDoc::Markup::Paragraph;	[	I"K@run_list_items is an array of RunListItems that describe the items to;TI"Kexecute in order. RunListItems can load from and convert to the string;TI"(forms users set on roles and nodes.;TI"For example:;To:RDoc::Markup::Verbatim;	[I"?@run_list_items = ['recipe[foo::bar]', 'role[webserver]']
+;Fo;
+;	[I"
+Thus,;To;;	[I"0self.role_names would return ['webserver']
+;FI"0self.recipe_names would return ['foo::bar'];F:
+@file0FI"lib/chef/run_list.rb;T

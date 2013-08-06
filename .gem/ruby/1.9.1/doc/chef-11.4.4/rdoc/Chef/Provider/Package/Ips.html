@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Chef::Provider::Package::Ips</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/chef/provider/package/ips_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/chef/provider/package/ips.rb">lib/chef/provider/package/ips.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Package.html">Chef::Provider::Package</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-check_package_state">#check_package_state</a></li>
+          
+          <li><a href="#method-i-define_resource_requirements">#define_resource_requirements</a></li>
+          
+          <li><a href="#method-i-install_package">#install_package</a></li>
+          
+          <li><a href="#method-i-load_current_resource">#load_current_resource</a></li>
+          
+          <li><a href="#method-i-remove_package">#remove_package</a></li>
+          
+          <li><a href="#method-i-upgrade_package">#upgrade_package</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../../Mixin/ShellOut.html">Chef::Mixin::ShellOut</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../LICENSE.html">LICENSE</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Chef.html">Chef</a></li>
+        
+          <li><a href="../../../Chef/ApiClient.html">Chef::ApiClient</a></li>
+        
+          <li><a href="../../../Chef/ApiClient/Registration.html">Chef::ApiClient::Registration</a></li>
+        
+          <li><a href="../../../Chef/Application.html">Chef::Application</a></li>
+        
+          <li><a href="../../../Chef/Application/Apply.html">Chef::Application::Apply</a></li>
+        
+          <li><a href="../../../Chef/Application/Client.html">Chef::Application::Client</a></li>
+        
+          <li><a href="../../../Chef/Application/Knife.html">Chef::Application::Knife</a></li>
+        
+          <li><a href="../../../Chef/Application/Solo.html">Chef::Application::Solo</a></li>
+        
+          <li><a href="../../../Chef/Application/Wakeup.html">Chef::Application::Wakeup</a></li>
+        
+          <li><a href="../../../Chef/Application/WindowsService.html">Chef::Application::WindowsService</a></li>
+        
+          <li><a href="../../../Chef/Checksum.html">Chef::Checksum</a></li>
+        
+          <li><a href="../../../Chef/Checksum/Storage.html">Chef::Checksum::Storage</a></li>
+        
+          <li><a href="../../../Chef/Checksum/Storage/Filesystem.html">Chef::Checksum::Storage::Filesystem</a></li>
+        
+          <li><a href="../../../Chef/ChefFS.html">Chef::ChefFS</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/CommandLine.html">Chef::ChefFS::CommandLine</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FilePattern.html">Chef::ChefFS::FilePattern</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem.html">Chef::ChefFS::FileSystem</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/BaseFSDir.html">Chef::ChefFS::FileSystem::BaseFSDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/BaseFSObject.html">Chef::ChefFS::FileSystem::BaseFSObject</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/ChefRepositoryFileSystemEntry.html">Chef::ChefFS::FileSystem::ChefRepositoryFileSystemEntry</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/ChefRepositoryFileSystemRootDir.html">Chef::ChefFS::FileSystem::ChefRepositoryFileSystemRootDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/ChefServerRootDir.html">Chef::ChefFS::FileSystem::ChefServerRootDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/CookbookDir.html">Chef::ChefFS::FileSystem::CookbookDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/CookbookFile.html">Chef::ChefFS::FileSystem::CookbookFile</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/CookbookSubdir.html">Chef::ChefFS::FileSystem::CookbookSubdir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/CookbooksDir.html">Chef::ChefFS::FileSystem::CookbooksDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/DataBagDir.html">Chef::ChefFS::FileSystem::DataBagDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/DataBagItem.html">Chef::ChefFS::FileSystem::DataBagItem</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/DataBagsDir.html">Chef::ChefFS::FileSystem::DataBagsDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/FileSystemEntry.html">Chef::ChefFS::FileSystem::FileSystemEntry</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/FileSystemError.html">Chef::ChefFS::FileSystem::FileSystemError</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/FileSystemRootDir.html">Chef::ChefFS::FileSystem::FileSystemRootDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/MustDeleteRecursivelyError.html">Chef::ChefFS::FileSystem::MustDeleteRecursivelyError</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/NodesDir.html">Chef::ChefFS::FileSystem::NodesDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/NonexistentFSObject.html">Chef::ChefFS::FileSystem::NonexistentFSObject</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/NotFoundError.html">Chef::ChefFS::FileSystem::NotFoundError</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/RestListDir.html">Chef::ChefFS::FileSystem::RestListDir</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/FileSystem/RestListEntry.html">Chef::ChefFS::FileSystem::RestListEntry</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/Knife.html">Chef::ChefFS::Knife</a></li>
+        
+          <li><a href="../../../Chef/ChefFS/PathUtils.html">Chef::ChefFS::PathUtils</a></li>
+        
+          <li><a href="../../../Chef/Client.html">Chef::Client</a></li>
+        
+          <li><a href="../../../Chef/Config.html">Chef::Config</a></li>
+        
+          <li><a href="../../../Chef/Cookbook.html">Chef::Cookbook</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/Chefignore.html">Chef::Cookbook::Chefignore</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/CookbookVersionLoader.html">Chef::Cookbook::CookbookVersionLoader</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/FileSystemFileVendor.html">Chef::Cookbook::FileSystemFileVendor</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/FileVendor.html">Chef::Cookbook::FileVendor</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/Metadata.html">Chef::Cookbook::Metadata</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/MinimalMetadata.html">Chef::Cookbook::MinimalMetadata</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/RemoteFileVendor.html">Chef::Cookbook::RemoteFileVendor</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/SyntaxCheck.html">Chef::Cookbook::SyntaxCheck</a></li>
+        
+          <li><a href="../../../Chef/Cookbook/SyntaxCheck/PersistentSet.html">Chef::Cookbook::SyntaxCheck::PersistentSet</a></li>
+        
+          <li><a href="../../../Chef/CookbookCacheCleaner.html">Chef::CookbookCacheCleaner</a></li>
+        
+          <li><a href="../../../Chef/CookbookCollection.html">Chef::CookbookCollection</a></li>
+        
+          <li><a href="../../../Chef/CookbookLoader.html">Chef::CookbookLoader</a></li>
+        
+          <li><a href="../../../Chef/CookbookSiteStreamingUploader.html">Chef::CookbookSiteStreamingUploader</a></li>
+        
+          <li><a href="../../../Chef/CookbookSiteStreamingUploader/MultipartStream.html">Chef::CookbookSiteStreamingUploader::MultipartStream</a></li>
+        
+          <li><a href="../../../Chef/CookbookSiteStreamingUploader/StreamPart.html">Chef::CookbookSiteStreamingUploader::StreamPart</a></li>
+        
+          <li><a href="../../../Chef/CookbookSiteStreamingUploader/StringPart.html">Chef::CookbookSiteStreamingUploader::StringPart</a></li>
+        
+          <li><a href="../../../Chef/CookbookSynchronizer.html">Chef::CookbookSynchronizer</a></li>
+        
+          <li><a href="../../../Chef/CookbookUploader.html">Chef::CookbookUploader</a></li>
+        
+          <li><a href="../../../Chef/CookbookVersion.html">Chef::CookbookVersion</a></li>
+        
+          <li><a href="../../../Chef/DSL.html">Chef::DSL</a></li>
+        
+          <li><a href="../../../Chef/DSL/DataQuery.html">Chef::DSL::DataQuery</a></li>
+        
+          <li><a href="../../../Chef/DSL/IncludeAttribute.html">Chef::DSL::IncludeAttribute</a></li>
+        
+          <li><a href="../../../Chef/DSL/IncludeRecipe.html">Chef::DSL::IncludeRecipe</a></li>
+        
+          <li><a href="../../../Chef/DSL/PlatformIntrospection.html">Chef::DSL::PlatformIntrospection</a></li>
+        
+          <li><a href="../../../Chef/DSL/PlatformIntrospection/PlatformDependentValue.html">Chef::DSL::PlatformIntrospection::PlatformDependentValue</a></li>
+        
+          <li><a href="../../../Chef/DSL/PlatformIntrospection/PlatformFamilyDependentValue.html">Chef::DSL::PlatformIntrospection::PlatformFamilyDependentValue</a></li>
+        
+          <li><a href="../../../Chef/DSL/Recipe.html">Chef::DSL::Recipe</a></li>
+        
+          <li><a href="../../../Chef/DSL/RegistryHelper.html">Chef::DSL::RegistryHelper</a></li>
+        
+          <li><a href="../../../Chef/Daemon.html">Chef::Daemon</a></li>
+        
+          <li><a href="../../../Chef/DataBag.html">Chef::DataBag</a></li>
+        
+          <li><a href="../../../Chef/DataBagItem.html">Chef::DataBagItem</a></li>
+        
+          <li><a href="../../../Chef/Digester.html">Chef::Digester</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem.html">Chef::EncryptedDataBagItem</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/DecryptionFailure.html">Chef::EncryptedDataBagItem::DecryptionFailure</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/Decryptor.html">Chef::EncryptedDataBagItem::Decryptor</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/Decryptor/Version0Decryptor.html">Chef::EncryptedDataBagItem::Decryptor::Version0Decryptor</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/Decryptor/Version1Decryptor.html">Chef::EncryptedDataBagItem::Decryptor::Version1Decryptor</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/Encryptor.html">Chef::EncryptedDataBagItem::Encryptor</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/UnsupportedCipher.html">Chef::EncryptedDataBagItem::UnsupportedCipher</a></li>
+        
+          <li><a href="../../../Chef/EncryptedDataBagItem/UnsupportedEncryptedDataBagItemFormat.html">Chef::EncryptedDataBagItem::UnsupportedEncryptedDataBagItemFormat</a></li>
+        
+          <li><a href="../../../Chef/Environment.html">Chef::Environment</a></li>
+        
+          <li><a href="../../../Chef/EventDispatch.html">Chef::EventDispatch</a></li>
+        
+          <li><a href="../../../Chef/EventDispatch/Base.html">Chef::EventDispatch::Base</a></li>
+        
+          <li><a href="../../../Chef/EventDispatch/Dispatcher.html">Chef::EventDispatch::Dispatcher</a></li>
+        
+          <li><a href="../../../Chef/Exceptions.html">Chef::Exceptions</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/AmbiguousRunlistSpecification.html">Chef::Exceptions::AmbiguousRunlistSpecification</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Application.html">Chef::Exceptions::Application</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/AttributeNotFound.html">Chef::Exceptions::AttributeNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CannotDetermineNodeName.html">Chef::Exceptions::CannotDetermineNodeName</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CannotWritePrivateKey.html">Chef::Exceptions::CannotWritePrivateKey</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CommandTimeout.html">Chef::Exceptions::CommandTimeout</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ConfigurationError.html">Chef::Exceptions::ConfigurationError</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookFrozen.html">Chef::Exceptions::CookbookFrozen</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookNotFound.html">Chef::Exceptions::CookbookNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookNotFoundInRepo.html">Chef::Exceptions::CookbookNotFoundInRepo</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookVersionConflict.html">Chef::Exceptions::CookbookVersionConflict</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookVersionNameMismatch.html">Chef::Exceptions::CookbookVersionNameMismatch</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookVersionSelection.html">Chef::Exceptions::CookbookVersionSelection</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookVersionSelection/InvalidRunListItems.html">Chef::Exceptions::CookbookVersionSelection::InvalidRunListItems</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/CookbookVersionSelection/UnsatisfiableRunListItem.html">Chef::Exceptions::CookbookVersionSelection::UnsatisfiableRunListItem</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Cron.html">Chef::Exceptions::Cron</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/DsclCommandFailed.html">Chef::Exceptions::DsclCommandFailed</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/EnclosingDirectoryDoesNotExist.html">Chef::Exceptions::EnclosingDirectoryDoesNotExist</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Env.html">Chef::Exceptions::Env</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ErlCall.html">Chef::Exceptions::ErlCall</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Exec.html">Chef::Exceptions::Exec</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/FileNotFound.html">Chef::Exceptions::FileNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Group.html">Chef::Exceptions::Group</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/GroupIDNotFound.html">Chef::Exceptions::GroupIDNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Ifconfig.html">Chef::Exceptions::Ifconfig</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/IllegalChecksumRevert.html">Chef::Exceptions::IllegalChecksumRevert</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ImmutableAttributeModification.html">Chef::Exceptions::ImmutableAttributeModification</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InsufficientPermissions.html">Chef::Exceptions::InsufficientPermissions</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidCommandOption.html">Chef::Exceptions::InvalidCommandOption</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidCookbookVersion.html">Chef::Exceptions::InvalidCookbookVersion</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidDataBagItemID.html">Chef::Exceptions::InvalidDataBagItemID</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidDataBagName.html">Chef::Exceptions::InvalidDataBagName</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidDataBagPath.html">Chef::Exceptions::InvalidDataBagPath</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidEnvironmentRunListSpecification.html">Chef::Exceptions::InvalidEnvironmentRunListSpecification</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidHomeDirectory.html">Chef::Exceptions::InvalidHomeDirectory</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidPrivateKey.html">Chef::Exceptions::InvalidPrivateKey</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidRemoteFileURI.html">Chef::Exceptions::InvalidRemoteFileURI</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidRemoteGitReference.html">Chef::Exceptions::InvalidRemoteGitReference</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidResourceReference.html">Chef::Exceptions::InvalidResourceReference</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidResourceSpecification.html">Chef::Exceptions::InvalidResourceSpecification</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/InvalidVersionConstraint.html">Chef::Exceptions::InvalidVersionConstraint</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Link.html">Chef::Exceptions::Link</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/MissingLibrary.html">Chef::Exceptions::MissingLibrary</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/MissingParentDirectory.html">Chef::Exceptions::MissingParentDirectory</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/MissingRole.html">Chef::Exceptions::MissingRole</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Mount.html">Chef::Exceptions::Mount</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/MultipleFailures.html">Chef::Exceptions::MultipleFailures</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ObsoleteDependencySyntax.html">Chef::Exceptions::ObsoleteDependencySyntax</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Override.html">Chef::Exceptions::Override</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Package.html">Chef::Exceptions::Package</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/PrivateKeyMissing.html">Chef::Exceptions::PrivateKeyMissing</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/RecipeNotFound.html">Chef::Exceptions::RecipeNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/RedirectLimitExceeded.html">Chef::Exceptions::RedirectLimitExceeded</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/RequestedUIDUnavailable.html">Chef::Exceptions::RequestedUIDUnavailable</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ResourceNotFound.html">Chef::Exceptions::ResourceNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/RoleNotFound.html">Chef::Exceptions::RoleNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Route.html">Chef::Exceptions::Route</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/SearchIndex.html">Chef::Exceptions::SearchIndex</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Service.html">Chef::Exceptions::Service</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/SolrConnectionError.html">Chef::Exceptions::SolrConnectionError</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/StaleAttributeRead.html">Chef::Exceptions::StaleAttributeRead</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/UnresolvableGitReference.html">Chef::Exceptions::UnresolvableGitReference</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/UnsupportedAction.html">Chef::Exceptions::UnsupportedAction</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/User.html">Chef::Exceptions::User</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/UserIDNotFound.html">Chef::Exceptions::UserIDNotFound</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/ValidationFailed.html">Chef::Exceptions::ValidationFailed</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32APIError.html">Chef::Exceptions::Win32APIError</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32APIFunctionNotImplemented.html">Chef::Exceptions::Win32APIFunctionNotImplemented</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32NotWindows.html">Chef::Exceptions::Win32NotWindows</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegArchitectureIncorrect.html">Chef::Exceptions::Win32RegArchitectureIncorrect</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegBadType.html">Chef::Exceptions::Win32RegBadType</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegBadValueSize.html">Chef::Exceptions::Win32RegBadValueSize</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegDataMissing.html">Chef::Exceptions::Win32RegDataMissing</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegHiveMissing.html">Chef::Exceptions::Win32RegHiveMissing</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegKeyMissing.html">Chef::Exceptions::Win32RegKeyMissing</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegNoRecursive.html">Chef::Exceptions::Win32RegNoRecursive</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegTypeDoesNotExist.html">Chef::Exceptions::Win32RegTypeDoesNotExist</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegTypesMismatch.html">Chef::Exceptions::Win32RegTypesMismatch</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegValueExists.html">Chef::Exceptions::Win32RegValueExists</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/Win32RegValueMissing.html">Chef::Exceptions::Win32RegValueMissing</a></li>
+        
+          <li><a href="../../../Chef/Exceptions/WindowsNotAdmin.html">Chef::Exceptions::WindowsNotAdmin</a></li>
+        
+          <li><a href="../../../Chef/FileAccessControl.html">Chef::FileAccessControl</a></li>
+        
+          <li><a href="../../../Chef/FileAccessControl/Unix.html">Chef::FileAccessControl::Unix</a></li>
+        
+          <li><a href="../../../Chef/FileAccessControl/Windows.html">Chef::FileAccessControl::Windows</a></li>
+        
+          <li><a href="../../../Chef/FileCache.html">Chef::FileCache</a></li>
+        
+          <li><a href="../../../Chef/Formatters.html">Chef::Formatters</a></li>
+        
+          <li><a href="../../../Chef/Formatters/APIErrorFormatting.html">Chef::Formatters::APIErrorFormatting</a></li>
+        
+          <li><a href="../../../Chef/Formatters/Base.html">Chef::Formatters::Base</a></li>
+        
+          <li><a href="../../../Chef/Formatters/Doc.html">Chef::Formatters::Doc</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorDescription.html">Chef::Formatters::ErrorDescription</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors.html">Chef::Formatters::ErrorInspectors</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/CompileErrorInspector.html">Chef::Formatters::ErrorInspectors::CompileErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/CookbookResolveErrorInspector.html">Chef::Formatters::ErrorInspectors::CookbookResolveErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/CookbookSyncErrorInspector.html">Chef::Formatters::ErrorInspectors::CookbookSyncErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/NodeLoadErrorInspector.html">Chef::Formatters::ErrorInspectors::NodeLoadErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/RegistrationErrorInspector.html">Chef::Formatters::ErrorInspectors::RegistrationErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/ResourceFailureInspector.html">Chef::Formatters::ErrorInspectors::ResourceFailureInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorInspectors/RunListExpansionErrorInspector.html">Chef::Formatters::ErrorInspectors::RunListExpansionErrorInspector</a></li>
+        
+          <li><a href="../../../Chef/Formatters/ErrorMapper.html">Chef::Formatters::ErrorMapper</a></li>
+        
+          <li><a href="../../../Chef/Formatters/Minimal.html">Chef::Formatters::Minimal</a></li>
+        
+          <li><a href="../../../Chef/Formatters/NullFormatter.html">Chef::Formatters::NullFormatter</a></li>
+        
+          <li><a href="../../../Chef/Formatters/Outputter.html">Chef::Formatters::Outputter</a></li>
+        
+          <li><a href="../../../Chef/Formatters/UnknownFormatter.html">Chef::Formatters::UnknownFormatter</a></li>
+        
+          <li><a href="../../../Chef/Handler.html">Chef::Handler</a></li>
+        
+          <li><a href="../../../Chef/Handler/ErrorReport.html">Chef::Handler::ErrorReport</a></li>
+        
+          <li><a href="../../../Chef/Handler/JsonFile.html">Chef::Handler::JsonFile</a></li>
+        
+          <li><a href="../../../Chef/JSONCompat.html">Chef::JSONCompat</a></li>
+        
+          <li><a href="../../../Chef/Knife.html">Chef::Knife</a></li>
+        
+          <li><a href="../../../Chef/Knife/Bootstrap.html">Chef::Knife::Bootstrap</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientBulkDelete.html">Chef::Knife::ClientBulkDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientCreate.html">Chef::Knife::ClientCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientDelete.html">Chef::Knife::ClientDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientEdit.html">Chef::Knife::ClientEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientList.html">Chef::Knife::ClientList</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientReregister.html">Chef::Knife::ClientReregister</a></li>
+        
+          <li><a href="../../../Chef/Knife/ClientShow.html">Chef::Knife::ClientShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/Configure.html">Chef::Knife::Configure</a></li>
+        
+          <li><a href="../../../Chef/Knife/ConfigureClient.html">Chef::Knife::ConfigureClient</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookBulkDelete.html">Chef::Knife::CookbookBulkDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookCreate.html">Chef::Knife::CookbookCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookDelete.html">Chef::Knife::CookbookDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookDownload.html">Chef::Knife::CookbookDownload</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookList.html">Chef::Knife::CookbookList</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookMetadata.html">Chef::Knife::CookbookMetadata</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookMetadataFromFile.html">Chef::Knife::CookbookMetadataFromFile</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSCMRepo.html">Chef::Knife::CookbookSCMRepo</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookShow.html">Chef::Knife::CookbookShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteDownload.html">Chef::Knife::CookbookSiteDownload</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteInstall.html">Chef::Knife::CookbookSiteInstall</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteList.html">Chef::Knife::CookbookSiteList</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteSearch.html">Chef::Knife::CookbookSiteSearch</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteShare.html">Chef::Knife::CookbookSiteShare</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteShow.html">Chef::Knife::CookbookSiteShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteUnshare.html">Chef::Knife::CookbookSiteUnshare</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookSiteVendor.html">Chef::Knife::CookbookSiteVendor</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookTest.html">Chef::Knife::CookbookTest</a></li>
+        
+          <li><a href="../../../Chef/Knife/CookbookUpload.html">Chef::Knife::CookbookUpload</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core.html">Chef::Knife::Core</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/BootstrapContext.html">Chef::Knife::Core::BootstrapContext</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/GenericPresenter.html">Chef::Knife::Core::GenericPresenter</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/NodeFormattingOptions.html">Chef::Knife::Core::NodeFormattingOptions</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/NodePresenter.html">Chef::Knife::Core::NodePresenter</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/ObjectLoader.html">Chef::Knife::Core::ObjectLoader</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/ObjectLoader/ObjectType.html">Chef::Knife::Core::ObjectLoader::ObjectType</a></li>
+        
+          <li><a href="../../../Chef/Knife/Core/TextFormatter.html">Chef::Knife::Core::TextFormatter</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagCreate.html">Chef::Knife::DataBagCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagDelete.html">Chef::Knife::DataBagDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagEdit.html">Chef::Knife::DataBagEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagFromFile.html">Chef::Knife::DataBagFromFile</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagList.html">Chef::Knife::DataBagList</a></li>
+        
+          <li><a href="../../../Chef/Knife/DataBagShow.html">Chef::Knife::DataBagShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/Delete.html">Chef::Knife::Delete</a></li>
+        
+          <li><a href="../../../Chef/Knife/Diff.html">Chef::Knife::Diff</a></li>
+        
+          <li><a href="../../../Chef/Knife/Download.html">Chef::Knife::Download</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentCreate.html">Chef::Knife::EnvironmentCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentDelete.html">Chef::Knife::EnvironmentDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentEdit.html">Chef::Knife::EnvironmentEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentFromFile.html">Chef::Knife::EnvironmentFromFile</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentList.html">Chef::Knife::EnvironmentList</a></li>
+        
+          <li><a href="../../../Chef/Knife/EnvironmentShow.html">Chef::Knife::EnvironmentShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/Exec.html">Chef::Knife::Exec</a></li>
+        
+          <li><a href="../../../Chef/Knife/Help.html">Chef::Knife::Help</a></li>
+        
+          <li><a href="../../../Chef/Knife/IndexRebuild.html">Chef::Knife::IndexRebuild</a></li>
+        
+          <li><a href="../../../Chef/Knife/List.html">Chef::Knife::List</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeBulkDelete.html">Chef::Knife::NodeBulkDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeCreate.html">Chef::Knife::NodeCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeDelete.html">Chef::Knife::NodeDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeEdit.html">Chef::Knife::NodeEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeEditor.html">Chef::Knife::NodeEditor</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeFromFile.html">Chef::Knife::NodeFromFile</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeList.html">Chef::Knife::NodeList</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeRunListAdd.html">Chef::Knife::NodeRunListAdd</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeRunListRemove.html">Chef::Knife::NodeRunListRemove</a></li>
+        
+          <li><a href="../../../Chef/Knife/NodeShow.html">Chef::Knife::NodeShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/Raw.html">Chef::Knife::Raw</a></li>
+        
+          <li><a href="../../../Chef/Knife/RecipeList.html">Chef::Knife::RecipeList</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleBulkDelete.html">Chef::Knife::RoleBulkDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleCreate.html">Chef::Knife::RoleCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleDelete.html">Chef::Knife::RoleDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleEdit.html">Chef::Knife::RoleEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleFromFile.html">Chef::Knife::RoleFromFile</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleList.html">Chef::Knife::RoleList</a></li>
+        
+          <li><a href="../../../Chef/Knife/RoleShow.html">Chef::Knife::RoleShow</a></li>
+        
+          <li><a href="../../../Chef/Knife/Search.html">Chef::Knife::Search</a></li>
+        
+          <li><a href="../../../Chef/Knife/Show.html">Chef::Knife::Show</a></li>
+        
+          <li><a href="../../../Chef/Knife/Ssh.html">Chef::Knife::Ssh</a></li>
+        
+          <li><a href="../../../Chef/Knife/Status.html">Chef::Knife::Status</a></li>
+        
+          <li><a href="../../../Chef/Knife/SubcommandLoader.html">Chef::Knife::SubcommandLoader</a></li>
+        
+          <li><a href="../../../Chef/Knife/TagCreate.html">Chef::Knife::TagCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/TagDelete.html">Chef::Knife::TagDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/TagList.html">Chef::Knife::TagList</a></li>
+        
+          <li><a href="../../../Chef/Knife/UI.html">Chef::Knife::UI</a></li>
+        
+          <li><a href="../../../Chef/Knife/Upload.html">Chef::Knife::Upload</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserCreate.html">Chef::Knife::UserCreate</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserDelete.html">Chef::Knife::UserDelete</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserEdit.html">Chef::Knife::UserEdit</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserList.html">Chef::Knife::UserList</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserReregister.html">Chef::Knife::UserReregister</a></li>
+        
+          <li><a href="../../../Chef/Knife/UserShow.html">Chef::Knife::UserShow</a></li>
+        
+          <li><a href="../../../Chef/Log.html">Chef::Log</a></li>
+        
+          <li><a href="../../../Chef/Log/Formatter.html">Chef::Log::Formatter</a></li>
+        
+          <li><a href="../../../Chef/Mixin.html">Chef::Mixin</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Checksum.html">Chef::Mixin::Checksum</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Command.html">Chef::Mixin::Command</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Command/Unix.html">Chef::Mixin::Command::Unix</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Command/Windows.html">Chef::Mixin::Command::Windows</a></li>
+        
+          <li><a href="../../../Chef/Mixin/ConvertToClassName.html">Chef::Mixin::ConvertToClassName</a></li>
+        
+          <li><a href="../../../Chef/Mixin/CreatePath.html">Chef::Mixin::CreatePath</a></li>
+        
+          <li><a href="../../../Chef/Mixin/DeepMerge.html">Chef::Mixin::DeepMerge</a></li>
+        
+          <li><a href="../../../Chef/Mixin/DeepMerge/InvalidParameter.html">Chef::Mixin::DeepMerge::InvalidParameter</a></li>
+        
+          <li><a href="../../../Chef/Mixin/DeepMerge/InvalidSubtractiveMerge.html">Chef::Mixin::DeepMerge::InvalidSubtractiveMerge</a></li>
+        
+          <li><a href="../../../Chef/Mixin/DeprecatedLanguageModule.html">Chef::Mixin::DeprecatedLanguageModule</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Deprecation.html">Chef::Mixin::Deprecation</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Deprecation/DeprecatedInstanceVariable.html">Chef::Mixin::Deprecation::DeprecatedInstanceVariable</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Deprecation/DeprecatedObjectProxyBase.html">Chef::Mixin::Deprecation::DeprecatedObjectProxyBase</a></li>
+        
+          <li><a href="../../../Chef/Mixin/EnforceOwnershipAndPermissions.html">Chef::Mixin::EnforceOwnershipAndPermissions</a></li>
+        
+          <li><a href="../../../Chef/Mixin/FileClass.html">Chef::Mixin::FileClass</a></li>
+        
+          <li><a href="../../../Chef/Mixin/FromFile.html">Chef::Mixin::FromFile</a></li>
+        
+          <li><a href="../../../Chef/Mixin/GetSourceFromPackage.html">Chef::Mixin::GetSourceFromPackage</a></li>
+        
+          <li><a href="../../../Chef/Mixin/ParamsValidate.html">Chef::Mixin::ParamsValidate</a></li>
+        
+          <li><a href="../../../Chef/Mixin/PathSanity.html">Chef::Mixin::PathSanity</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Securable.html">Chef::Mixin::Securable</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Securable/WindowsMacros.html">Chef::Mixin::Securable::WindowsMacros</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Securable/WindowsSecurableAttributes.html">Chef::Mixin::Securable::WindowsSecurableAttributes</a></li>
+        
+          <li><a href="../../../Chef/Mixin/ShellOut.html">Chef::Mixin::ShellOut</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Template.html">Chef::Mixin::Template</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Template/ChefContext.html">Chef::Mixin::Template::ChefContext</a></li>
+        
+          <li><a href="../../../Chef/Mixin/Template/TemplateError.html">Chef::Mixin::Template::TemplateError</a></li>
+        
+          <li><a href="../../../Chef/Mixin/WhyRun.html">Chef::Mixin::WhyRun</a></li>
+        
+          <li><a href="../../../Chef/Mixin/WhyRun/ConvergeActions.html">Chef::Mixin::WhyRun::ConvergeActions</a></li>
+        
+          <li><a href="../../../Chef/Mixin/WhyRun/ResourceRequirements.html">Chef::Mixin::WhyRun::ResourceRequirements</a></li>
+        
+          <li><a href="../../../Chef/Mixin/WhyRun/ResourceRequirements/Assertion.html">Chef::Mixin::WhyRun::ResourceRequirements::Assertion</a></li>
+        
+          <li><a href="../../../Chef/Mixin/WhyRun/ResourceRequirements/Assertion/AssertionFailure.html">Chef::Mixin::WhyRun::ResourceRequirements::Assertion::AssertionFailure</a></li>
+        
+          <li><a href="../../../Chef/Mixin/XMLEscape.html">Chef::Mixin::XMLEscape</a></li>
+        
+          <li><a href="../../../Chef/Mixin/XMLEscape/FastXS.html">Chef::Mixin::XMLEscape::FastXS</a></li>
+        
+          <li><a href="../../../Chef/Mixin/XMLEscape/PureRuby.html">Chef::Mixin::XMLEscape::PureRuby</a></li>
+        
+          <li><a href="../../../Chef/Node.html">Chef::Node</a></li>
+        
+          <li><a href="../../../Chef/Node/AttrArray.html">Chef::Node::AttrArray</a></li>
+        
+          <li><a href="../../../Chef/Node/Attribute.html">Chef::Node::Attribute</a></li>
+        
+          <li><a href="../../../Chef/Node/ImmutableArray.html">Chef::Node::ImmutableArray</a></li>
+        
+          <li><a href="../../../Chef/Node/ImmutableMash.html">Chef::Node::ImmutableMash</a></li>
+        
+          <li><a href="../../../Chef/Node/Immutablize.html">Chef::Node::Immutablize</a></li>
+        
+          <li><a href="../../../Chef/Node/VividMash.html">Chef::Node::VividMash</a></li>
+        
+          <li><a href="../../../Chef/Platform.html">Chef::Platform</a></li>
+        
+          <li><a href="../../../Chef/Provider.html">Chef::Provider</a></li>
+        
+          <li><a href="../../../Chef/Provider/Breakpoint.html">Chef::Provider::Breakpoint</a></li>
+        
+          <li><a href="../../../Chef/Provider/CookbookFile.html">Chef::Provider::CookbookFile</a></li>
+        
+          <li><a href="../../../Chef/Provider/Cron.html">Chef::Provider::Cron</a></li>
+        
+          <li><a href="../../../Chef/Provider/Cron/Solaris.html">Chef::Provider::Cron::Solaris</a></li>
+        
+          <li><a href="../../../Chef/Provider/Deploy.html">Chef::Provider::Deploy</a></li>
+        
+          <li><a href="../../../Chef/Provider/Deploy/Revision.html">Chef::Provider::Deploy::Revision</a></li>
+        
+          <li><a href="../../../Chef/Provider/Deploy/Timestamped.html">Chef::Provider::Deploy::Timestamped</a></li>
+        
+          <li><a href="../../../Chef/Provider/Directory.html">Chef::Provider::Directory</a></li>
+        
+          <li><a href="../../../Chef/Provider/Env.html">Chef::Provider::Env</a></li>
+        
+          <li><a href="../../../Chef/Provider/Env/Windows.html">Chef::Provider::Env::Windows</a></li>
+        
+          <li><a href="../../../Chef/Provider/ErlCall.html">Chef::Provider::ErlCall</a></li>
+        
+          <li><a href="../../../Chef/Provider/Execute.html">Chef::Provider::Execute</a></li>
+        
+          <li><a href="../../../Chef/Provider/File.html">Chef::Provider::File</a></li>
+        
+          <li><a href="../../../Chef/Provider/Git.html">Chef::Provider::Git</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group.html">Chef::Provider::Group</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Aix.html">Chef::Provider::Group::Aix</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Dscl.html">Chef::Provider::Group::Dscl</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Gpasswd.html">Chef::Provider::Group::Gpasswd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Groupadd.html">Chef::Provider::Group::Groupadd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Groupmod.html">Chef::Provider::Group::Groupmod</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Pw.html">Chef::Provider::Group::Pw</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Suse.html">Chef::Provider::Group::Suse</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Usermod.html">Chef::Provider::Group::Usermod</a></li>
+        
+          <li><a href="../../../Chef/Provider/Group/Windows.html">Chef::Provider::Group::Windows</a></li>
+        
+          <li><a href="../../../Chef/Provider/HttpRequest.html">Chef::Provider::HttpRequest</a></li>
+        
+          <li><a href="../../../Chef/Provider/Ifconfig.html">Chef::Provider::Ifconfig</a></li>
+        
+          <li><a href="../../../Chef/Provider/LWRPBase.html">Chef::Provider::LWRPBase</a></li>
+        
+          <li><a href="../../../Chef/Provider/LWRPBase/InlineResources.html">Chef::Provider::LWRPBase::InlineResources</a></li>
+        
+          <li><a href="../../../Chef/Provider/LWRPBase/InlineResources/ClassMethods.html">Chef::Provider::LWRPBase::InlineResources::ClassMethods</a></li>
+        
+          <li><a href="../../../Chef/Provider/Link.html">Chef::Provider::Link</a></li>
+        
+          <li><a href="../../../Chef/Provider/Log.html">Chef::Provider::Log</a></li>
+        
+          <li><a href="../../../Chef/Provider/Log/ChefLog.html">Chef::Provider::Log::ChefLog</a></li>
+        
+          <li><a href="../../../Chef/Provider/Mdadm.html">Chef::Provider::Mdadm</a></li>
+        
+          <li><a href="../../../Chef/Provider/Mount.html">Chef::Provider::Mount</a></li>
+        
+          <li><a href="../../../Chef/Provider/Mount/Mount.html">Chef::Provider::Mount::Mount</a></li>
+        
+          <li><a href="../../../Chef/Provider/Mount/Windows.html">Chef::Provider::Mount::Windows</a></li>
+        
+          <li><a href="../../../Chef/Provider/Ohai.html">Chef::Provider::Ohai</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package.html">Chef::Provider::Package</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Apt.html">Chef::Provider::Package::Apt</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Dpkg.html">Chef::Provider::Package::Dpkg</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/EasyInstall.html">Chef::Provider::Package::EasyInstall</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Freebsd.html">Chef::Provider::Package::Freebsd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Ips.html">Chef::Provider::Package::Ips</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Macports.html">Chef::Provider::Package::Macports</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Pacman.html">Chef::Provider::Package::Pacman</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Portage.html">Chef::Provider::Package::Portage</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Rpm.html">Chef::Provider::Package::Rpm</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Rubygems.html">Chef::Provider::Package::Rubygems</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Rubygems/AlternateGemEnvironment.html">Chef::Provider::Package::Rubygems::AlternateGemEnvironment</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Rubygems/CurrentGemEnvironment.html">Chef::Provider::Package::Rubygems::CurrentGemEnvironment</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Rubygems/GemEnvironment.html">Chef::Provider::Package::Rubygems::GemEnvironment</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/SmartOS.html">Chef::Provider::Package::SmartOS</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Solaris.html">Chef::Provider::Package::Solaris</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum.html">Chef::Provider::Package::Yum</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMDb.html">Chef::Provider::Package::Yum::RPMDb</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMDbPackage.html">Chef::Provider::Package::Yum::RPMDbPackage</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMDependency.html">Chef::Provider::Package::Yum::RPMDependency</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMPackage.html">Chef::Provider::Package::Yum::RPMPackage</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMProvide.html">Chef::Provider::Package::Yum::RPMProvide</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMRequire.html">Chef::Provider::Package::Yum::RPMRequire</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMUtils.html">Chef::Provider::Package::Yum::RPMUtils</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/RPMVersion.html">Chef::Provider::Package::Yum::RPMVersion</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Yum/YumCache.html">Chef::Provider::Package::Yum::YumCache</a></li>
+        
+          <li><a href="../../../Chef/Provider/Package/Zypper.html">Chef::Provider::Package::Zypper</a></li>
+        
+          <li><a href="../../../Chef/Provider/RegistryKey.html">Chef::Provider::RegistryKey</a></li>
+        
+          <li><a href="../../../Chef/Provider/RemoteDirectory.html">Chef::Provider::RemoteDirectory</a></li>
+        
+          <li><a href="../../../Chef/Provider/RemoteFile.html">Chef::Provider::RemoteFile</a></li>
+        
+          <li><a href="../../../Chef/Provider/ResourceUpdate.html">Chef::Provider::ResourceUpdate</a></li>
+        
+          <li><a href="../../../Chef/Provider/Route.html">Chef::Provider::Route</a></li>
+        
+          <li><a href="../../../Chef/Provider/RubyBlock.html">Chef::Provider::RubyBlock</a></li>
+        
+          <li><a href="../../../Chef/Provider/Script.html">Chef::Provider::Script</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service.html">Chef::Provider::Service</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Arch.html">Chef::Provider::Service::Arch</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Debian.html">Chef::Provider::Service::Debian</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Freebsd.html">Chef::Provider::Service::Freebsd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Gentoo.html">Chef::Provider::Service::Gentoo</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Init.html">Chef::Provider::Service::Init</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Insserv.html">Chef::Provider::Service::Insserv</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Invokercd.html">Chef::Provider::Service::Invokercd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Macosx.html">Chef::Provider::Service::Macosx</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Redhat.html">Chef::Provider::Service::Redhat</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Simple.html">Chef::Provider::Service::Simple</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Solaris.html">Chef::Provider::Service::Solaris</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Systemd.html">Chef::Provider::Service::Systemd</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Upstart.html">Chef::Provider::Service::Upstart</a></li>
+        
+          <li><a href="../../../Chef/Provider/Service/Windows.html">Chef::Provider::Service::Windows</a></li>
+        
+          <li><a href="../../../Chef/Provider/Subversion.html">Chef::Provider::Subversion</a></li>
+        
+          <li><a href="../../../Chef/Provider/Template.html">Chef::Provider::Template</a></li>
+        
+          <li><a href="../../../Chef/Provider/TemplateFinder.html">Chef::Provider::TemplateFinder</a></li>
+        
+          <li><a href="../../../Chef/Provider/User.html">Chef::Provider::User</a></li>
+        
+          <li><a href="../../../Chef/Provider/User/Dscl.html">Chef::Provider::User::Dscl</a></li>
+        
+          <li><a href="../../../Chef/Provider/User/Pw.html">Chef::Provider::User::Pw</a></li>
+        
+          <li><a href="../../../Chef/Provider/User/Useradd.html">Chef::Provider::User::Useradd</a></li>
+        
+          <li><a href="../../../Chef/Provider/User/Windows.html">Chef::Provider::User::Windows</a></li>
+        
+          <li><a href="../../../Chef/REST.html">Chef::REST</a></li>
+        
+          <li><a href="../../../Chef/REST/AuthCredentials.html">Chef::REST::AuthCredentials</a></li>
+        
+          <li><a href="../../../Chef/REST/CookieJar.html">Chef::REST::CookieJar</a></li>
+        
+          <li><a href="../../../Chef/REST/NoopInflater.html">Chef::REST::NoopInflater</a></li>
+        
+          <li><a href="../../../Chef/REST/RESTRequest.html">Chef::REST::RESTRequest</a></li>
+        
+          <li><a href="../../../Chef/Recipe.html">Chef::Recipe</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames.html">Chef::ReservedNames</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32.html">Chef::ReservedNames::Win32</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API.html">Chef::ReservedNames::Win32::API</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Error.html">Chef::ReservedNames::Win32::API::Error</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File.html">Chef::ReservedNames::Win32::API::File</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/BY_HANDLE_FILE_INFORMATION.html">Chef::ReservedNames::Win32::API::File::BY_HANDLE_FILE_INFORMATION</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/FILETIME.html">Chef::ReservedNames::Win32::API::File::FILETIME</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/REPARSE_DATA_BUFFER.html">Chef::ReservedNames::Win32::API::File::REPARSE_DATA_BUFFER</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/REPARSE_DATA_BUFFER_GENERIC.html">Chef::ReservedNames::Win32::API::File::REPARSE_DATA_BUFFER_GENERIC</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/REPARSE_DATA_BUFFER_MOUNT_POINT.html">Chef::ReservedNames::Win32::API::File::REPARSE_DATA_BUFFER_MOUNT_POINT</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/REPARSE_DATA_BUFFER_SYMBOLIC_LINK.html">Chef::ReservedNames::Win32::API::File::REPARSE_DATA_BUFFER_SYMBOLIC_LINK</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/REPARSE_DATA_BUFFER_UNION.html">Chef::ReservedNames::Win32::API::File::REPARSE_DATA_BUFFER_UNION</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/SECURITY_ATTRIBUTES.html">Chef::ReservedNames::Win32::API::File::SECURITY_ATTRIBUTES</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/File/WIN32_FIND_DATA.html">Chef::ReservedNames::Win32::API::File::WIN32_FIND_DATA</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Macros.html">Chef::ReservedNames::Win32::API::Macros</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Memory.html">Chef::ReservedNames::Win32::API::Memory</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/PSAPI.html">Chef::ReservedNames::Win32::API::PSAPI</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/PSAPI/PROCESS_MEMORY_COUNTERS.html">Chef::ReservedNames::Win32::API::PSAPI::PROCESS_MEMORY_COUNTERS</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Process.html">Chef::ReservedNames::Win32::API::Process</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security.html">Chef::ReservedNames::Win32::API::Security</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/ACE_HEADER.html">Chef::ReservedNames::Win32::API::Security::ACE_HEADER</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/ACE_WITH_MASK_AND_SID.html">Chef::ReservedNames::Win32::API::Security::ACE_WITH_MASK_AND_SID</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/ACLStruct.html">Chef::ReservedNames::Win32::API::Security::ACLStruct</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/LUID.html">Chef::ReservedNames::Win32::API::Security::LUID</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/LUID_AND_ATTRIBUTES.html">Chef::ReservedNames::Win32::API::Security::LUID_AND_ATTRIBUTES</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Security/TOKEN_PRIVILEGES.html">Chef::ReservedNames::Win32::API::Security::TOKEN_PRIVILEGES</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/System.html">Chef::ReservedNames::Win32::API::System</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/System/OSVERSIONINFOEX.html">Chef::ReservedNames::Win32::API::System::OSVERSIONINFOEX</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/API/Unicode.html">Chef::ReservedNames::Win32::API::Unicode</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Error.html">Chef::ReservedNames::Win32::Error</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/File.html">Chef::ReservedNames::Win32::File</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/File/Info.html">Chef::ReservedNames::Win32::File::Info</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Handle.html">Chef::ReservedNames::Win32::Handle</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Memory.html">Chef::ReservedNames::Win32::Memory</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Process.html">Chef::ReservedNames::Win32::Process</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security.html">Chef::ReservedNames::Win32::Security</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/ACE.html">Chef::ReservedNames::Win32::Security::ACE</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/ACL.html">Chef::ReservedNames::Win32::Security::ACL</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/SID.html">Chef::ReservedNames::Win32::Security::SID</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/SecurableObject.html">Chef::ReservedNames::Win32::Security::SecurableObject</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/SecurityDescriptor.html">Chef::ReservedNames::Win32::Security::SecurityDescriptor</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Security/Token.html">Chef::ReservedNames::Win32::Security::Token</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Unicode.html">Chef::ReservedNames::Win32::Unicode</a></li>
+        
+          <li><a href="../../../Chef/ReservedNames/Win32/Version.html">Chef::ReservedNames::Win32::Version</a></li>
+        
+          <li><a href="../../../Chef/Resource.html">Chef::Resource</a></li>
+        
+          <li><a href="../../../Chef/Resource/AptPackage.html">Chef::Resource::AptPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Bash.html">Chef::Resource::Bash</a></li>
+        
+          <li><a href="../../../Chef/Resource/Breakpoint.html">Chef::Resource::Breakpoint</a></li>
+        
+          <li><a href="../../../Chef/Resource/ChefGem.html">Chef::Resource::ChefGem</a></li>
+        
+          <li><a href="../../../Chef/Resource/Conditional.html">Chef::Resource::Conditional</a></li>
+        
+          <li><a href="../../../Chef/Resource/CookbookFile.html">Chef::Resource::CookbookFile</a></li>
+        
+          <li><a href="../../../Chef/Resource/Cron.html">Chef::Resource::Cron</a></li>
+        
+          <li><a href="../../../Chef/Resource/Csh.html">Chef::Resource::Csh</a></li>
+        
+          <li><a href="../../../Chef/Resource/Deploy.html">Chef::Resource::Deploy</a></li>
+        
+          <li><a href="../../../Chef/Resource/DeployBranch.html">Chef::Resource::DeployBranch</a></li>
+        
+          <li><a href="../../../Chef/Resource/DeployRevision.html">Chef::Resource::DeployRevision</a></li>
+        
+          <li><a href="../../../Chef/Resource/Directory.html">Chef::Resource::Directory</a></li>
+        
+          <li><a href="../../../Chef/Resource/DpkgPackage.html">Chef::Resource::DpkgPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/EasyInstallPackage.html">Chef::Resource::EasyInstallPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Env.html">Chef::Resource::Env</a></li>
+        
+          <li><a href="../../../Chef/Resource/ErlCall.html">Chef::Resource::ErlCall</a></li>
+        
+          <li><a href="../../../Chef/Resource/Execute.html">Chef::Resource::Execute</a></li>
+        
+          <li><a href="../../../Chef/Resource/File.html">Chef::Resource::File</a></li>
+        
+          <li><a href="../../../Chef/Resource/FreebsdPackage.html">Chef::Resource::FreebsdPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/GemPackage.html">Chef::Resource::GemPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Git.html">Chef::Resource::Git</a></li>
+        
+          <li><a href="../../../Chef/Resource/Group.html">Chef::Resource::Group</a></li>
+        
+          <li><a href="../../../Chef/Resource/HttpRequest.html">Chef::Resource::HttpRequest</a></li>
+        
+          <li><a href="../../../Chef/Resource/Ifconfig.html">Chef::Resource::Ifconfig</a></li>
+        
+          <li><a href="../../../Chef/Resource/IpsPackage.html">Chef::Resource::IpsPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/LWRPBase.html">Chef::Resource::LWRPBase</a></li>
+        
+          <li><a href="../../../Chef/Resource/Link.html">Chef::Resource::Link</a></li>
+        
+          <li><a href="../../../Chef/Resource/Log.html">Chef::Resource::Log</a></li>
+        
+          <li><a href="../../../Chef/Resource/MacportsPackage.html">Chef::Resource::MacportsPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Mdadm.html">Chef::Resource::Mdadm</a></li>
+        
+          <li><a href="../../../Chef/Resource/Mount.html">Chef::Resource::Mount</a></li>
+        
+          <li><a href="../../../Chef/Resource/Notification.html">Chef::Resource::Notification</a></li>
+        
+          <li><a href="../../../Chef/Resource/Ohai.html">Chef::Resource::Ohai</a></li>
+        
+          <li><a href="../../../Chef/Resource/Package.html">Chef::Resource::Package</a></li>
+        
+          <li><a href="../../../Chef/Resource/PacmanPackage.html">Chef::Resource::PacmanPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Perl.html">Chef::Resource::Perl</a></li>
+        
+          <li><a href="../../../Chef/Resource/PlatformMap.html">Chef::Resource::PlatformMap</a></li>
+        
+          <li><a href="../../../Chef/Resource/PortagePackage.html">Chef::Resource::PortagePackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Python.html">Chef::Resource::Python</a></li>
+        
+          <li><a href="../../../Chef/Resource/RegistryKey.html">Chef::Resource::RegistryKey</a></li>
+        
+          <li><a href="../../../Chef/Resource/RemoteDirectory.html">Chef::Resource::RemoteDirectory</a></li>
+        
+          <li><a href="../../../Chef/Resource/RemoteFile.html">Chef::Resource::RemoteFile</a></li>
+        
+          <li><a href="../../../Chef/Resource/Route.html">Chef::Resource::Route</a></li>
+        
+          <li><a href="../../../Chef/Resource/RpmPackage.html">Chef::Resource::RpmPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Ruby.html">Chef::Resource::Ruby</a></li>
+        
+          <li><a href="../../../Chef/Resource/RubyBlock.html">Chef::Resource::RubyBlock</a></li>
+        
+          <li><a href="../../../Chef/Resource/Scm.html">Chef::Resource::Scm</a></li>
+        
+          <li><a href="../../../Chef/Resource/Script.html">Chef::Resource::Script</a></li>
+        
+          <li><a href="../../../Chef/Resource/Service.html">Chef::Resource::Service</a></li>
+        
+          <li><a href="../../../Chef/Resource/SmartOSPackage.html">Chef::Resource::SmartOSPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/SolarisPackage.html">Chef::Resource::SolarisPackage</a></li>
+        
+          <li><a href="../../../Chef/Resource/Subversion.html">Chef::Resource::Subversion</a></li>
+        
+          <li><a href="../../../Chef/Resource/Template.html">Chef::Resource::Template</a></li>
+        
+          <li><a href="../../../Chef/Resource/TimestampedDeploy.html">Chef::Resource::TimestampedDeploy</a></li>
+        
+          <li><a href="../../../Chef/Resource/User.html">Chef::Resource::User</a></li>
+        
+          <li><a href="../../../Chef/Resource/YumPackage.html">Chef::Resource::YumPackage</a></li>
+        
+          <li><a href="../../../Chef/ResourceCollection.html">Chef::ResourceCollection</a></li>
+        
+          <li><a href="../../../Chef/ResourceCollection/StepableIterator.html">Chef::ResourceCollection::StepableIterator</a></li>
+        
+          <li><a href="../../../Chef/ResourceDefinition.html">Chef::ResourceDefinition</a></li>
+        
+          <li><a href="../../../Chef/ResourceDefinitionList.html">Chef::ResourceDefinitionList</a></li>
+        
+          <li><a href="../../../Chef/ResourceReporter.html">Chef::ResourceReporter</a></li>
+        
+          <li><a href="../../../Chef/ResourceReporter/ResourceReport.html">Chef::ResourceReporter::ResourceReport</a></li>
+        
+          <li><a href="../../../Chef/Role.html">Chef::Role</a></li>
+        
+          <li><a href="../../../Chef/RunContext.html">Chef::RunContext</a></li>
+        
+          <li><a href="../../../Chef/RunContext/CookbookCompiler.html">Chef::RunContext::CookbookCompiler</a></li>
+        
+          <li><a href="../../../Chef/RunList.html">Chef::RunList</a></li>
+        
+          <li><a href="../../../Chef/RunList/RunListExpansion.html">Chef::RunList::RunListExpansion</a></li>
+        
+          <li><a href="../../../Chef/RunList/RunListExpansionFromAPI.html">Chef::RunList::RunListExpansionFromAPI</a></li>
+        
+          <li><a href="../../../Chef/RunList/RunListExpansionFromDisk.html">Chef::RunList::RunListExpansionFromDisk</a></li>
+        
+          <li><a href="../../../Chef/RunList/RunListItem.html">Chef::RunList::RunListItem</a></li>
+        
+          <li><a href="../../../Chef/RunList/VersionedRecipeList.html">Chef::RunList::VersionedRecipeList</a></li>
+        
+          <li><a href="../../../Chef/RunLock.html">Chef::RunLock</a></li>
+        
+          <li><a href="../../../Chef/RunStatus.html">Chef::RunStatus</a></li>
+        
+          <li><a href="../../../Chef/Runner.html">Chef::Runner</a></li>
+        
+          <li><a href="../../../Chef/Sandbox.html">Chef::Sandbox</a></li>
+        
+          <li><a href="../../../Chef/ScanAccessControl.html">Chef::ScanAccessControl</a></li>
+        
+          <li><a href="../../../Chef/Search.html">Chef::Search</a></li>
+        
+          <li><a href="../../../Chef/Search/Query.html">Chef::Search::Query</a></li>
+        
+          <li><a href="../../../Chef/ShellOut.html">Chef::ShellOut</a></li>
+        
+          <li><a href="../../../Chef/StreamingCookbookUploader.html">Chef::StreamingCookbookUploader</a></li>
+        
+          <li><a href="../../../Chef/StreamingCookbookUploader/MultipartStream.html">Chef::StreamingCookbookUploader::MultipartStream</a></li>
+        
+          <li><a href="../../../Chef/StreamingCookbookUploader/StreamPart.html">Chef::StreamingCookbookUploader::StreamPart</a></li>
+        
+          <li><a href="../../../Chef/StreamingCookbookUploader/StringPart.html">Chef::StreamingCookbookUploader::StringPart</a></li>
+        
+          <li><a href="../../../Chef/User.html">Chef::User</a></li>
+        
+          <li><a href="../../../Chef/Util.html">Chef::Util</a></li>
+        
+          <li><a href="../../../Chef/Util/FileEdit.html">Chef::Util::FileEdit</a></li>
+        
+          <li><a href="../../../Chef/Util/Windows.html">Chef::Util::Windows</a></li>
+        
+          <li><a href="../../../Chef/Util/Windows/NetGroup.html">Chef::Util::Windows::NetGroup</a></li>
+        
+          <li><a href="../../../Chef/Util/Windows/NetUse.html">Chef::Util::Windows::NetUse</a></li>
+        
+          <li><a href="../../../Chef/Util/Windows/NetUser.html">Chef::Util::Windows::NetUser</a></li>
+        
+          <li><a href="../../../Chef/Util/Windows/Volume.html">Chef::Util::Windows::Volume</a></li>
+        
+          <li><a href="../../../Chef/Version.html">Chef::Version</a></li>
+        
+          <li><a href="../../../Chef/VersionConstraint.html">Chef::VersionConstraint</a></li>
+        
+          <li><a href="../../../Chef/Win32.html">Chef::Win32</a></li>
+        
+          <li><a href="../../../Chef/Win32/Registry.html">Chef::Win32::Registry</a></li>
+        
+          <li><a href="../../../Shell.html">Shell</a></li>
+        
+          <li><a href="../../../Shell/ClientSession.html">Shell::ClientSession</a></li>
+        
+          <li><a href="../../../Shell/DoppelGangerClient.html">Shell::DoppelGangerClient</a></li>
+        
+          <li><a href="../../../Shell/DoppelGangerSession.html">Shell::DoppelGangerSession</a></li>
+        
+          <li><a href="../../../Shell/Extensions.html">Shell::Extensions</a></li>
+        
+          <li><a href="../../../Shell/Extensions/FalseClass.html">Shell::Extensions::FalseClass</a></li>
+        
+          <li><a href="../../../Shell/Extensions/ObjectCoreExtensions.html">Shell::Extensions::ObjectCoreExtensions</a></li>
+        
+          <li><a href="../../../Shell/Extensions/String.html">Shell::Extensions::String</a></li>
+        
+          <li><a href="../../../Shell/Extensions/Symbol.html">Shell::Extensions::Symbol</a></li>
+        
+          <li><a href="../../../Shell/Extensions/TrueClass.html">Shell::Extensions::TrueClass</a></li>
+        
+          <li><a href="../../../Shell/ModelWrapper.html">Shell::ModelWrapper</a></li>
+        
+          <li><a href="../../../Shell/NamedDataBagWrapper.html">Shell::NamedDataBagWrapper</a></li>
+        
+          <li><a href="../../../Shell/Options.html">Shell::Options</a></li>
+        
+          <li><a href="../../../Shell/ShellREST.html">Shell::ShellREST</a></li>
+        
+          <li><a href="../../../Shell/ShellSession.html">Shell::ShellSession</a></li>
+        
+          <li><a href="../../../Shell/SoloSession.html">Shell::SoloSession</a></li>
+        
+          <li><a href="../../../Shell/StandAloneSession.html">Shell::StandAloneSession</a></li>
+        
+          <li><a href="../../../Net.html">Net</a></li>
+        
+          <li><a href="../../../Net/HTTPError.html">Net::HTTPError</a></li>
+        
+          <li><a href="../../../Net/HTTPFatalError.html">Net::HTTPFatalError</a></li>
+        
+          <li><a href="../../../Net/HTTPRetriableError.html">Net::HTTPRetriableError</a></li>
+        
+          <li><a href="../../../Net/HTTPServerException.html">Net::HTTPServerException</a></li>
+        
+          <li><a href="../../../FFI.html">FFI</a></li>
+        
+          <li><a href="../../../FFI/Pointer.html">FFI::Pointer</a></li>
+        
+          <li><a href="../../../FileUtils.html">FileUtils</a></li>
+        
+          <li><a href="../../../FileUtils/Entry_.html">FileUtils::Entry_</a></li>
+        
+          <li><a href="../../../ChefNetHTTPExceptionExtensions.html">ChefNetHTTPExceptionExtensions</a></li>
+        
+          <li><a href="../../../Dir.html">Dir</a></li>
+        
+          <li><a href="../../../FalseClass.html">FalseClass</a></li>
+        
+          <li><a href="../../../Mash.html">Mash</a></li>
+        
+          <li><a href="../../../Numeric.html">Numeric</a></li>
+        
+          <li><a href="../../../Object.html">Object</a></li>
+        
+          <li><a href="../../../Regexp.html">Regexp</a></li>
+        
+          <li><a href="../../../String.html">String</a></li>
+        
+          <li><a href="../../../Symbol.html">Symbol</a></li>
+        
+          <li><a href="../../../TrueClass.html">TrueClass</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Chef::Provider::Package::Ips</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="virtual-attribute-method" class="method-detail">
+          <a name="virtual"></a>
+          
+          <a name="virtual="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">virtual</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="check_package_state-method" class="method-detail ">
+          <a name="method-i-check_package_state"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_package_state</span><span
+              class="method-args">(package)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_package_state-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_package_state</span>(<span class="ruby-identifier">package</span>)
+  <span class="ruby-constant">Chef</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Checking package status for #{package}&quot;</span>)
+  <span class="ruby-identifier">installed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">depends</span> = <span class="ruby-keyword">false</span>
+  
+  <span class="ruby-identifier">shell_out!</span>(<span class="ruby-node">&quot;pkg info -r #{package}&quot;</span>).<span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^\s+State: Installed/</span>
+      <span class="ruby-identifier">installed</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^\s+Version: (.*)/</span>
+      <span class="ruby-ivar">@candidate_version</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">installed</span>
+        <span class="ruby-ivar">@current_resource</span>.<span class="ruby-identifier">version</span>(<span class="ruby-node">$1</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@current_resource</span>.<span class="ruby-identifier">version</span>(<span class="ruby-keyword">nil</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">installed</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_package_state-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_package_state-method -->
+
+      
+        <div id="define_resource_requirements-method" class="method-detail ">
+          <a name="method-i-define_resource_requirements"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">define_resource_requirements</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="define_resource_requirements-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">define_resource_requirements</span>
+  <span class="ruby-keyword">super</span>
+
+  <span class="ruby-identifier">requirements</span>.<span class="ruby-identifier">assert</span>(<span class="ruby-value">:all_actions</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">assertion</span> { <span class="ruby-operator">!</span> <span class="ruby-ivar">@candidate_version</span>.<span class="ruby-identifier">nil?</span> }
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">failure_message</span> <span class="ruby-constant">Chef</span><span class="ruby-operator">::</span><span class="ruby-constant">Exceptions</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span>, <span class="ruby-node">&quot;Package #{@new_resource.package_name} not found&quot;</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">whyrun</span> <span class="ruby-node">&quot;Assuming package #{@new_resource.package_name} would have been made available.&quot;</span>
+  <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- define_resource_requirements-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- define_resource_requirements-method -->
+
+      
+        <div id="install_package-method" class="method-detail ">
+          <a name="method-i-install_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">install_package</span><span
+              class="method-args">(name, version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="install_package-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">install_package</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">package_name</span> = <span class="ruby-node">&quot;#{name}@#{version}&quot;</span>
+  <span class="ruby-identifier">normal_command</span> = <span class="ruby-node">&quot;pkg#{expand_options(@new_resource.options)} install -q #{package_name}&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@new_resource</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:accept_license</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@new_resource</span>.<span class="ruby-identifier">accept_license</span>
+    <span class="ruby-identifier">command</span> = <span class="ruby-identifier">normal_command</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">'-q'</span>, <span class="ruby-string">'-q --accept'</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">command</span> = <span class="ruby-identifier">normal_command</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">run_command_with_systems_locale</span>(<span class="ruby-value">:command</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">command</span>)
+  <span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- install_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- install_package-method -->
+
+      
+        <div id="load_current_resource-method" class="method-detail ">
+          <a name="method-i-load_current_resource"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_current_resource</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="load_current_resource-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_current_resource</span>
+  <span class="ruby-ivar">@current_resource</span> = <span class="ruby-constant">Chef</span><span class="ruby-operator">::</span><span class="ruby-constant">Resource</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@new_resource</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@current_resource</span>.<span class="ruby-identifier">package_name</span>(<span class="ruby-ivar">@new_resource</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">check_package_state</span>(<span class="ruby-ivar">@new_resource</span>.<span class="ruby-identifier">package_name</span>)
+  <span class="ruby-ivar">@current_resource</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_current_resource-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_current_resource-method -->
+
+      
+        <div id="remove_package-method" class="method-detail ">
+          <a name="method-i-remove_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">remove_package</span><span
+              class="method-args">(name, version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="remove_package-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_package</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">package_name</span> = <span class="ruby-node">&quot;#{name}@#{version}&quot;</span>
+  <span class="ruby-identifier">run_command_with_systems_locale</span>(
+    <span class="ruby-value">:command</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;pkg#{expand_options(@new_resource.options)} uninstall -q #{package_name}&quot;</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- remove_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- remove_package-method -->
+
+      
+        <div id="upgrade_package-method" class="method-detail ">
+          <a name="method-i-upgrade_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">upgrade_package</span><span
+              class="method-args">(name, version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="upgrade_package-source">
+<pre>
+<span class="ruby-comment"># File lib/chef/provider/package/ips.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">upgrade_package</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">install_package</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- upgrade_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- upgrade_package-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

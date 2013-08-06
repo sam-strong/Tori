@@ -1,0 +1,5 @@
+U:RDoc::Attr[iI"run_list_trace:EFI"3Chef::RunList::RunListExpansion#run_list_trace;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NReturns a Hash of the form "including_role" => "included_role_or_recipe".;TI"DThis can be used to show the expanded run list (ordered) graph.;TS:RDoc::Markup::Heading:
+leveli	:	textI"Caveats;To:RDoc::Markup::List:
+@type:BULLET:@items[o:RDoc::Markup::ListItem:@label0;	[o;
+;	[I"#Duplicate roles are not shown.;T:
+@file0FI",lib/chef/run_list/run_list_expansion.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"master:EFI"#Net::SSH::Multi::Server#master;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MThe Net::SSH::Multi::Session instance that manages this server instance.;T:
+@file0FI" lib/net/ssh/multi/server.rb;T

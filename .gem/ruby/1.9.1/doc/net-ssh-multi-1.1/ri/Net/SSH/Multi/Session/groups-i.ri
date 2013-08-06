@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"groups:EFI"$Net::SSH::Multi::Session#groups;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe hash of group definitions, mapping each group name to a corresponding;TI"!Net::SSH::Multi::ServerList.;T:
+@file0FI"!lib/net/ssh/multi/session.rb;T

@@ -1,0 +1,9 @@
+Wed, 19 Jun 2013 10:08:01 +0000
+lib/mixlib/authentication.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/authentication/http_authentication_request.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/authentication/signedheaderauth.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/authentication/digester.rb	Wed, 19 Jun 2013 10:06:22 +0000
+lib/mixlib/authentication/signatureverification.rb	Wed, 19 Jun 2013 10:06:22 +0000
+README.rdoc	Wed, 19 Jun 2013 10:06:22 +0000
+LICENSE	Wed, 19 Jun 2013 10:06:22 +0000
+NOTICE	Wed, 19 Jun 2013 10:06:22 +0000

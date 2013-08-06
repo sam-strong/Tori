@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: IPAddress::Prefix32</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ipaddress/prefix_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress/prefix.rb">lib/ipaddress/prefix.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Prefix.html">IPAddress::Prefix</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-parse_netmask">::parse_netmask</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-bits">#bits</a></li>
+          
+          <li><a href="#method-i-host_prefix">#host_prefix</a></li>
+          
+          <li><a href="#method-i-hostmask">#hostmask</a></li>
+          
+          <li><a href="#method-i-octets">#octets</a></li>
+          
+          <li><a href="#method-i-to_ip">#to_ip</a></li>
+          
+          <li><a href="#method-i-to_u32">#to_u32</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../IPAddress.html">IPAddress</a></li>
+        
+          <li><a href="../IPAddress/IPAddress.html">IPAddress::IPAddress</a></li>
+        
+          <li><a href="../IPAddress/IPAddress/IPAddress.html">IPAddress::IPAddress::IPAddress</a></li>
+        
+          <li><a href="../IPAddress/IPAddress/IPAddress/IPv6.html">IPAddress::IPAddress::IPAddress::IPv6</a></li>
+        
+          <li><a href="../IPAddress/IPAddress/IPAddress/IPv6/Loopback.html">IPAddress::IPAddress::IPAddress::IPv6::Loopback</a></li>
+        
+          <li><a href="../IPAddress/IPAddress/IPAddress/IPv6/Mapped.html">IPAddress::IPAddress::IPAddress::IPv6::Mapped</a></li>
+        
+          <li><a href="../IPAddress/IPAddress/IPAddress/IPv6/Unspecified.html">IPAddress::IPAddress::IPAddress::IPv6::Unspecified</a></li>
+        
+          <li><a href="../IPAddress/IPv4.html">IPAddress::IPv4</a></li>
+        
+          <li><a href="../IPAddress/IPv6.html">IPAddress::IPv6</a></li>
+        
+          <li><a href="../IPAddress/Prefix.html">IPAddress::Prefix</a></li>
+        
+          <li><a href="../IPAddress/Prefix128.html">IPAddress::Prefix128</a></li>
+        
+          <li><a href="../IPAddress/Prefix32.html">IPAddress::Prefix32</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">IPAddress::Prefix32</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="IN4MASK">IN4MASK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(num)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new prefix object for 32 bits <a href="IPv4.html">IPv4</a>
+addresses</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+  #=&gt; 24</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-keyword">unless</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">32</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">num</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Prefix must be in range 0..32, got: #{num}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">num</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="parse_netmask-method" class="method-detail ">
+          <a name="method-c-parse_netmask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_netmask</span><span
+              class="method-args">(netmask)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new prefix by parsing a netmask in  dotted decimal form</p>
+
+<pre>prefix = IPAddress::Prefix32::parse_netmask &quot;255.255.255.0&quot;
+  #=&gt; 24</pre>
+            
+
+            
+            <div class="method-source-code" id="parse_netmask-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_netmask</span>(<span class="ruby-identifier">netmask</span>)
+  <span class="ruby-identifier">octets</span> = <span class="ruby-identifier">netmask</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span>}
+  <span class="ruby-identifier">num</span> = <span class="ruby-identifier">octets</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;C&quot;</span>*<span class="ruby-identifier">octets</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;B*&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">count</span> <span class="ruby-string">&quot;1&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">num</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_netmask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_netmask-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Shortcut for the octecs in the dotted decimal  representation</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix[2]
+  #=&gt; 255</pre>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">octets</span>[<span class="ruby-identifier">index</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="bits-method" class="method-detail ">
+          <a name="method-i-bits"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bits</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Transforms the prefix into a string of bits representing the netmask</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix.bits 
+  #=&gt; &quot;11111111111111111111111100000000&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="bits-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bits</span>
+  <span class="ruby-string">&quot;%.32b&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">to_u32</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bits-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bits-method -->
+
+      
+        <div id="host_prefix-method" class="method-detail ">
+          <a name="method-i-host_prefix"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host_prefix</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the length of the host portion of a netmask.</p>
+
+<pre>prefix = Prefix32.new 24
+
+prefix.host_prefix
+  #=&gt; 8</pre>
+            
+
+            
+            <div class="method-source-code" id="host_prefix-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host_prefix</span>
+  <span class="ruby-value">32</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@prefix</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host_prefix-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host_prefix-method -->
+
+      
+        <div id="hostmask-method" class="method-detail ">
+          <a name="method-i-hostmask"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hostmask</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The hostmask is the contrary of the subnet mask, as it shows the bits that
+can change within the hosts</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix.hostmask
+  #=&gt; &quot;0.0.0.255&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="hostmask-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hostmask</span>
+  [<span class="ruby-operator">~</span><span class="ruby-identifier">to_u32</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;N&quot;</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;CCCC&quot;</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;.&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hostmask-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hostmask-method -->
+
+      
+        <div id="octets-method" class="method-detail ">
+          <a name="method-i-octets"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">octets</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>An array of octets of the <a href="IPv4.html">IPv4</a> dotted decimal 
+format</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix.octets
+  #=&gt; [255, 255, 255, 0]</pre>
+            
+
+            
+            <div class="method-source-code" id="octets-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">octets</span>
+  <span class="ruby-identifier">to_ip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- octets-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- octets-method -->
+
+      
+        <div id="to_ip-method" class="method-detail ">
+          <a name="method-i-to_ip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_ip</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Gives the prefix in <a href="IPv4.html">IPv4</a> dotted decimal format, 
+i.e. the canonical netmask we’re all used to</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix.to_ip
+  #=&gt; &quot;255.255.255.0&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="to_ip-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_ip</span>
+  [<span class="ruby-identifier">bits</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;B*&quot;</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;CCCC&quot;</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;.&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_ip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_ip-method -->
+
+      
+        <div id="to_u32-method" class="method-detail ">
+          <a name="method-i-to_u32"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_u32</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Unsigned 32 bits decimal number representing the prefix</p>
+
+<pre>prefix = IPAddress::Prefix32.new 24
+
+prefix.to_u32
+  #=&gt; 4294967040</pre>
+            
+
+            
+            <div class="method-source-code" id="to_u32-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/prefix.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_u32</span>
+  (<span class="ruby-constant">IN4MASK</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">host_prefix</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">host_prefix</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_u32-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_u32-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

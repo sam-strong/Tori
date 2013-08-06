@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Net::SSH::Gateway</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/net/ssh/gateway_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/net/ssh/gateway.rb">lib/net/ssh/gateway.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Gateway/Version.html">Net::SSH::Gateway::Version</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-active-3F">#active?</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-open">#open</a></li>
+          
+          <li><a href="#method-i-shutdown-21">#shutdown!</a></li>
+          
+          <li><a href="#method-i-ssh">#ssh</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../LICENSE_txt.html">LICENSE.txt</a></li>
+        
+          <li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Net.html">Net</a></li>
+        
+          <li><a href="../../Net/SSH.html">Net::SSH</a></li>
+        
+          <li><a href="../../Net/SSH/Gateway.html">Net::SSH::Gateway</a></li>
+        
+          <li><a href="../../Net/SSH/Gateway/Version.html">Net::SSH::Gateway::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Net::SSH::Gateway</h1>
+
+    <div id="description" class="description">
+      
+<p>A <a href="Gateway.html">Gateway</a> is an object that allows you to tunnel
+network connections through a publicly visible host to a host hidden behind
+it. This is particularly useful when dealing with hosts behind a firewall.
+One host will generally be visible (and accessible) outside the firewall,
+while the others will all be behind the firewall, and the only way to
+access those restricted hosts is by first logging into the publicly visible
+host, and from thence logging into the restricted ones.</p>
+
+<p>This class makes it easy to programmatically connect to these restricted
+hosts via <a href="../SSH.html">SSH</a>. You can either simply forward a
+port from the local host to the remote host, or you can open a new <a
+href="../SSH.html">Net::SSH</a> connection to the remote host via a
+forwarded port.</p>
+
+<pre>require 'net/ssh/gateway'
+
+gateway = Net::SSH::Gateway.new('host.name', 'user')
+
+gateway.open('hidden.host', 80) do |port|
+  Net::HTTP.get_print '127.0.0.1', '/path', port
+end
+
+gateway.ssh('hidden.host', 'user') do |ssh|
+  puts ssh.exec!(&quot;hostname&quot;)
+end
+
+gateway.shutdown!</pre>
+
+<p>Port numbers are allocated automatically, beginning at <a
+href="Gateway.html#MAX_PORT">MAX_PORT</a> and decrementing on each request
+for a new port until <a href="Gateway.html#MIN_PORT">MIN_PORT</a> is
+reached. If a port is already in use, this is detected and a different port
+will be assigned.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="MAX_PORT">MAX_PORT</a></dt>
+          
+          <dd class="description"><p>The maximum port number that the gateway will attempt to use to forward
+connections from.</p></dd>
+          
+        
+          <dt><a name="MIN_PORT">MIN_PORT</a></dt>
+          
+          <dd class="description"><p>The minimum port number that the gateway will attempt to use to forward
+connections from.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(host, user, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Instantiate a new <a href="Gateway.html">Gateway</a> object, using the
+given remote host as the tunnel. The arguments here are identical to those
+for Net::SSH.start, and are passed as given to that method to start up the
+gateway connection.</p>
+
+<pre>gateway = Net::SSH::Gateway.new('host', 'user', :password =&gt; &quot;password&quot;)</pre>
+
+<p>As of 1.1 there is an additional option to specify the wait time for the
+gateway thread. The default is 0.001 seconds and can be changed with the
+:loop_wait option.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-ivar">@session</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SSH</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-ivar">@session_mutex</span> = <span class="ruby-constant">Mutex</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@port_mutex</span> = <span class="ruby-constant">Mutex</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@next_port</span> = <span class="ruby-constant">MAX_PORT</span>
+  <span class="ruby-ivar">@loop_wait</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:loop_wait</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0.001</span>
+  <span class="ruby-identifier">initiate_event_loop!</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="active-3F-method" class="method-detail ">
+          <a name="method-i-active-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">active?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns <tt>true</tt> if the gateway is currently open and accepting
+connections. This will be the case unless <a
+href="Gateway.html#method-i-shutdown-21">shutdown!</a> has been invoked.</p>
+            
+
+            
+            <div class="method-source-code" id="active-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">active?</span>
+  <span class="ruby-ivar">@active</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- active-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- active-3F-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">(port)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Cancels port-forwarding over an open port that was previously opened via <a
+href="Gateway.html#method-i-open">open</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>(<span class="ruby-identifier">port</span>)
+  <span class="ruby-identifier">ensure_open!</span>
+
+  <span class="ruby-ivar">@session_mutex</span>.<span class="ruby-identifier">synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">forward</span>.<span class="ruby-identifier">cancel_local</span>(<span class="ruby-identifier">port</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-i-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(host, port, local_port=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Opens a new port on the local host and forwards it to the given host/port
+via the gateway host. If a block is given, the newly allocated port number
+will be yielded to the block, and the port automatically closed (see <a
+href="Gateway.html#method-i-close">close</a>) when the block finishes.
+Otherwise, the port number will be returned, and the caller is responsible
+for closing the port (<a href="Gateway.html#method-i-close">close</a>).</p>
+
+<pre>gateway.open('host', 80) do |port|
+  # ...
+end
+
+port = gateway.open('host', 80)
+# ...
+gateway.close(port)</pre>
+
+<p>If <tt>local_port</tt> is not specified, the next available port will be
+used.</p>
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">port</span>, <span class="ruby-identifier">local_port</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">ensure_open!</span>
+
+  <span class="ruby-identifier">actual_local_port</span> = <span class="ruby-identifier">local_port</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">next_port</span>
+
+  <span class="ruby-ivar">@session_mutex</span>.<span class="ruby-identifier">synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">forward</span>.<span class="ruby-identifier">local</span>(<span class="ruby-identifier">actual_local_port</span>, <span class="ruby-identifier">host</span>, <span class="ruby-identifier">port</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">actual_local_port</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">close</span>(<span class="ruby-identifier">actual_local_port</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">actual_local_port</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EADDRINUSE</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_port</span> <span class="ruby-comment"># if a local port was explicitly requested, bubble the error up</span>
+  <span class="ruby-keyword">retry</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+        <div id="shutdown-21-method" class="method-detail ">
+          <a name="method-i-shutdown-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">shutdown!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Shuts down the gateway by closing all forwarded ports and then closing the
+gateway’s <a href="../SSH.html">SSH</a> session.</p>
+            
+
+            
+            <div class="method-source-code" id="shutdown-21-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">shutdown!</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">active?</span>
+
+  <span class="ruby-ivar">@session_mutex</span>.<span class="ruby-identifier">synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># cancel all active forward channels</span>
+    <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">forward</span>.<span class="ruby-identifier">active_locals</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lport</span>, <span class="ruby-identifier">host</span>, <span class="ruby-identifier">port</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">forward</span>.<span class="ruby-identifier">cancel_local</span>(<span class="ruby-identifier">lport</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@active</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-ivar">@thread</span>.<span class="ruby-identifier">join</span>
+  <span class="ruby-ivar">@session</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- shutdown-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- shutdown-21-method -->
+
+      
+        <div id="ssh-method" class="method-detail ">
+          <a name="method-i-ssh"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ssh</span><span
+              class="method-args">(host, user, options={}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Forwards a new connection to the given <tt>host</tt> and opens a new <a
+href="../SSH.html">Net::SSH</a> connection to that host over the forwarded
+port. If a block is given, the new <a href="../SSH.html">SSH</a> connection
+will be yielded to the block, and autoclosed when the block terminates. The
+forwarded port will be autoclosed as well. If no block was given, the new
+<a href="../SSH.html">SSH</a> connection will be returned, and it is up to
+the caller to terminate both the connection and the forwarded port when
+done.</p>
+
+<pre>gateway.ssh('host', 'user') do |ssh|
+  # ...
+end
+
+ssh = gateway.ssh('host', 'user')
+# ...
+ssh.close
+gateway.close(ssh.transport.port)</pre>
+            
+
+            
+            <div class="method-source-code" id="ssh-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/gateway.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ssh</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>={}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">local_port</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>] <span class="ruby-operator">||</span> <span class="ruby-value">22</span>)
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SSH</span>.<span class="ruby-identifier">start</span>(<span class="ruby-string">&quot;127.0.0.1&quot;</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:port</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">local_port</span>), &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-identifier">close</span>(<span class="ruby-identifier">local_port</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">$!</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ssh-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ssh-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Net::SSH::Multi::Session</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/net/ssh/multi/session_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/net/ssh/multi/session.rb">lib/net/ssh/multi/session.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-group">#group</a></li>
+          
+          <li><a href="#method-i-loop">#loop</a></li>
+          
+          <li><a href="#method-i-loop_forever">#loop_forever</a></li>
+          
+          <li><a href="#method-i-on">#on</a></li>
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+          <li><a href="#method-i-servers">#servers</a></li>
+          
+          <li><a href="#method-i-servers_for">#servers_for</a></li>
+          
+          <li><a href="#method-i-use">#use</a></li>
+          
+          <li><a href="#method-i-via">#via</a></li>
+          
+          <li><a href="#method-i-with">#with</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="SessionActions.html">Net::SSH::Multi::SessionActions</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="../../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Net.html">Net</a></li>
+        
+          <li><a href="../../../Net/SSH.html">Net::SSH</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi.html">Net::SSH::Multi</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Channel.html">Net::SSH::Multi::Channel</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ChannelProxy.html">Net::SSH::Multi::ChannelProxy</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/DynamicServer.html">Net::SSH::Multi::DynamicServer</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/PendingConnection.html">Net::SSH::Multi::PendingConnection</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Server.html">Net::SSH::Multi::Server</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ServerList.html">Net::SSH::Multi::ServerList</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Session.html">Net::SSH::Multi::Session</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/SessionActions.html">Net::SSH::Multi::SessionActions</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Subsession.html">Net::SSH::Multi::Subsession</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Version.html">Net::SSH::Multi::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Net::SSH::Multi::Session</h1>
+
+    <div id="description" class="description">
+      
+<p>Represents a collection of connections to various servers. It provides an
+interface for organizing the connections (<a
+href="Session.html#method-i-group">group</a>), as well as a way to scope
+commands to a subset of all connections (<a
+href="Session.html#method-i-with">with</a>). You can also provide a default
+gateway connection that servers should use when connecting (<a
+href="Session.html#method-i-via">via</a>). It exposes an interface similar
+to Net::SSH::Connection::Session for opening <a
+href="../../SSH.html">SSH</a> channels and executing commands, allowing for
+these operations to be done in parallel across multiple connections.</p>
+
+<pre>Net::SSH::Multi.start do |session|
+  # access servers via a gateway
+  session.via 'gateway', 'gateway-user'
+
+  # define the servers we want to use
+  session.use 'user1@host1'
+  session.use 'user2@host2'
+
+  # define servers in groups for more granular access
+  session.group :app do
+    session.use 'user@app1'
+    session.use 'user@app2'
+  end
+
+  # execute commands on all servers
+  session.exec &quot;uptime&quot;
+
+  # execute commands on a subset of servers
+  session.with(:app).exec &quot;hostname&quot;
+
+  # run the aggregated event loop
+  session.loop
+end</pre>
+
+<p>Note that connections are established lazily, as soon as they are needed.
+You can force the connections to be opened immediately, though, using the
+<a href="SessionActions.html#method-i-connect-21">connect!</a> method.</p>
+
+<h2>Concurrent Connection Limiting</h2>
+
+<p>Sometimes you may be dealing with a large number of servers, and if you try
+to have connections open to all of them simultaneously you’ll run into open
+file handle limitations and such. If this happens to you, you can set the
+<a
+href="Session.html#attribute-i-concurrent_connections">concurrent_connections</a>
+property of the session. <a href="../Multi.html">Net::SSH::Multi</a> will
+then ensure that no more than this number of connections are ever open
+simultaneously.</p>
+
+<pre>Net::SSH::Multi.start(:concurrent_connections =&gt; 5) do |session|
+  # ...
+end</pre>
+
+<p>Opening channels and executing commands will still work exactly as before,
+but <a href="../Multi.html">Net::SSH::Multi</a> will transparently close
+finished connections and open pending ones.</p>
+
+<h2>Controlling Connection Errors</h2>
+
+<p>By default, <a href="../Multi.html">Net::SSH::Multi</a> will raise an
+exception if a connection error occurs when connecting to a server. This
+will typically bubble up and abort the entire connection process.
+Sometimes, however, you might wish to ignore connection errors, for
+instance when starting a daemon on a large number of boxes and you know
+that some of the boxes are going to be unavailable.</p>
+
+<p>To do this, simply set the <a
+href="Session.html#attribute-i-on_error">on_error</a> property of the
+session to :ignore (or to :warn, if you want a warning message when a
+connection attempt fails):</p>
+
+<pre>Net::SSH::Multi.start(:on_error =&gt; :ignore) do |session|
+  # ...
+end</pre>
+
+<p>The default is :fail, which causes the exception to bubble up.
+Additionally, you can specify a Proc object as the value for <a
+href="Session.html#attribute-i-on_error">on_error</a>, which will be
+invoked with the server in question if the connection attempt fails. You
+can force the connection attempt to retry by throwing the :go symbol, with
+:retry as the payload, or force the exception to be reraised by throwing
+:go with :raise as the payload:</p>
+
+<pre>handler = Proc.new do |server|
+  server[:connection_attempts] ||= 0
+  if server[:connection_attempts] &lt; 3
+    server[:connection_attempts] += 1
+    throw :go, :retry
+  else
+    throw :go, :raise
+  end
+end
+
+Net::SSH::Multi.start(:on_error =&gt; handler) do |session|
+  # ...
+end</pre>
+
+<p>Any other thrown value (or no thrown value at all) will result in the
+failure being ignored.</p>
+
+<h2>Lazily Evaluated <a href="Server.html">Server</a> Definitions</h2>
+
+<p>Sometimes you might be dealing with an environment where you don’t know the
+names or addresses of the servers until runtime. You can certainly
+dynamically build server names and pass them to <a
+href="Session.html#method-i-use">use</a>, but if the operation to determine
+the server names is expensive, you might want to defer it until the server
+is actually needed (especially if the logic of your program is such that
+you might not even need to connect to that server every time the program
+runs).</p>
+
+<p>You can do this by passing a block to <a
+href="Session.html#method-i-use">use</a>:</p>
+
+<pre>session.use do |opt|
+  lookup_ip_address_of_remote_host
+end</pre>
+
+<p>See <a href="Session.html#method-i-use">use</a> for more information about
+this usage.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="concurrent_connections-attribute-method" class="method-detail">
+          <a name="concurrent_connections"></a>
+          
+          <a name="concurrent_connections="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">concurrent_connections</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The number of allowed concurrent connections. No more than this number of
+sessions will be open at any given time.</p>
+          
+          </div>
+        </div>
+        
+        <div id="default_gateway-attribute-method" class="method-detail">
+          <a name="default_gateway"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">default_gateway</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The default Net::SSH::Gateway instance to use to connect to the servers. If
+<tt>nil</tt>, no default gateway will be used.</p>
+          
+          </div>
+        </div>
+        
+        <div id="default_user-attribute-method" class="method-detail">
+          <a name="default_user"></a>
+          
+          <a name="default_user="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">default_user</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The default user name to use when connecting to a server. If a user name is
+not given for a particular server, this value will be used. It defaults to
+<a href="http://'USER'">ENV</a> || <a href="http://'USERNAME'">ENV</a>, or
+“unknown” if neither of those are set.</p>
+          
+          </div>
+        </div>
+        
+        <div id="groups-attribute-method" class="method-detail">
+          <a name="groups"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">groups</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The hash of group definitions, mapping each group name to a corresponding
+<a href="ServerList.html">Net::SSH::Multi::ServerList</a>.</p>
+          
+          </div>
+        </div>
+        
+        <div id="on_error-attribute-method" class="method-detail">
+          <a name="on_error"></a>
+          
+          <a name="on_error="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">on_error</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>How connection errors should be handled. This defaults to :fail, but may be
+set to :ignore if connection errors should be ignored, or :warn if
+connection errors should cause a warning.</p>
+          
+          </div>
+        </div>
+        
+        <div id="server_list-attribute-method" class="method-detail">
+          <a name="server_list"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">server_list</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The <a href="ServerList.html">Net::SSH::Multi::ServerList</a> managed by
+this session.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new <a href="Session.html">Net::SSH::Multi::Session</a> instance.
+Initially, it contains no server definitions, no group definitions, and no
+default gateway.</p>
+
+<p>You can set the <a
+href="Session.html#attribute-i-concurrent_connections">concurrent_connections</a>
+property in the options. Setting it to <tt>nil</tt> (the default) will
+cause <a href="../Multi.html">Net::SSH::Multi</a> to ignore any concurrent
+connection limit and allow all defined sessions to be open simultaneously.
+Setting it to an integer will cause <a
+href="../Multi.html">Net::SSH::Multi</a> to allow no more than that number
+of concurrently open sessions, opening subsequent sessions only when other
+sessions finish and close.</p>
+
+<pre>Net::SSH::Multi.start(:concurrent_connections =&gt; 10) do |session|
+  session.use ...
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-ivar">@server_list</span> = <span class="ruby-constant">ServerList</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@groups</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>,<span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">ServerList</span>.<span class="ruby-identifier">new</span> }
+  <span class="ruby-ivar">@gateway</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@open_groups</span> = []
+  <span class="ruby-ivar">@connect_threads</span> = []
+  <span class="ruby-ivar">@on_error</span> = <span class="ruby-value">:fail</span>
+  <span class="ruby-ivar">@default_user</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'USER'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'USERNAME'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;unknown&quot;</span>
+
+  <span class="ruby-ivar">@open_connections</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@pending_sessions</span> = []
+  <span class="ruby-ivar">@session_mutex</span> = <span class="ruby-constant">Mutex</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">opt</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{opt}=&quot;</span>, <span class="ruby-identifier">value</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Closes the multi-session by shutting down all open server sessions, and the
+default gateway (if one was specified using <a
+href="Session.html#method-i-via">via</a>). Note that other gateway
+connections (e.g., those passed to <a
+href="Session.html#method-i-use">use</a> directly) will <em>not</em> be
+closed by this method, and must be managed externally.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">close_channels</span> }
+  <span class="ruby-identifier">loop</span>(<span class="ruby-value">0</span>) { <span class="ruby-identifier">busy?</span>(<span class="ruby-keyword">true</span>) }
+  <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">close</span> }
+  <span class="ruby-identifier">default_gateway</span>.<span class="ruby-identifier">shutdown!</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">default_gateway</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="group-method" class="method-detail ">
+          <a name="method-i-group"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">group</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>At its simplest, this associates a named group with a server definition. It
+can be used in either of two ways:</p>
+
+<p>First, you can use it to associate a group (or array of groups) with a
+server definition (or array of server definitions). The server definitions
+must already exist in the <a
+href="Session.html#attribute-i-server_list">server_list</a> array
+(typically by calling <a href="Session.html#method-i-use">use</a>):</p>
+
+<pre>server1 = session.use('host1', 'user1')
+server2 = session.use('host2', 'user2')
+session.group :app =&gt; server1, :web =&gt; server2
+session.group :staging =&gt; [server1, server2]
+session.group %w(xen linux) =&gt; server2
+session.group %w(rackspace backup) =&gt; [server1, server2]</pre>
+
+<p>Secondly, instead of a mapping of groups to servers, you can just provide a
+list of group names, and then a block. Inside the block, any calls to <a
+href="Session.html#method-i-use">use</a> will automatically associate the
+new server definition with those groups. You can nest <a
+href="Session.html#method-i-group">group</a> calls, too, which will
+aggregate the group definitions.</p>
+
+<pre>session.group :rackspace, :backup do
+  session.use 'host1', 'user1'
+  session.group :xen do
+    session.use 'host2', 'user2'
+  end
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="group-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">group</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">mapping</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mapping</span>.<span class="ruby-identifier">any?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;must provide group mapping OR block, not both&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">saved_groups</span> = <span class="ruby-identifier">open_groups</span>.<span class="ruby-identifier">dup</span>
+      <span class="ruby-identifier">open_groups</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_sym</span> }).<span class="ruby-identifier">uniq!</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">open_groups</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">saved_groups</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">mapping</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+      (<span class="ruby-identifier">open_groups</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Array</span>(<span class="ruby-identifier">key</span>)).<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">grp</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">groups</span>[<span class="ruby-identifier">grp</span>.<span class="ruby-identifier">to_sym</span>].<span class="ruby-identifier">concat</span>(<span class="ruby-constant">Array</span>(<span class="ruby-identifier">value</span>))
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- group-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- group-method -->
+
+      
+        <div id="loop-method" class="method-detail ">
+          <a name="method-i-loop"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">loop</span><span
+              class="method-args">(wait=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Run the aggregated event loop for all open server sessions, until the given
+block returns <tt>false</tt>. If no block is given, the loop will run for
+as long as <a href="SessionActions.html#method-i-busy-3F">busy?</a> returns
+<tt>true</tt> (in other words, for as long as there are any (non-invisible)
+channels open).</p>
+            
+
+            
+            <div class="method-source-code" id="loop-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">loop</span>(<span class="ruby-identifier">wait</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">running</span> = <span class="ruby-identifier">block</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">busy?</span> }
+  <span class="ruby-identifier">loop_forever</span> { <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">wait</span>, &amp;<span class="ruby-identifier">running</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- loop-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Session.html#method-i-loop_forever">loop_forever</a>
+          </div>
+          
+
+          
+        </div><!-- loop-method -->
+
+      
+        <div id="loop_forever-method" class="method-detail method-alias">
+          <a name="method-i-loop_forever"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">loop_forever</span><span
+              class="method-args">(wait=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Session.html#method-i-loop">loop</a>
+          </div>
+          
+        </div><!-- loop_forever-method -->
+
+      
+        <div id="on-method" class="method-detail ">
+          <a name="method-i-on"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">on</span><span
+              class="method-args">(*servers)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Works as <a href="Session.html#method-i-with">with</a>, but for specific
+servers rather than groups. It will return a new subsession (<a
+href="Subsession.html">Net::SSH::Multi::Subsession</a>) consisting of the
+given servers. (Note that it requires that the servers in question have
+been created via calls to <a href="Session.html#method-i-use">use</a> on
+this session object, or things will not work quite right.) If a block is
+given, the new subsession will also be yielded to the block.</p>
+
+<pre>srv1 = session.use('host1', 'user')
+srv2 = session.use('host2', 'user')
+# ...
+session.on(srv1, srv2).exec('hostname')</pre>
+            
+
+            
+            <div class="method-source-code" id="on-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 392</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">on</span>(*<span class="ruby-identifier">servers</span>)
+  <span class="ruby-identifier">subsession</span> = <span class="ruby-constant">Subsession</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">servers</span>)
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">subsession</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">subsession</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- on-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- on-method -->
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(wait=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Run a single iteration of the aggregated event loop for all open server
+sessions. The <tt>wait</tt> parameter indicates how long to wait for an
+event to appear on any of the different sessions; <tt>nil</tt> (the
+default) means “wait forever”. If the block is given, then it will be used
+to determine whether <a href="Session.html#method-i-process">process</a>
+returns <tt>true</tt> (the block did not return <tt>false</tt>), or
+<tt>false</tt> (the block returned <tt>false</tt>).</p>
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 426</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">wait</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">realize_pending_connections!</span>
+  <span class="ruby-identifier">wait</span> = <span class="ruby-ivar">@connect_threads</span>.<span class="ruby-identifier">any?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">wait</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">preprocess</span>(&amp;<span class="ruby-identifier">block</span>)
+
+  <span class="ruby-identifier">readers</span> = <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">readers</span> }.<span class="ruby-identifier">flatten</span>
+  <span class="ruby-identifier">writers</span> = <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">writers</span> }.<span class="ruby-identifier">flatten</span>
+
+  <span class="ruby-identifier">readers</span>, <span class="ruby-identifier">writers</span>, = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">select</span>(<span class="ruby-identifier">readers</span>, <span class="ruby-identifier">writers</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">wait</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">readers</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">postprocess</span>(<span class="ruby-identifier">readers</span>, <span class="ruby-identifier">writers</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+        <div id="servers-method" class="method-detail ">
+          <a name="method-i-servers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">servers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Essentially an alias for <a
+href="Session.html#method-i-servers_for">servers_for</a> without any
+arguments. This is used primarily to satistfy the expectations of the <a
+href="SessionActions.html">Net::SSH::Multi::SessionActions</a> module.</p>
+            
+
+            
+            <div class="method-source-code" id="servers-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 293</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">servers</span>
+  <span class="ruby-identifier">servers_for</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- servers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- servers-method -->
+
+      
+        <div id="servers_for-method" class="method-detail ">
+          <a name="method-i-servers_for"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">servers_for</span><span
+              class="method-args">(*criteria)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the set of servers that match the given criteria. It can be used in
+any (or all) of three ways.</p>
+
+<p>First, you can omit any arguments. In this case, the full list of servers
+will be returned.</p>
+
+<pre>all = session.servers_for</pre>
+
+<p>Second, you can simply specify a list of group names. All servers in all
+named groups will be returned. If a server belongs to multiple matching
+groups, then it will appear only once in the list (the resulting list will
+contain only unique servers).</p>
+
+<pre>servers = session.servers_for(:app, :db)</pre>
+
+<p>Last, you can specify a hash with group names as keys, and property
+constraints as the values. These property constraints are either “only”
+constraints (which restrict the set of servers to “only” those that match
+the given properties) or “except” constraints (which restrict the set of
+servers to those whose properties do <em>not</em> match). Properties are
+described when the server is defined (via the :properties key):</p>
+
+<pre>session.group :db do
+  session.use 'dbmain', 'user', :properties =&gt; { :primary =&gt; true }
+  session.use 'dbslave', 'user2'
+  session.use 'dbslve2', 'user2'
+end
+
+# return ONLY on the servers in the :db group which have the :primary
+# property set to true.
+primary = session.servers_for(:db =&gt; { :only =&gt; { :primary =&gt; true } })</pre>
+
+<p>You can, naturally, combine these methods:</p>
+
+<pre># all servers in :app and :web, and all servers in :db with the
+# :primary property set to true
+servers = session.servers_for(:app, :web, :db =&gt; { :only =&gt; { :primary =&gt; true } })</pre>
+            
+
+            
+            <div class="method-source-code" id="servers_for-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">servers_for</span>(*<span class="ruby-identifier">criteria</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">criteria</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">flatten</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># normalize the criteria list, so that every entry is a key to a</span>
+    <span class="ruby-comment"># criteria hash (possibly empty).</span>
+    <span class="ruby-identifier">criteria</span> = <span class="ruby-identifier">criteria</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>, <span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">entry</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">entry</span>)
+      <span class="ruby-keyword">else</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">entry</span> =<span class="ruby-operator">&gt;</span> {})
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">list</span> = <span class="ruby-identifier">criteria</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aggregator</span>, (<span class="ruby-identifier">group</span>, <span class="ruby-identifier">properties</span>)<span class="ruby-operator">|</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;the value for any group must be a Hash, but got a #{properties.class} for #{group.inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">properties</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">bad_keys</span> = <span class="ruby-identifier">properties</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">-</span> [<span class="ruby-value">:only</span>, <span class="ruby-value">:except</span>]
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unknown constraint(s) #{bad_keys.inspect} for #{group.inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">bad_keys</span>.<span class="ruby-identifier">empty?</span>
+
+      <span class="ruby-identifier">servers</span> = <span class="ruby-identifier">groups</span>[<span class="ruby-identifier">group</span>].<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span>
+        (<span class="ruby-identifier">properties</span>[<span class="ruby-value">:only</span>] <span class="ruby-operator">||</span> {}).<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">prop</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">server</span>[<span class="ruby-identifier">prop</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span> } <span class="ruby-operator">&amp;&amp;</span>
+        <span class="ruby-operator">!</span>(<span class="ruby-identifier">properties</span>[<span class="ruby-value">:except</span>] <span class="ruby-operator">||</span> {}).<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">prop</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">server</span>[<span class="ruby-identifier">prop</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span> }
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">aggregator</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">servers</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">list</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- servers_for-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- servers_for-method -->
+
+      
+        <div id="use-method" class="method-detail ">
+          <a name="method-i-use"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use</span><span
+              class="method-args">(*hosts, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Defines a new server definition, to be managed by this session. The server
+is at the given <tt>host</tt>, and will be connected to as the given
+<tt>user</tt>. The other options are passed as-is to the <a
+href="../../SSH.html">Net::SSH</a> session constructor.</p>
+
+<p>If a default gateway has been specified previously (with <a
+href="Session.html#method-i-via">via</a>) it will be passed to the new
+server definition. You can override this by passing a different
+Net::SSH::Gateway instance (or <tt>nil</tt>) with the :via key in the
+<tt>options</tt>.</p>
+
+<pre>session.use 'host'
+session.use 'user@host2', :via =&gt; nil
+session.use 'host3', :user =&gt; &quot;user3&quot;, :via =&gt; Net::SSH::Gateway.new('gateway.host', 'user')</pre>
+
+<p>If only a single host is given, the new server instance is returned. You
+can give multiple hosts at a time, though, in which case an array of server
+instances will be returned.</p>
+
+<pre>server1, server2 = session.use &quot;host1&quot;, &quot;host2&quot;</pre>
+
+<p>If given a block, this will save the block as a <a
+href="DynamicServer.html">Net::SSH::Multi::DynamicServer</a> definition, to
+be evaluated lazily the first time the server is needed. The block will
+recive any options hash given to <a
+href="Session.html#method-i-use">use</a>, and should return <tt>nil</tt>
+(if no servers are to be added), a String or an array of Strings (to be
+interpreted as a connection specification), or a <a
+href="Server.html">Server</a> or an array of Servers.</p>
+            
+
+            
+            <div class="method-source-code" id="use-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">use</span>(*<span class="ruby-identifier">hosts</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">options</span> = <span class="ruby-identifier">hosts</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">hosts</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+  <span class="ruby-identifier">options</span> = { <span class="ruby-value">:via</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">default_gateway</span> }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>)
+
+  <span class="ruby-identifier">results</span> = <span class="ruby-identifier">hosts</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">host</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">add</span>(<span class="ruby-constant">Server</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">host</span>, <span class="ruby-identifier">options</span>))
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">server_list</span>.<span class="ruby-identifier">add</span>(<span class="ruby-constant">DynamicServer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">block</span>))
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">group</span> [] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">results</span>
+  <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">results</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use-method -->
+
+      
+        <div id="via-method" class="method-detail ">
+          <a name="method-i-via"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">via</span><span
+              class="method-args">(host, user, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets up a default gateway to use when establishing connections to servers.
+Note that any servers defined prior to this invocation will not use the
+default gateway; it only affects servers defined subsequently.</p>
+
+<pre>session.via 'gateway.host', 'user'</pre>
+
+<p>You may override the default gateway on a per-server basis by passing the
+:via key to the <a href="Session.html#method-i-use">use</a> method; see <a
+href="Session.html#method-i-use">use</a> for details.</p>
+            
+
+            
+            <div class="method-source-code" id="via-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">via</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-ivar">@default_gateway</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SSH</span><span class="ruby-operator">::</span><span class="ruby-constant">Gateway</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- via-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- via-method -->
+
+      
+        <div id="with-method" class="method-detail ">
+          <a name="method-i-with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">with</span><span
+              class="method-args">(*groups)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a new <a href="Subsession.html">Net::SSH::Multi::Subsession</a>
+instance consisting of the servers that meet the given criteria. If a block
+is given, the subsession will be yielded to it. See <a
+href="Session.html#method-i-servers_for">servers_for</a> for a discussion
+of how these criteria are interpreted.</p>
+
+<pre>session.with(:app).exec('hostname')
+
+session.with(:app, :db =&gt; { :primary =&gt; true }) do |s|
+  s.exec 'date'
+  s.exec 'uptime'
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="with-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/session.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">with</span>(*<span class="ruby-identifier">groups</span>)
+  <span class="ruby-identifier">subsession</span> = <span class="ruby-constant">Subsession</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">servers_for</span>(*<span class="ruby-identifier">groups</span>))
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">subsession</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">subsession</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- with-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"host_key:EFI"-Net::SSH::Transport::Algorithms#host_key;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=The type of host key that will be used for this session.;T:
+@file0FI"(lib/net/ssh/transport/algorithms.rb;T

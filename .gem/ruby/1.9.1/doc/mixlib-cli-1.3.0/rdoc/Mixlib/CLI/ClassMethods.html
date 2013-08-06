@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mixlib::CLI::ClassMethods</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/mixlib/cli_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/cli.rb">lib/mixlib/cli.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-banner">#banner</a></li>
+          
+          <li><a href="#method-i-option">#option</a></li>
+          
+          <li><a href="#method-i-options">#options</a></li>
+          
+          <li><a href="#method-i-options-3D">#options=</a></li>
+          
+          <li><a href="#method-i-use_separate_default_options">#use_separate_default_options</a></li>
+          
+          <li><a href="#method-i-use_separate_defaults-3F">#use_separate_defaults?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="../../Mixlib/CLI.html">Mixlib::CLI</a></li>
+        
+          <li><a href="../../Mixlib/CLI/ClassMethods.html">Mixlib::CLI::ClassMethods</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mixlib::CLI::ClassMethods</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="banner-method" class="method-detail ">
+          <a name="method-i-banner"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">banner</span><span
+              class="method-args">(bstring=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Change the banner.  Defaults to:</p>
+
+<pre>Usage: #{0} (options)</pre>
+
+<h3>Parameters</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>bstring&lt;String&gt;</p></td>
+<td>
+<p>The string to set the banner to</p>
+</td></tr></table>
+
+<h3>Returns</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>@banner&lt;String&gt;</p></td>
+<td>
+<p>The current banner</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="banner-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">banner</span>(<span class="ruby-identifier">bstring</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bstring</span>
+    <span class="ruby-ivar">@banner</span> = <span class="ruby-identifier">bstring</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@banner</span> <span class="ruby-operator">||=</span> <span class="ruby-node">&quot;Usage: #{$0} (options)&quot;</span>
+    <span class="ruby-ivar">@banner</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- banner-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- banner-method -->
+
+      
+        <div id="option-method" class="method-detail ">
+          <a name="method-i-option"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">option</span><span
+              class="method-args">(name, args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add a command line option.</p>
+
+<h3>Parameters</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>name&lt;Symbol&gt;</p></td>
+<td>
+<p>The name of the option to add</p>
+</td></tr><tr><td class="rdoc-term"><p>args&lt;Hash&gt;</p></td>
+<td>
+<p>A hash of arguments for the option, specifying how it should be parsed.</p>
+</td></tr></table>
+
+<h3>Returns</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>true</p></td>
+<td>
+<p>Always returns true.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="option-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">option</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> {}
+  <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Option name must be a symbol&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>)
+  <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">args</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- option-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- option-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-i-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the hash of current options.</p>
+
+<h3>Returns</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>@options&lt;Hash&gt;</p></td>
+<td>
+<p>The current options hash.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> {}
+  <span class="ruby-ivar">@options</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="options-3D-method" class="method-detail ">
+          <a name="method-i-options-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the current options hash</p>
+
+<h3>Parameters</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>val&lt;Hash&gt;</p></td>
+<td>
+<p>The hash to set the options to</p>
+</td></tr></table>
+
+<h3>Returns</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>@options&lt;Hash&gt;</p></td>
+<td>
+<p>The current options hash.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="options-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options=</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Options must recieve a hash&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-3D-method -->
+
+      
+        <div id="use_separate_default_options-method" class="method-detail ">
+          <a name="method-i-use_separate_default_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_separate_default_options</span><span
+              class="method-args">(true_or_false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>When this setting is set to <tt>true</tt>, default values supplied to the
+mixlib-cli DSL will be stored in a separate Hash</p>
+            
+
+            
+            <div class="method-source-code" id="use_separate_default_options-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">use_separate_default_options</span>(<span class="ruby-identifier">true_or_false</span>)
+  <span class="ruby-ivar">@separate_default_options</span> = <span class="ruby-identifier">true_or_false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_separate_default_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_separate_default_options-method -->
+
+      
+        <div id="use_separate_defaults-3F-method" class="method-detail ">
+          <a name="method-i-use_separate_defaults-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_separate_defaults?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="use_separate_defaults-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/cli.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">use_separate_defaults?</span>
+  <span class="ruby-ivar">@separate_default_options</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_separate_defaults-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_separate_defaults-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

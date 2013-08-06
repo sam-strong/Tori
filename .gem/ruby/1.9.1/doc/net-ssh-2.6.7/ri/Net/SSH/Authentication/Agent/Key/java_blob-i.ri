@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"java_blob:EFI"3Net::SSH::Authentication::Agent::Key#java_blob;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"0:blob is used by OpenSSL::PKey::RSA#to_blob;T:
+@file0FI"5lib/net/ssh/authentication/agent/java_pageant.rb;T

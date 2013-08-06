@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"default_user:EFI"*Net::SSH::Multi::Session#default_user;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"MThe default user name to use when connecting to a server. If a user name;TI"Ois not given for a particular server, this value will be used. It defaults;TI"Lto ENV['USER'] || ENV['USERNAME'], or "unknown" if neither of those are;TI"	set.;T:
+@file0FI"!lib/net/ssh/multi/session.rb;T

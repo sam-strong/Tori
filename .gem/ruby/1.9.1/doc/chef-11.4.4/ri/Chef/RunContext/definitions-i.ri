@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"definitions:EFI"!Chef::RunContext#definitions;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"CResource Definitions for this run. Populated when the files in;TI"?+definitions/+ are evaluated (this is triggered by #load).;T:
+@file0FI"lib/chef/run_context.rb;T

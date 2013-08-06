@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"source:EFI" Net::SSH::KnownHosts#source;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LThe host-key file name that this KnownHosts instance will use to search;TI"for keys.;T:
+@file0FI"lib/net/ssh/known_hosts.rb;T

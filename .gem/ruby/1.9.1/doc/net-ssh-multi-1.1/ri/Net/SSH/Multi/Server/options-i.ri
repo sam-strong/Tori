@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"options:EFI"$Net::SSH::Multi::Server#options;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GThe Hash of additional options to pass to Net::SSH when connecting;TI"5(including things like :password, and so forth).;T:
+@file0FI" lib/net/ssh/multi/server.rb;T

@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: README.rdoc [ipaddress-0.8.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./IPAddress.html">IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress.html">IPAddress::IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress.html">IPAddress::IPAddress::IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6.html">IPAddress::IPAddress::IPAddress::IPv6</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Loopback.html">IPAddress::IPAddress::IPAddress::IPv6::Loopback</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Mapped.html">IPAddress::IPAddress::IPAddress::IPv6::Mapped</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Unspecified.html">IPAddress::IPAddress::IPAddress::IPv6::Unspecified</a></li>
+        
+          <li><a href="./IPAddress/IPv4.html">IPAddress::IPv4</a></li>
+        
+          <li><a href="./IPAddress/IPv6.html">IPAddress::IPv6</a></li>
+        
+          <li><a href="./IPAddress/Prefix.html">IPAddress::Prefix</a></li>
+        
+          <li><a href="./IPAddress/Prefix128.html">IPAddress::Prefix128</a></li>
+        
+          <li><a href="./IPAddress/Prefix32.html">IPAddress::Prefix32</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<h1><a href="IPAddress.html">IPAddress</a></h1>
+
+<p><a href="IPAddress.html">IPAddress</a> is a Ruby library designed to make
+the use of IPv4 and IPv6 addresses simple, powerful and enjoyable. It
+provides a complete set of methods to handle IP addresses for any need,
+from simple scripting to full network design.</p>
+
+<p><a href="IPAddress.html">IPAddress</a> is written with a full OO interface,
+and its code is easy to read, maintain and extend. The documentation is
+full of examples, to let you start being productive immediately.</p>
+
+<p>This document provides a brief introduction to the library and examples of
+typical usage.</p>
+
+<h2>Requirements</h2>
+<ul><li>
+<p>Ruby &gt;= 1.8.7 (not tested with previous versions)</p>
+</li><li>
+<p>Ruby 1.9.2 or later is strongly recommended</p>
+</li></ul>
+
+<p><a href="IPAddress.html">IPAddress</a> 0.8.0 has been tested on:</p>
+<ul><li>
+<p>ruby-1.8.7-p334 [ i386 ]</p>
+</li><li>
+<p>ree-1.8.7-2011.03 [ i386 ]</p>
+</li><li>
+<p>rbx-head [ ]</p>
+</li><li>
+<p>jruby-1.6.1 [ linux-i386-java ]</p>
+</li><li>
+<p>ruby-1.9.1-p431 [ i386 ]</p>
+</li><li>
+<p>ruby-1.9.2-p180 [ i386 ]</p>
+</li></ul>
+
+<p>If you want to collaborate feel  free to send a small report to my email
+address, or  <a href="http://groups.google.com/group/ruby-ipaddress">join
+the discussion</a>.</p>
+
+<h2>Installation</h2>
+
+<p>Install the library using rubygems</p>
+
+<pre>$ gem install ipaddress</pre>
+
+<p>You can then use it in your programs:</p>
+
+<pre>require 'rubygems'  # optional
+require 'ipaddress'</pre>
+
+<p>Another way would be to clone the git repository</p>
+
+<pre>$ git clone git://github.com/bluemonk/ipaddress.git</pre>
+
+<p>And then install the library</p>
+
+<pre>$ cd ipaddress
+ipaddress$ rake install</pre>
+
+<h2>Documentation</h2>
+
+<p>The code is fully documented with RDoc. You can generate the documentation
+with Rake:</p>
+
+<pre>ipaddress$ rake rdoc</pre>
+
+<p>The latest documentation can be found online at  <a
+href="http://rubydoc.info/gems/ipaddress/0.8.0/frames">this address</a></p>
+
+<h2>IPv4</h2>
+
+<p>Class <a href="IPAddress/IPv4.html">IPAddress::IPv4</a> is used to handle
+IPv4 type addresses. <a href="IPAddress.html">IPAddress</a> is similar to
+other IP Addresses libraries, like Ruby’s own IPAddr. However it works
+slightly different, as we will see.</p>
+
+<h3>Create a new IPv4 address</h3>
+
+<p>The usual way to express an IP Address is using its dotted decimal form,
+such as 172.16.10.1, and a prefix, such as 24, separated by a slash.</p>
+
+<pre>172.16.10.1/24</pre>
+
+<p>To create a new IPv4 object, you can use IPv4 own class</p>
+
+<pre>ip = IPAddress::IPv4.new &quot;172.16.10.1/24&quot;</pre>
+
+<p>or, in a easier way, using the <a href="IPAddress.html">IPAddress</a> parse
+method</p>
+
+<pre>ip = IPAddress.parse &quot;172.16.10.1/24&quot;</pre>
+
+<p>which accepts and parses any kind of IP (IPv4, IPV6 and  IPv4 IPv6 Mapped
+addresses).</p>
+
+<p>If you like syntactic sugar, you can use the wrapper method IPAddress(),
+which is built around IPAddress::parse:</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;</pre>
+
+<p>You can specify an IPv4 address in any of two ways:</p>
+
+<pre>IPAddress &quot;172.16.10.1/24&quot;
+IPAddress &quot;172.16.10.1/255.255.255.0&quot;</pre>
+
+<p>In this example, prefix /24 and netmask 255.255.255.0 are the same and you
+have the flexibility to use either one of them.</p>
+
+<p>If you don’t explicitly specify the prefix (or the subnet mask),  <a
+href="IPAddress.html">IPAddress</a> thinks you’re dealing with host
+addresses and not with  networks. Therefore, the default prefix will be
+/32, or 255.255.255.255. For example:</p>
+
+<pre># let's declare an host address
+host = IPAddress::IPv4.new &quot;10.1.1.1&quot;
+
+puts host.to_string
+  #=&gt; &quot;10.1.1.1/32&quot;</pre>
+
+<p>The new created object has prefix /32, which is the same  as we created the
+following:</p>
+
+<pre>host = IPAddress::IPv4.new &quot;10.1.1.1/32&quot;</pre>
+
+<h3>Handling the IPv4 address</h3>
+
+<p>Once created, you can obtain the attributes for an IPv4 object:</p>
+
+<pre>ip = IPAddress(&quot;172.16.10.1/24&quot;)
+
+ip.address
+  #=&gt; &quot;172.16.10.1&quot;
+ip.prefix
+  #=&gt; 24</pre>
+
+<p>In case you need to retrieve the netmask in IPv4 format, you can use the
+IPv4#netmask method:</p>
+
+<pre>ip.netmask
+  #=&gt; &quot;255.255.255.0&quot;</pre>
+
+<p>A special attribute, IPv4#octets, is available to get the four  decimal
+octets from the IP address:</p>
+
+<pre>ip.octets
+  #=&gt; [172,16,10,1]</pre>
+
+<p>Shortcut method IPv4#[], provides access to a given octet whithin the
+range:</p>
+
+<pre>ip[1]
+  #=&gt; 16</pre>
+
+<p>If you need to print out the IPv4 address in a canonical form, you can use
+IPv4#to_string</p>
+
+<pre>ip.to_string
+  #=&gt; &quot;172.16.10.l/24&quot;</pre>
+
+<h3>Changing netmask</h3>
+
+<p>You can set a new prefix (netmask) after creating an IPv4  object. For
+example:</p>
+
+<pre>ip.prefix = 25
+
+ip.to_string
+  #=&gt; &quot;172.16.10.l/25&quot;</pre>
+
+<p>If you need to use a netmask in IPv4 format, you can achive so by using the
+IPv4#netmask= method</p>
+
+<pre>ip.netmask = &quot;255.255.255.252&quot;
+
+ip.to_string
+  #=&gt; &quot;172.16.10.1/30&quot;</pre>
+
+<h3>Working with networks, broadcasts and addresses</h3>
+
+<p>Some very important topics in dealing with IP addresses are the concepts of
+<tt>network</tt> and <tt>broadcast</tt>, as well as the addresses included
+in a range.</p>
+
+<p>When you specify an IPv4 address such as “172.16.10.1/24”, you are actually
+handling two different information:</p>
+<ul><li>
+<p>The IP address itself, “172.16.10.1”</p>
+</li><li>
+<p>The subnet mask which indicates the network</p>
+</li></ul>
+
+<p>The network number is the IP which has all zeroes in the host portion. In
+our example, because the prefix is 24, we identify our network number to
+have the last 8 (32-24) bits all zeroes.  Thus, IP address “172.16.10.1/24”
+belongs to network “172.16.10.0/24”.</p>
+
+<p>This is very important because, for instance, IP “172.16.10.1/16” is very
+different to the previous one, belonging to the very different network
+“172.16.0.0/16”.</p>
+
+<h4>Networks</h4>
+
+<p>With <a href="IPAddress.html">IPAddress</a> it’s very easy to calculate the
+network for an IP address:</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;
+
+net = ip.network
+  #=&gt; #&lt;IPAddress::IPv4:0xb7a5ab24 @octets=[172, 16, 10, 0], 
+                                   @prefix=24,
+                                   @address=&quot;172.16.10.0&quot;&gt;
+net.to_string
+  #=&gt; &quot;172.16.10.0/24&quot;</pre>
+
+<p>Method IPv4#network creates a new IPv4 object from the network number,
+calculated after the original object. We want to outline here that the
+network address is a perfect legitimate IPv4 address, which just happen to
+have all zeroes in the host portion.</p>
+
+<p>You can use method IPv4#network? to check whether an IP address is a
+network or not:</p>
+
+<pre>ip1 = IPAddress &quot;172.16.10.1/24&quot;
+ip2 = IPAddress &quot;172.16.10.4/30&quot;
+
+ip1.network?
+  #=&gt; false
+ip2.network?
+  #=&gt; true</pre>
+
+<h4>Broadcast</h4>
+
+<p>The broadcast address is the contrary than the network number: where the
+network number has all zeroes in the host portion, the broadcast address
+has all one’s. For example, ip “172.16.10.1/24” has broadcast
+“172.16.10.255/24”, where ip “172.16.10.1/16” has broadcast
+“172.16.255.255/16”.</p>
+
+<p>Method IPv4#broadcast has the same behavior as is network counterpart: it
+creates a new IPv4 object to handle the broadcast address:</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;
+
+bcast = ip.broadcast
+  #=&gt; #&lt;IPAddress::IPv4:0xb7a406fc @octets=[172, 16, 10, 255],
+                                   @prefix=24, 
+                                   @address=&quot;172.16.10.255&quot;&gt;
+bcast.to_string
+  #=&gt; &quot;172.16.10.255/24&quot;</pre>
+
+<h4>Addresses, ranges and iterators</h4>
+
+<p>So we see that the netmask essentially specifies a range for IP addresses
+that are included in a network: all the addresses between the network
+number and the broadcast. <a href="IPAddress.html">IPAddress</a> has many
+methods to iterate between those addresses. Let’s start with IPv4#each,
+which iterates over all addresses in a range</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;
+
+ip.each do |addr|
+  puts addr
+end</pre>
+
+<p>It is important to note that it doesn’t matter if the original IP is a host
+IP or a network number (or a broadcast address): the each method only
+considers the range that the original IP specifies.</p>
+
+<p>If you only want to iterate over hosts IP, use the IPv4#each_host method:</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;
+
+ip.each_host do |host|
+  puts host
+end</pre>
+
+<p>Methods IPv4#first and IPv4#last return a new object containing
+respectively the first and the last host address in the range</p>
+
+<pre>ip = IPAddress &quot;172.16.10.100/24&quot;
+
+ip.first.to_string
+  #=&gt; &quot;172.16.10.1/24&quot;
+
+ip.last.to_string
+  #=&gt; &quot;172.16.10.254/24&quot;</pre>
+
+<h3>IP special formats    </h3>
+
+<p>The <a href="IPAddress.html">IPAddress</a> library provides a complete set
+of methods to access an IPv4 address in special formats, such as binary, 32
+bits unsigned int, data and hexadecimal.</p>
+
+<p>Let’s take the following IPv4 as an example:</p>
+
+<pre>ip = IPAddress &quot;172.16.10.1/24&quot;
+
+ip.address
+  #=&gt; &quot;172.16.10.1&quot;</pre>
+
+<p>The first thing to highlight here is that all these conversion methods only
+take into consideration the address portion of an IPv4 object and not the
+prefix (netmask).</p>
+
+<p>So, to express the address in binary format, use the IPv4#bits method:</p>
+
+<pre>ip.bits
+  #=&gt; &quot;10101100000100000000101000000001&quot;</pre>
+
+<p>To calculate the 32 bits unsigned int format of the ip address, use the
+IPv4#to_u32 method</p>
+
+<pre>ip.to_u32
+  #=&gt; 2886732289</pre>
+
+<p>This method is the equivalent of the Unix call pton(), expressing an IP
+address in the so called +network byte order+ notation. However, if you
+want to transmit your IP over a network socket, you might need to transform
+it in data format using the IPv4#data method:</p>
+
+<pre>ip.data
+  #=&gt; &quot;\254\020\n\001&quot;</pre>
+
+<p>Finally, you can transform an IPv4 address into a format which is suitable
+to use in IPv4-IPv6 mapped addresses:</p>
+
+<pre>ip.to_ipv6
+  #=&gt; &quot;ac10:0a01&quot;</pre>
+
+<h3>Classful networks</h3>
+
+<p><a href="IPAddress.html">IPAddress</a> allows you to create and manipulate
+objects using the old  and deprecated (but apparently still popular)
+classful networks concept.</p>
+
+<p>Classful networks and addresses don’t have a prefix: their subnet mask is
+univocally identified by their address, and therefore diveded in classes.
+As per RFC 791, these classes are:</p>
+<ul><li>
+<p>Class A, from 0.0.0.0 to 127.255.255.255</p>
+</li><li>
+<p>Class B, from 128.0.0.0 to 191.255.255.255</p>
+</li><li>
+<p>Class C, from 192.0.0.0 to 255.255.255.255</p>
+</li></ul>
+
+<p>Since classful networks here are only considered to calculate the default
+prefix number, classes D and E are not considered.</p>
+
+<p>To create a classful IP and prefix from an IP address, use the 
+IPv4::parse_classful method:</p>
+
+<pre># classful ip 
+ip = IPAddress::IPv4::parse_classful &quot;10.1.1.1&quot;
+
+ip.prefix
+  #=&gt; 8</pre>
+
+<p>The method automatically created a new IPv4 object and assigned it the
+correct prefix.</p>
+
+<p>You can easily check which CLASSFUL network an IPv4 object belongs:</p>
+
+<pre>ip = IPAddress(&quot;10.0.0.1/24&quot;)
+ip.a?
+  #=&gt; true
+
+ip = IPAddress(&quot;172.16.10.1/24&quot;)
+ip.b?
+  #=&gt; true
+
+ip = IPAddress(&quot;192.168.1.1/30&quot;)
+ip.c?
+  #=&gt; true</pre>
+
+<p>Remember that these methods are only checking the address portion of an IP,
+and are independent from its prefix, as classful networks have no concept
+of prefix.</p>
+
+<p>For more information on CLASSFUL networks visit the  <a
+href="http://en.wikipedia.org/wiki/Classful_network">Wikipedia page</a></p>
+
+<h3>Network design with <a href="IPAddress.html">IPAddress</a></h3>
+
+<p><a href="IPAddress.html">IPAddress</a> includes a lot of useful methods to
+manipulate IPv4 and IPv6 networks and do some basic network design.</p>
+
+<h4>Subnetting</h4>
+
+<p>The process of subnetting is the division of a network into smaller (in
+terms of hosts capacity) networks, called subnets, so that they all share a
+common root, which is the starting network.</p>
+
+<p>For example, if you have network “172.16.10.0/24”, we can subnet it into 4
+smaller subnets. The new prefix will be /26, because 4 is 2^2 and therefore
+we add 2 bits to the network prefix (24+2=26).</p>
+
+<p>Subnetting is easy with <a href="IPAddress.html">IPAddress</a>. You
+actually have two options:</p>
+<ul><li>
+<p>IPv4#subnet: specify a new prefix</p>
+</li><li>
+<p>IPv4#split: tell <a href="IPAddress.html">IPAddress</a> how many subnets
+you want to create.</p>
+</li></ul>
+
+<p>Let’s examine IPv4#subnet first. Say you have network “172.16.10.0/24” and
+you want to subnet it into /26 networks. With <a
+href="IPAddress.html">IPAddress</a> it’s very  easy:</p>
+
+<pre>network = IPAddress &quot;172.16.10.0/24&quot;
+
+subnets = network.subnet(26)
+
+subnets.map{|i| i.to_string}
+  #=&gt; [&quot;172.16.10.0/26&quot;, 
+       &quot;172.16.10.64/26&quot;, 
+       &quot;172.16.10.128/26&quot;, 
+       &quot;172.16.10.192/26&quot;]</pre>
+
+<p>As you can see, an Array has been created, containing 4 new IPv4 objects
+representing the new subnets.</p>
+
+<p>Another way to create subnets is to tell <a
+href="IPAddress.html">IPAddress</a> how many subnets you’d  like to have,
+and letting the library calculate the new prefix for you.</p>
+
+<p>Let’s see how it works, using IPv4#split method. Say you want 4 new
+subnets:</p>
+
+<pre>network = IPAddress(&quot;172.16.10.0/24&quot;)
+
+subnets = network.split(4)
+
+subnets.map{|i| i.to_string}
+  #=&gt; [&quot;172.16.10.0/26&quot;, 
+       &quot;172.16.10.64/26&quot;, 
+       &quot;172.16.10.128/26&quot;, 
+       &quot;172.16.10.192/26&quot;]</pre>
+
+<p>Hey, that’s the same result as before! This actually makes sense, as the
+two operations are complementary. When you use IPv4#subnet with the new
+prefix, <a href="IPAddress.html">IPAddress</a> will always create a number
+of subnets that is a power  of two. This is equivalent to use IPv4#split
+with a power of 2.</p>
+
+<p>Where IPv4#split really shines is with the so called “uneven subnetting”.
+You are not limited to split a network into a power-of-two numbers of
+subnets: <a href="IPAddress.html">IPAddress</a> lets you create any number
+of subnets, and it will try to organize the new created network in the best
+possible way, making an efficent allocation of the space.</p>
+
+<p>An example here is worth a thousand words. Let’s use the same network as
+the previous examples:</p>
+
+<pre>network = IPAddress(&quot;172.16.10.0/24&quot;)</pre>
+
+<p>How do we split this network into 3 subnets? Very easy:</p>
+
+<pre>subnets = network.split(3)
+
+subnets.map{|i| i.to_string}
+  #=&gt; [&quot;172.16.10.0/26&quot;,
+       &quot;172.16.10.64/26&quot;,
+       &quot;172.16.10.128/25&quot;]</pre>
+
+<p>As you can see, <a href="IPAddress.html">IPAddress</a> tried to perform a
+good allocation by filling up all the address space from the original
+network. There is no point in splitting a network into 3 subnets like
+“172.16.10.0/26”, “172.16.10.64/26” and  “172.16.10.128/26”, as you would
+end up having “172.16.10.192/26” wasted (plus, I suppose I wouldn’t need a
+Ruby library to perform un-efficient IP  allocation, as I do that myself
+very well ;) ).</p>
+
+<p>We can go even further and split into 11 subnets:</p>
+
+<pre>network.split(11)
+  #=&gt; [&quot;172.16.10.0/28&quot;, &quot;172.16.10.16/28&quot;, &quot;172.16.10.32/28&quot;,
+       &quot;172.16.10.48/28&quot;, &quot;172.16.10.64/28&quot;, &quot;172.16.10.80/28&quot;,
+       &quot;172.16.10.96/28&quot;, &quot;172.16.10.112/28&quot;, &quot;172.16.10.128/27&quot;,
+       &quot;172.16.10.160/27&quot;, &quot;172.16.10.192/26&quot;]</pre>
+
+<p>As you can see, most of the networks are /28, with a few /27 and one /26 to
+fill up the remaining space.</p>
+
+<h4>Summarization</h4>
+
+<p>Summarization (or aggregation) is the process when two or more networks are
+taken together to check if a supernet, including all and only these
+networks, exists. If it exists then this supernet  is called the summarized
+(or aggregated) network. It is very important to understand that
+summarization can only occur if there are no holes in the aggregated
+network, or, in other words, if the given networks fill completely the
+address space of the supernet. So the two rules are:</p>
+
+<p>1) The aggregate network must contain <tt>all</tt> the IP addresses of the
+original networks;</p>
+
+<p>2) The aggregate network must contain <tt>only</tt> the IP addresses of the
+original networks;</p>
+
+<p>A few examples will help clarify the above. Let’s consider for instance the
+following two networks:</p>
+
+<pre>ip1 = IPAddress(&quot;172.16.10.0/24&quot;)
+ip2 = IPAddress(&quot;172.16.11.0/24&quot;)</pre>
+
+<p>These two networks can be expressed using only one IP address network if we
+change the prefix. Let Ruby do the work:</p>
+
+<pre>IPAddress::IPv4::summarize(ip1,ip2).to_string
+  #=&gt; &quot;172.16.10.0/23&quot;</pre>
+
+<p>We note how the network “172.16.10.0/23” includes all the addresses
+specified in the above networks, and (more important) includes ONLY those
+addresses.</p>
+
+<p>If we summarized <tt>ip1</tt> and <tt>ip2</tt> with the following network:</p>
+
+<pre>&quot;172.16.0.0/16&quot;</pre>
+
+<p>we would have satisfied rule #1 above, but not rule #2. So</p>
+
+<pre>&quot;172.16.0.0/16&quot;</pre>
+
+<p>is not an aggregate network for <tt>ip1</tt> and <tt>ip2</tt>.</p>
+
+<p>If it’s not possible to compute a single aggregated network for all the
+original networks, the method returns an array with all the aggregate
+networks found. For example, the following four networks can be aggregated
+in a single /22:</p>
+
+<pre>ip1 = IPAddress(&quot;10.0.0.1/24&quot;)
+ip2 = IPAddress(&quot;10.0.1.1/24&quot;)
+ip3 = IPAddress(&quot;10.0.2.1/24&quot;)
+ip4 = IPAddress(&quot;10.0.3.1/24&quot;)
+
+IPAddress::IPv4::summarize(ip1,ip2,ip3,ip4).map{|i| i.to_string}
+  #=&gt; [&quot;10.0.0.0/22&quot;]</pre>
+
+<p>But the following networks can’t be summarized in a single network:</p>
+
+<pre>ip1 = IPAddress(&quot;10.0.1.1/24&quot;)
+ip2 = IPAddress(&quot;10.0.2.1/24&quot;)
+ip3 = IPAddress(&quot;10.0.3.1/24&quot;)
+ip4 = IPAddress(&quot;10.0.4.1/24&quot;)
+
+IPAddress::IPv4::summarize(ip1,ip2,ip3,ip4).map{|i| i.to_string}
+  #=&gt; [&quot;10.0.1.0/24&quot;,&quot;10.0.2.0/23&quot;,&quot;10.0.4.0/24&quot;]</pre>
+
+<p>In this case, the two summarizables networks have been aggregated into a
+single /23, while the other two networks have been left untouched.</p>
+
+<h4>Supernetting</h4>
+
+<p>Supernetting is a different operation than aggregation, as it only works on
+a single network and returns a new single IPv4 object, representing the
+supernet.</p>
+
+<p>Supernetting is similar to subnetting, except that you getting as a result
+a network with a smaller prefix (bigger host space). For example, given the
+network</p>
+
+<pre>ip = IPAddress(&quot;172.16.10.0/24&quot;)</pre>
+
+<p>you can supernet it with a new /23 prefix</p>
+
+<pre>ip.supernet(23).to_string
+  #=&gt; &quot;172.16.10.0/23&quot;</pre>
+
+<p>However if you supernet it with a /22 prefix, the network address will
+change:</p>
+
+<pre>ip.supernet(22).to_string
+  #=&gt; &quot;172.16.8.0/22&quot;</pre>
+
+<p>This is because “172.16.10.0/22” is not a network anymore, but an host
+address.</p>
+
+<h2>IPv6</h2>
+
+<p><a href="IPAddress.html">IPAddress</a> is not only fantastic for IPv4
+addresses, it's also great to handle IPv6 addresses family! Let's discover
+together how to use it in our projects.</p>
+
+<h3>IPv6 addresses</h3>
+
+<p>IPv6 addresses are 128 bits long, in contrast with IPv4 addresses which are
+only 32 bits long. An IPv6 address is generally written as eight groups of
+four hexadecimal digits, each group representing 16 bits or two octet. For
+example, the following is a valid IPv6 address:</p>
+
+<pre>2001:0db8:0000:0000:0008:0800:200c:417a</pre>
+
+<p>Letters in an IPv6 address are usually written downcase, as per RFC. You
+can create a new IPv6 object using uppercase letters, but they will be
+converted.</p>
+
+<h4>Compression</h4>
+
+<p>Since IPv6 addresses are very long to write, there are some simplifications
+and compressions that you can use to shorten them.</p>
+<ul><li>
+<p>Leading zeroes: all the leading zeroes within a group can be omitted:
+“0008” would become “8”</p>
+</li><li>
+<p>A string of consecutive zeroes can be replaced by the string “::”. This can
+be only applied once.</p>
+</li></ul>
+
+<p>Using compression, the IPv6 address written above can be shorten into the
+following, equivalent, address</p>
+
+<pre>2001:db8::8:800:200c:417a</pre>
+
+<p>This short version is often used in human representation.</p>
+
+<h4>Network Mask</h4>
+
+<p>As we used to do with IPv4 addresses, an IPv6 address can be written using
+the prefix notation to specify the subnet mask:</p>
+
+<pre>2001:db8::8:800:200c:417a/64</pre>
+
+<p>The /64 part means that the first 64 bits of the address are representing
+the network portion, and the last 64 bits are the host portion.</p>
+
+<h3>Using <a href="IPAddress.html">IPAddress</a> with IPv6 addresses</h3>
+
+<p>All the IPv6 representations we’ve just seen are perfectly fine when you
+want to create a new IPv6 address:</p>
+
+<pre>ip6 = IPAddress &quot;2001:0db8:0000:0000:0008:0800:200C:417A&quot;
+
+ip6 = IPAddress &quot;2001:db8:0:0:8:800:200C:417A&quot;
+
+ip6 = IPAddress &quot;2001:db8:8:800:200C:417A&quot;</pre>
+
+<p>All three are giving out the same IPv6 object. The default subnet mask for
+an IPv6 is 128, as IPv6 addresses don’t have classes like IPv4 addresses.
+If you want a different mask, you can go ahead and explicit it:</p>
+
+<pre>ip6 = IPAddress &quot;2001:db8::8:800:200c:417a/64&quot;</pre>
+
+<p>Access the address portion and the prefix by using the respective methods:</p>
+
+<pre>ip6 = IPAddress &quot;2001:db8::8:800:200c:417a/64&quot;
+
+ip6.address
+  #=&gt; &quot;2001:0db8:0000:0000:0008:0800:200c:417a&quot;
+
+ip6.prefix
+  #=&gt; 64</pre>
+
+<p>A compressed version of the IPv6 address can be obtained with the
+IPv6#compressed method:</p>
+
+<pre>ip6 = IPAddress &quot;2001:0db8:0000:0000:0008:200c:417a:00ab/64&quot;
+
+ip6.compressed
+  #=&gt; &quot;2001:db8::8:800:200c:417a&quot;</pre>
+
+<h3>Handling the IPv6 address</h3>
+
+<p>Accessing the groups that form an IPv6 address is very easy with the
+IPv6#groups method:</p>
+
+<pre>ip6 = IPAddress &quot;2001:db8::8:800:200c:417a/64&quot;
+
+ip6.groups
+  #=&gt; [8193, 3512, 0, 0, 8, 2048, 8204, 16762]</pre>
+
+<p>As with IPv4 addresses, each individual group can be accessed using the
+IPv6#[] shortcut method:</p>
+
+<pre>ip6[0]
+  #=&gt; 8193
+ip6[1]
+  #=&gt; 3512
+ip6[2]
+  #=&gt; 0
+ip6[3]
+  #=&gt; 0</pre>
+
+<p>Note that each 16 bits group is expressed in its decimal form. You can also
+obtain the groups into hexadecimal format using the IPv6#hexs method:</p>
+
+<pre>ip6.hexs
+  #=&gt; =&gt; [&quot;2001&quot;, &quot;0db8&quot;, &quot;0000&quot;, &quot;0000&quot;, &quot;0008&quot;, &quot;0800&quot;, &quot;200c&quot;, &quot;417a&quot;]</pre>
+
+<p>A few other methods are available to transform an IPv6 address into decimal
+representation, with IPv6.to_i</p>
+
+<pre>ip6.to_i
+  #=&gt; 42540766411282592856906245548098208122</pre>
+
+<p>or to hexadecimal representation</p>
+
+<pre>ip6.to_hex
+  #=&gt; &quot;20010db80000000000080800200c417a&quot;</pre>
+
+<p>To print out an IPv6 address in human readable form, use the IPv6#to_s,
+IPv6#to_string and IPv6#to_string_uncompressed methods</p>
+
+<pre>ip6 = IPAddress &quot;2001:db8::8:800:200c:417a/64&quot;
+
+ip6.to_string
+  #=&gt; &quot;2001:db8::8:800:200c:417a/96&quot;
+
+ip6.to_string_uncompressed
+  #=&gt; &quot;2001:0db8:0000:0000:0008:0800:200c:417a/96&quot;</pre>
+
+<p>As you can see, IPv6.to_string prints out the compressed form, while
+IPv6.to_string_uncompressed uses the expanded version.</p>
+
+<h4>Compressing and uncompressing</h4>
+
+<p>If you have a string representing an IPv6 address, you can easily compress
+it and uncompress it using the two class methods IPv6::expand and
+IPv6::compress.</p>
+
+<p>For example, let’s say you have the following uncompressed IPv6 address:</p>
+
+<pre>ip6str = &quot;2001:0DB8:0000:CD30:0000:0000:0000:0000&quot;</pre>
+
+<p>Here is the compressed version:</p>
+
+<pre>IPAddress::IPv6.compress ip6str
+  #=&gt; &quot;2001:db8:0:cd30::&quot;</pre>
+
+<p>The other way works as well:</p>
+
+<pre>ip6str = &quot;2001:db8:0:cd30::&quot;
+
+IPAddress::IPv6.expand ip6str
+  #=&gt; &quot;2001:0DB8:0000:CD30:0000:0000:0000:0000&quot;</pre>
+
+<p>These methods can be used when you don’t want to create a new object just
+for expanding or compressing an address (although a new object is actually
+created internally).</p>
+
+<h3>New IPv6 address from other formats</h3>
+
+<p>You can create a new IPv6 address from different formats than just a string
+representing the colon-hex groups.</p>
+
+<p>For instance, if you have a data stream, you can use IPv6::parse_data, like
+in the following example:</p>
+
+<pre>data = &quot; \001\r\270\000\000\000\000\000\b\b\000 \fAz&quot;
+
+ip6 = IPAddress::IPv6::parse_data data 
+ip6.prefix = 64
+
+ip6.to_string
+  #=&gt; &quot;2001:db8::8:800:200c:417a/64&quot;</pre>
+
+<p>A new IPv6 address can also be created from an unsigned 128 bits integer:</p>
+
+<pre>u128 = 42540766411282592856906245548098208122
+
+ip6 = IPAddress::IPv6::parse_u128 u128
+ip6.prefix = 64
+
+ip6.to_string
+  #=&gt;&quot;2001:db8::8:800:200c:417a/64&quot;</pre>
+
+<p>Finally, a new IPv6 address can be created from an hex string:</p>
+
+<pre>hex = &quot;20010db80000000000080800200c417a&quot;   
+
+ip6 = IPAddress::IPv6::parse_hex hex
+ip6.prefix = 64
+
+ip6.to_string
+  #=&gt; &quot;2001:db8::8:800:200c:417a/64&quot;</pre>
+
+<h3>Special IPv6 addresses</h3>
+
+<p>Some IPv6 have a special meaning and are expressed in a special form, quite
+different than an usual IPv6 address. <a
+href="IPAddress.html">IPAddress</a> has built-in support for unspecified,
+loopback and mapped IPv6 addresses.</p>
+
+<h4>Unspecified address</h4>
+
+<p>The address with all zero bits is called the <tt>unspecified</tt> address
+(corresponding to 0.0.0.0 in IPv4). It should be something like this:</p>
+
+<pre>0000:0000:0000:0000:0000:0000:0000:0000</pre>
+
+<p>but, with the use of compression, it is usually written as just two colons:</p>
+
+<pre>::</pre>
+
+<p>or, specifying the netmask:</p>
+
+<pre>::/128</pre>
+
+<p>With <a href="IPAddress.html">IPAddress</a>, create a new unspecified IPv6
+address using its own subclass:</p>
+
+<pre>ip = IPAddress::IPv6::Unspecified.new
+
+ip.to_string
+  #=&gt; &quot;::/128&quot;</pre>
+
+<p>You can easily check if an IPv6 object is an unspecified address by using
+the IPv6#unspecified? method</p>
+
+<pre>ip.unspecified?
+  #=&gt; true</pre>
+
+<p>An unspecified IPv6 address can also be created with the wrapper method,
+like we’ve seen before</p>
+
+<pre>ip = IPAddress &quot;::&quot;
+
+ip.unspecified?
+  #=&gt; true</pre>
+
+<p>This address must never be assigned to an interface and is to be used only
+in software before the application has learned its host’s source address
+appropriate for a pending connection. Routers must not forward packets with
+the unspecified address.</p>
+
+<h4>Loopback address</h4>
+
+<p>The loopback  address is a unicast localhost address. If an application in
+a host sends packets to this address, the IPv6 stack will loop these
+packets back on the same virtual interface.</p>
+
+<p>Loopback addresses are expressed in the following form:</p>
+
+<pre>::1</pre>
+
+<p>or, with their appropriate prefix,</p>
+
+<pre>::1/128</pre>
+
+<p>As for the unspecified addresses, IPv6 loopbacks can be created with <a
+href="IPAddress.html">IPAddress</a> calling their own class:</p>
+
+<pre>ip = IPAddress::IPv6::Loopback.new
+
+ip.to_string
+  #=&gt; &quot;::1/128&quot;</pre>
+
+<p>or by using the wrapper:</p>
+
+<pre>ip = IPAddress &quot;::1&quot;
+
+ip.to_string
+  #=&gt; &quot;::1/128&quot;</pre>
+
+<p>Checking if an address is loopback is easy with the IPv6#loopback? method:</p>
+
+<pre>ip.loopback?
+  #=&gt; true</pre>
+
+<p>The IPv6 loopback address corresponds to 127.0.0.1 in IPv4.</p>
+
+<h4>Mapped address</h4>
+
+<p>It is usually identified as a IPv4 mapped IPv6 address, a particular IPv6
+address which aids the transition from IPv4 to IPv6. The structure of the
+address is</p>
+
+<pre>::ffff:w.y.x.z</pre>
+
+<p>where w.x.y.z is a normal IPv4 address. For example, the following is a
+mapped IPv6 address:</p>
+
+<pre>::ffff:192.168.100.1</pre>
+
+<p><a href="IPAddress.html">IPAddress</a> is very powerful in handling mapped
+IPv6 addresses, as the IPv4 portion is stored internally as a normal IPv4
+object. Let's have a look at some examples. To create a new mapped address,
+just use the class builder itself</p>
+
+<pre>ip6 = IPAddress::IPv6::Mapped.new &quot;::ffff:172.16.10.1/128&quot;</pre>
+
+<p>or just use the wrapper method</p>
+
+<pre>ip6 = IPAddress &quot;::ffff:172.16.10.1/128&quot;</pre>
+
+<p>Let’s check it’s really a mapped address:</p>
+
+<pre>ip6.mapped?
+  #=&gt; true
+
+ip6.to_string
+  #=&gt; &quot;::ffff:172.16.10.1/128&quot;</pre>
+
+<p>Now with the <tt>ipv4</tt> attribute, we can easily access the IPv4 portion
+of the mapped IPv6 address:</p>
+
+<pre>ip6.ipv4.address
+  #=&gt; &quot;172.16.10.1&quot;</pre>
+
+<p>Internally, the IPv4 address is stored as two 16 bits groups. Therefore all
+the usual methods for an IPv6 address are working perfectly fine:</p>
+
+<pre>ip6.to_hex
+  #=&gt; &quot;00000000000000000000ffffac100a01&quot;
+
+ip6.address
+  #=&gt; &quot;0000:0000:0000:0000:0000:ffff:ac10:0a01&quot;</pre>
+
+<p>A mapped IPv6 can also be created just by specify the address in the
+following format:</p>
+
+<pre>ip6 = IPAddress &quot;::172.16.10.1&quot;</pre>
+
+<p>That is, two colons and the IPv4 address. However, as by RFC, the ffff 
+group will be automatically added at the beginning</p>
+
+<pre>ip6.to_string
+  =&gt; &quot;::ffff:172.16.10.1/128&quot;</pre>
+
+<p>making it a mapped IPv6 compatible address.</p>
+
+<h2>Why not using IPAddr?</h2>
+
+<p>IPAddr is the IP addresses library that comes with Ruby standard lib. We
+found this library, although very well written, not very suitable for all
+our needs, and not very flexible.</p>
+
+<p>Some quick examples of things you can’t do with IPAddr:</p>
+<ul><li>
+<p>store both the address and the prefix information</p>
+</li><li>
+<p>quickly find the broadcast address of a network</p>
+</li><li>
+<p>iterate over hosts</p>
+</li><li>
+<p>perform subnetting or network aggregation</p>
+</li></ul>
+
+<p>Many methods and procedures are so old that they have been  declared
+deprecated by the IETF, and some others have bugs in their  implementation.</p>
+
+<p>Moreover, <a href="IPAddress.html">IPAddress</a> is more robust and is
+already around 50% faster than IPAddr, in addition to provide an organic
+API with logical separation and OO structure.</p>
+
+<p>We hope that <a href="IPAddress.html">IPAddress</a> will address all these
+issues and meet all your needs in network programming.</p>
+
+<h2>Community</h2>
+
+<p>Want to join the community?</p>
+<ul><li>
+<p><a href="http://groups.google.com/group/ruby-ipaddress">IPAddress google
+group</a></p>
+</li></ul>
+
+<p>We’ve created a group to discuss about  <a
+href="IPAddress.html">IPAddress</a> future development, features and
+provide some kind of support. Feel free to join us and tell us what you
+think!</p>
+
+<h2>Thanks to</h2>
+
+<p>Thanks to Luca Russo (vargolo) and Simone Carletti  (weppos) for all the
+support and technical review. Thanks to Marco Beri,  Bryan T. Richardson,
+Nicolas Fevrier, jdpace, Daniele Alessandri, jrdioko,  Ghislain Charrier,
+Pawel Krzesniak, Mark Sullivan, Leif Gensert,  Erik Ahlström, Peter
+Vandenberk and Steve Rawlinson for their support,  feedback and bug
+reports.</p>
+
+<h2>Copyright</h2>
+
+<p>Copyright © 2009-2011 Marco Ceresa. See <a href="LICENSE.html">LICENSE</a>
+for details.</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

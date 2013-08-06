@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: HighLine::Style</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/highline/style_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/highline/style.rb">lib/highline/style.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-ansi_rgb_to_hex">::ansi_rgb_to_hex</a></li>
+          
+          <li><a href="#method-c-code_index">::code_index</a></li>
+          
+          <li><a href="#method-c-index">::index</a></li>
+          
+          <li><a href="#method-c-list">::list</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-rgb">::rgb</a></li>
+          
+          <li><a href="#method-c-rgb_hex">::rgb_hex</a></li>
+          
+          <li><a href="#method-c-rgb_number">::rgb_number</a></li>
+          
+          <li><a href="#method-c-rgb_parts">::rgb_parts</a></li>
+          
+          <li><a href="#method-c-uncolor">::uncolor</a></li>
+          
+          <li><a href="#method-i-blue">#blue</a></li>
+          
+          <li><a href="#method-i-bright">#bright</a></li>
+          
+          <li><a href="#method-i-code">#code</a></li>
+          
+          <li><a href="#method-i-color">#color</a></li>
+          
+          <li><a href="#method-i-dup">#dup</a></li>
+          
+          <li><a href="#method-i-green">#green</a></li>
+          
+          <li><a href="#method-i-on">#on</a></li>
+          
+          <li><a href="#method-i-red">#red</a></li>
+          
+          <li><a href="#method-i-to_hash">#to_hash</a></li>
+          
+          <li><a href="#method-i-variant">#variant</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CHANGELOG.html">CHANGELOG</a></li>
+        
+          <li class="file"><a href="../INSTALL.html">INSTALL</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../HighLine.html">HighLine</a></li>
+        
+          <li><a href="../HighLine/ColorScheme.html">HighLine::ColorScheme</a></li>
+        
+          <li><a href="../HighLine/HighLine.html">HighLine::HighLine</a></li>
+        
+          <li><a href="../HighLine/HighLine/HighLine.html">HighLine::HighLine::HighLine</a></li>
+        
+          <li><a href="../HighLine/HighLine/HighLine/String.html">HighLine::HighLine::HighLine::String</a></li>
+        
+          <li><a href="../HighLine/Menu.html">HighLine::Menu</a></li>
+        
+          <li><a href="../HighLine/Question.html">HighLine::Question</a></li>
+        
+          <li><a href="../HighLine/Question/NoAutoCompleteMatch.html">HighLine::Question::NoAutoCompleteMatch</a></li>
+        
+          <li><a href="../HighLine/QuestionError.html">HighLine::QuestionError</a></li>
+        
+          <li><a href="../HighLine/SampleColorScheme.html">HighLine::SampleColorScheme</a></li>
+        
+          <li><a href="../HighLine/Simulate.html">HighLine::Simulate</a></li>
+        
+          <li><a href="../HighLine/StringExtensions.html">HighLine::StringExtensions</a></li>
+        
+          <li><a href="../HighLine/Style.html">HighLine::Style</a></li>
+        
+          <li><a href="../HighLine/SystemExtensions.html">HighLine::SystemExtensions</a></li>
+        
+          <li><a href="../HighLine/SystemExtensions/WinAPI.html">HighLine::SystemExtensions::WinAPI</a></li>
+        
+          <li><a href="../IO.html">IO</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+          <li><a href="../StringIO.html">StringIO</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">HighLine::Style</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="builtin-attribute-method" class="method-detail">
+          <a name="builtin"></a>
+          
+          <a name="builtin="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">builtin</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="list-attribute-method" class="method-detail">
+          <a name="list"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">list</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="rgb-attribute-method" class="method-detail">
+          <a name="rgb"></a>
+          
+          <a name="rgb="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">rgb</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="ansi_rgb_to_hex-method" class="method-detail ">
+          <a name="method-c-ansi_rgb_to_hex"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ansi_rgb_to_hex</span><span
+              class="method-args">(ansi_number)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ansi_rgb_to_hex-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ansi_rgb_to_hex</span>(<span class="ruby-identifier">ansi_number</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid ANSI rgb code #{ansi_number}&quot;</span> <span class="ruby-keyword">unless</span> (<span class="ruby-value">16</span><span class="ruby-operator">..</span><span class="ruby-value">231</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">ansi_number</span>)
+  <span class="ruby-identifier">parts</span> = (<span class="ruby-identifier">ansi_number</span><span class="ruby-operator">-</span><span class="ruby-value">16</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-value">6</span>).<span class="ruby-identifier">rjust</span>(<span class="ruby-value">3</span>,<span class="ruby-string">'0'</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/./</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_i</span>*<span class="ruby-value">255.0</span><span class="ruby-operator">/</span><span class="ruby-value">6.0</span>).<span class="ruby-identifier">ceil</span>}
+  <span class="ruby-identifier">rgb_hex</span>(*<span class="ruby-identifier">parts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ansi_rgb_to_hex-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ansi_rgb_to_hex-method -->
+
+      
+        <div id="code_index-method" class="method-detail ">
+          <a name="method-c-code_index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">code_index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="code_index-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">code_index</span>
+  <span class="ruby-identifier">@@code_index</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- code_index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- code_index-method -->
+
+      
+        <div id="index-method" class="method-detail ">
+          <a name="method-c-index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">index</span><span
+              class="method-args">(style)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="index-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">style</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">name</span>
+    <span class="ruby-identifier">@@styles</span> <span class="ruby-operator">||=</span> {}
+    <span class="ruby-identifier">@@styles</span>[<span class="ruby-identifier">style</span>.<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">style</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">style</span>.<span class="ruby-identifier">list</span>
+    <span class="ruby-identifier">@@code_index</span> <span class="ruby-operator">||=</span> {}
+    <span class="ruby-identifier">@@code_index</span>[<span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>] <span class="ruby-operator">||=</span> []
+    <span class="ruby-identifier">@@code_index</span>[<span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>].<span class="ruby-identifier">reject!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">indexed_style</span><span class="ruby-operator">|</span> <span class="ruby-identifier">indexed_style</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">name</span>}
+    <span class="ruby-identifier">@@code_index</span>[<span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">style</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">style</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- index-method -->
+
+      
+        <div id="list-method" class="method-detail ">
+          <a name="method-c-list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="list-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">list</span>
+  <span class="ruby-identifier">@@styles</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(defn = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Single color/styles have :name, :code, :rgb (possibly), :builtin Compound
+styles have :name, :list, :builtin</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">defn</span> = {})
+  <span class="ruby-ivar">@definition</span> = <span class="ruby-identifier">defn</span>
+  <span class="ruby-ivar">@name</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-value">:name</span>]
+  <span class="ruby-ivar">@code</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-value">:code</span>]
+  <span class="ruby-ivar">@rgb</span>     = <span class="ruby-identifier">defn</span>[<span class="ruby-value">:rgb</span>]
+  <span class="ruby-ivar">@list</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-value">:list</span>]
+  <span class="ruby-ivar">@builtin</span> = <span class="ruby-identifier">defn</span>[<span class="ruby-value">:builtin</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rgb</span>
+    <span class="ruby-identifier">hex</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">rgb_hex</span>(<span class="ruby-ivar">@rgb</span>)
+    <span class="ruby-ivar">@name</span> <span class="ruby-operator">||=</span> <span class="ruby-string">'rgb_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">hex</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@list</span>
+    <span class="ruby-ivar">@name</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@list</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">index</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">defn</span>[<span class="ruby-value">:no_index</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="rgb-method" class="method-detail ">
+          <a name="method-c-rgb"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rgb</span><span
+              class="method-args">(*colors)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rgb-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rgb</span>(*<span class="ruby-identifier">colors</span>)
+  <span class="ruby-identifier">hex</span> = <span class="ruby-identifier">rgb_hex</span>(*<span class="ruby-identifier">colors</span>)
+  <span class="ruby-identifier">name</span> = (<span class="ruby-string">'rgb_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">hex</span>).<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span> = <span class="ruby-identifier">list</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-identifier">style</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">rgb_parts</span>(<span class="ruby-identifier">hex</span>)
+    <span class="ruby-identifier">new</span>(<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">name</span>, <span class="ruby-value">:code=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;\e[38;5;#{rgb_number(parts)}m&quot;</span>, <span class="ruby-value">:rgb=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">parts</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rgb-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rgb-method -->
+
+      
+        <div id="rgb_hex-method" class="method-detail ">
+          <a name="method-c-rgb_hex"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rgb_hex</span><span
+              class="method-args">(*colors)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rgb_hex-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rgb_hex</span>(*<span class="ruby-identifier">colors</span>)
+  <span class="ruby-identifier">colors</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">color</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">?</span> <span class="ruby-string">'%02x'</span><span class="ruby-operator">%</span><span class="ruby-identifier">color</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rgb_hex-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rgb_hex-method -->
+
+      
+        <div id="rgb_number-method" class="method-detail ">
+          <a name="method-c-rgb_number"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rgb_number</span><span
+              class="method-args">(*parts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rgb_number-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rgb_number</span>(*<span class="ruby-identifier">parts</span>)
+  <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">flatten</span>
+  <span class="ruby-value">16</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">kode</span>, <span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kode</span>*<span class="ruby-value">6</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">part</span><span class="ruby-operator">/</span><span class="ruby-value">256.0</span>*<span class="ruby-value">6.0</span>).<span class="ruby-identifier">floor</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rgb_number-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rgb_number-method -->
+
+      
+        <div id="rgb_parts-method" class="method-detail ">
+          <a name="method-c-rgb_parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rgb_parts</span><span
+              class="method-args">(hex)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rgb_parts-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rgb_parts</span>(<span class="ruby-identifier">hex</span>)
+  <span class="ruby-identifier">hex</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/../</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-identifier">part</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>)}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rgb_parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rgb_parts-method -->
+
+      
+        <div id="uncolor-method" class="method-detail ">
+          <a name="method-c-uncolor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uncolor</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="uncolor-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">uncolor</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\e\[\d+(;\d+)*m/</span>, <span class="ruby-string">''</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uncolor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uncolor-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="blue-method" class="method-detail ">
+          <a name="method-i-blue"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blue</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="blue-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blue</span>
+  <span class="ruby-ivar">@rgb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@rgb</span>[<span class="ruby-value">2</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blue-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blue-method -->
+
+      
+        <div id="bright-method" class="method-detail ">
+          <a name="method-i-bright"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bright</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="bright-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bright</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Cannot create a bright variant of a style list (#{inspect})&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@list</span>
+  <span class="ruby-identifier">new_name</span> = (<span class="ruby-string">'bright_'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@name</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">style</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">list</span>[<span class="ruby-identifier">new_name</span>]
+    <span class="ruby-identifier">style</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">new_rgb</span> = <span class="ruby-ivar">@rgb</span> <span class="ruby-operator">==</span> [<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>] <span class="ruby-operator">?</span> [<span class="ruby-value">128</span>, <span class="ruby-value">128</span>, <span class="ruby-value">128</span>] <span class="ruby-operator">:</span> <span class="ruby-ivar">@rgb</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span>  <span class="ruby-identifier">color</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> [<span class="ruby-identifier">color</span><span class="ruby-operator">+</span><span class="ruby-value">128</span>,<span class="ruby-value">255</span>].<span class="ruby-identifier">min</span> }
+    <span class="ruby-identifier">variant</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-value">:increment=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">60</span>, <span class="ruby-value">:rgb=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">new_rgb</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bright-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bright-method -->
+
+      
+        <div id="code-method" class="method-detail ">
+          <a name="method-i-code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">code</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="code-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@list</span>
+    <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-constant">HighLine</span>.<span class="ruby-constant">Style</span>(<span class="ruby-identifier">element</span>).<span class="ruby-identifier">code</span>}.<span class="ruby-identifier">join</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@code</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- code-method -->
+
+      
+        <div id="color-method" class="method-detail ">
+          <a name="method-i-color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">code</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">+</span> <span class="ruby-constant">HighLine</span><span class="ruby-operator">::</span><span class="ruby-constant">CLEAR</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color-method -->
+
+      
+        <div id="dup-method" class="method-detail ">
+          <a name="method-i-dup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dup-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@definition</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dup-method -->
+
+      
+        <div id="green-method" class="method-detail ">
+          <a name="method-i-green"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">green</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="green-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">green</span>
+  <span class="ruby-ivar">@rgb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@rgb</span>[<span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- green-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- green-method -->
+
+      
+        <div id="on-method" class="method-detail ">
+          <a name="method-i-on"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">on</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="on-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">on</span>
+  <span class="ruby-identifier">new_name</span> = (<span class="ruby-string">'on_'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@name</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">list</span>[<span class="ruby-identifier">new_name</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">variant</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-value">:increment=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">10</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- on-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- on-method -->
+
+      
+        <div id="red-method" class="method-detail ">
+          <a name="method-i-red"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">red</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="red-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">red</span>
+  <span class="ruby-ivar">@rgb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@rgb</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- red-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- red-method -->
+
+      
+        <div id="to_hash-method" class="method-detail ">
+          <a name="method-i-to_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_hash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hash</span>
+  <span class="ruby-ivar">@definition</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_hash-method -->
+
+      
+        <div id="variant-method" class="method-detail ">
+          <a name="method-i-variant"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">variant</span><span
+              class="method-args">(new_name, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="variant-source">
+<pre>
+<span class="ruby-comment"># File lib/highline/style.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">variant</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Cannot create a variant of a style list (#{inspect})&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@list</span>
+  <span class="ruby-identifier">new_code</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:code</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:increment</span>]
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unexpected code in #{inspect}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_code</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(.*?)(\d+)(.*)/</span>
+    <span class="ruby-identifier">new_code</span> = <span class="ruby-node">$1</span> <span class="ruby-operator">+</span> (<span class="ruby-node">$2</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:increment</span>]).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-node">$3</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">new_rgb</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:rgb</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@rgb</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_hash</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">new_name</span>, <span class="ruby-value">:code=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">new_code</span>, <span class="ruby-value">:rgb=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">new_rgb</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- variant-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- variant-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

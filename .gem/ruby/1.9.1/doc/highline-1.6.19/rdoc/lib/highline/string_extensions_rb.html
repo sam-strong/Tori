@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: string_extensions.rb [highline-1.6.19 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-06-19 10:06:38 +0000</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>Extensions for class <a href="../../String.html">String</a></p>
+
+<p>HighLine::String is a subclass of <a href="../../String.html">String</a>
+with convenience methods added for colorization.</p>
+
+<p>Available convenience methods include:</p>
+
+<pre>* 'color' method         e.g.  highline_string.color(:bright_blue, :underline)
+* colors                 e.g.  highline_string.magenta
+* RGB colors             e.g.  highline_string.rgb_ff6000
+                          or   highline_string.rgb(255,96,0)
+* background colors      e.g.  highline_string.on_magenta
+* RGB background colors  e.g.  highline_string.on_rgb_ff6000
+                          or   highline_string.on_rgb(255,96,0)
+* styles                 e.g.  highline_string.underline</pre>
+
+<p>Additionally, convenience methods can be chained, for instance the
+following are equivalent:</p>
+
+<pre>highline_string.bright_blue.blink.underline
+highline_string.color(:bright_blue, :blink, :underline)
+HighLine.color(highline_string, :bright_blue, :blink, :underline)</pre>
+
+<p>For those less squeamish about possible conflicts, the same convenience
+methods can be added to the built-in <a href="../../String.html">String</a>
+class, as follows:</p>
+
+<pre>require 'highline'
+Highline.colorize_strings</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

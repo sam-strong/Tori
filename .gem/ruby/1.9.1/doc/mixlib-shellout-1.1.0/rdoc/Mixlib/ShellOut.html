@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mixlib::ShellOut</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mixlib/shellout_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout.rb">lib/mixlib/shellout.rb</a></li>
+          
+            <li><a href="../lib/mixlib/shellout/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/version.rb">lib/mixlib/shellout/version.rb</a></li>
+          
+            <li><a href="../lib/mixlib/shellout/windows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/windows.rb">lib/mixlib/shellout/windows.rb</a></li>
+          
+            <li><a href="../lib/mixlib/shellout/exceptions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/exceptions.rb">lib/mixlib/shellout/exceptions.rb</a></li>
+          
+            <li><a href="../lib/mixlib/shellout/unix_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/unix.rb">lib/mixlib/shellout/unix.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="ShellOut/CommandTimeout.html">Mixlib::ShellOut::CommandTimeout</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="ShellOut/InvalidCommandOption.html">Mixlib::ShellOut::InvalidCommandOption</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="ShellOut/ShellCommandFailed.html">Mixlib::ShellOut::ShellCommandFailed</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-error-21">#error!</a></li>
+          
+          <li><a href="#method-i-exitstatus">#exitstatus</a></li>
+          
+          <li><a href="#method-i-format_for_exception">#format_for_exception</a></li>
+          
+          <li><a href="#method-i-gid">#gid</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-invalid-21">#invalid!</a></li>
+          
+          <li><a href="#method-i-run_command">#run_command</a></li>
+          
+          <li><a href="#method-i-timeout">#timeout</a></li>
+          
+          <li><a href="#method-i-uid">#uid</a></li>
+          
+          <li><a href="#method-i-umask-3D">#umask=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+        
+        
+        
+          <li><a class="include" href="ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="../Mixlib/ShellOut.html">Mixlib::ShellOut</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/CommandTimeout.html">Mixlib::ShellOut::CommandTimeout</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/InvalidCommandOption.html">Mixlib::ShellOut::InvalidCommandOption</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/ShellCommandFailed.html">Mixlib::ShellOut::ShellCommandFailed</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/Windows/ThingThatLooksSortOfLikeAProcessStatus.html">Mixlib::ShellOut::Windows::ThingThatLooksSortOfLikeAProcessStatus</a></li>
+        
+          <li><a href="../Mixlib/ShellOut/Windows/Utils.html">Mixlib::ShellOut::Windows::Utils</a></li>
+        
+          <li><a href="../Windows.html">Windows</a></li>
+        
+          <li><a href="../Windows/Process.html">Windows::Process</a></li>
+        
+          <li><a href="../Process.html">Process</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mixlib::ShellOut</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DEFAULT_ENVIRONMENT">DEFAULT_ENVIRONMENT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_READ_TIMEOUT">DEFAULT_READ_TIMEOUT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="READ_SIZE">READ_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="READ_WAIT_TIME">READ_WAIT_TIME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="command-attribute-method" class="method-detail">
+          <a name="command"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">command</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The command to be executed.</p>
+          
+          </div>
+        </div>
+        
+        <div id="cwd-attribute-method" class="method-detail">
+          <a name="cwd"></a>
+          
+          <a name="cwd="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">cwd</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Working directory for the subprocess. Normally set via options to new</p>
+          
+          </div>
+        </div>
+        
+        <div id="environment-attribute-method" class="method-detail">
+          <a name="environment"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">environment</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Environment variables that will be set for the subcommand. Refer to the
+documentation of new to understand how <a href="ShellOut.html">ShellOut</a>
+interprets this.</p>
+          
+          </div>
+        </div>
+        
+        <div id="execution_time-attribute-method" class="method-detail">
+          <a name="execution_time"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">execution_time</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The amount of time the subcommand took to execute</p>
+          
+          </div>
+        </div>
+        
+        <div id="group-attribute-method" class="method-detail">
+          <a name="group"></a>
+          
+          <a name="group="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">group</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Group the command will run as. Normally set via options passed to new</p>
+          
+          </div>
+        </div>
+        
+        <div id="input-attribute-method" class="method-detail">
+          <a name="input"></a>
+          
+          <a name="input="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">input</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p><a href="ShellOut.html">ShellOut</a> will push data from :input down the
+stdin of the subprocss. Normally set via options passed to new. Default:
+nil</p>
+          
+          </div>
+        </div>
+        
+        <div id="live_stream-attribute-method" class="method-detail">
+          <a name="live_stream"></a>
+          
+          <a name="live_stream="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">live_stream</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>When <a href="ShellOut.html#attribute-i-live_stream">live_stream</a> is
+set, stdout of the subprocess will be copied to it as the subprocess is
+running. For example, if <a
+href="ShellOut.html#attribute-i-live_stream">live_stream</a> is set to
+STDOUT, the command’s output will be echoed to STDOUT.</p>
+          
+          </div>
+        </div>
+        
+        <div id="log_level-attribute-method" class="method-detail">
+          <a name="log_level"></a>
+          
+          <a name="log_level="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">log_level</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The log level at which <a href="ShellOut.html">ShellOut</a> should log.</p>
+          
+          </div>
+        </div>
+        
+        <div id="log_tag-attribute-method" class="method-detail">
+          <a name="log_tag"></a>
+          
+          <a name="log_tag="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">log_tag</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A string which will be prepended to the log message.</p>
+          
+          </div>
+        </div>
+        
+        <div id="logger-attribute-method" class="method-detail">
+          <a name="logger"></a>
+          
+          <a name="logger="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">logger</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>If a logger is set, <a href="ShellOut.html">ShellOut</a> will log a message
+before it executes the command.</p>
+          
+          </div>
+        </div>
+        
+        <div id="process_status_pipe-attribute-method" class="method-detail">
+          <a name="process_status_pipe"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">process_status_pipe</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="status-attribute-method" class="method-detail">
+          <a name="status"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">status</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A Process::Status (or ducktype) object collected when the subprocess is
+reaped.</p>
+          
+          </div>
+        </div>
+        
+        <div id="stderr-attribute-method" class="method-detail">
+          <a name="stderr"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">stderr</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Data written to stderr by the subprocess</p>
+          
+          </div>
+        </div>
+        
+        <div id="stderr_pipe-attribute-method" class="method-detail">
+          <a name="stderr_pipe"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">stderr_pipe</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="stdin_pipe-attribute-method" class="method-detail">
+          <a name="stdin_pipe"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">stdin_pipe</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="stdout-attribute-method" class="method-detail">
+          <a name="stdout"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">stdout</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Data written to stdout by the subprocess</p>
+          
+          </div>
+        </div>
+        
+        <div id="stdout_pipe-attribute-method" class="method-detail">
+          <a name="stdout_pipe"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">stdout_pipe</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="timeout-attribute-method" class="method-detail">
+          <a name="timeout"></a>
+          
+          <a name="timeout="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">timeout</span><span
+              class="attribute-access-type">[W]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The maximum time this command is allowed to run. Usually set via options to
+new</p>
+          
+          </div>
+        </div>
+        
+        <div id="umask-attribute-method" class="method-detail">
+          <a name="umask"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">umask</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The umask that will be set for the subcommand.</p>
+          
+          </div>
+        </div>
+        
+        <div id="user-attribute-method" class="method-detail">
+          <a name="user"></a>
+          
+          <a name="user="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">user</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>User the command will run as. Normally set via options passed to new</p>
+          
+          </div>
+        </div>
+        
+        <div id="valid_exit_codes-attribute-method" class="method-detail">
+          <a name="valid_exit_codes"></a>
+          
+          <a name="valid_exit_codes="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">valid_exit_codes</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>An Array of acceptable exit codes. <a
+href="ShellOut.html#method-i-error-21">error!</a> uses this list to
+determine if the command was successful. Normally set via options to new</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*command_args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <h3>Arguments:</h3>
+
+<p>Takes a single command, or a list of command fragments. These are used as
+arguments to Kernel.exec. See the Kernel.exec documentation for more
+explanation of how arguments are evaluated. The last argument can be an
+options Hash.</p>
+
+<h3>Options:</h3>
+
+<p>If the last argument is a Hash, it is removed from the list of args passed
+to exec and used as an options hash. The following options are available:</p>
+<ul><li>
+<p><tt>user</tt>: the user the commmand should run as. if an integer is given,
+it is used as a uid. A string is treated as a username and resolved to a
+uid with Etc.getpwnam</p>
+</li><li>
+<p><tt>group</tt>: the group the command should run as. works similarly to
+<tt>user</tt></p>
+</li><li>
+<p><tt>cwd</tt>: the directory to chdir to before running the command</p>
+</li><li>
+<p><tt>umask</tt>: a umask to set before running the command. If given as an
+Integer, be sure to use two leading zeros so it's parsed as Octal. A string
+will be treated as an octal integer</p>
+</li><li>
+<p><tt>returns</tt>:  one or more Integer values to use as valid exit codes
+for the subprocess. This only has an effect if you call <tt>error!</tt>
+after <tt>run_command</tt>.</p>
+</li><li>
+<p><tt>environment</tt>: a Hash of environment variables to set before the
+command is run. By default, the environment will <b>always</b> be set to
+'LC_ALL' =&gt; 'C' to prevent issues with multibyte characters in Ruby 1.8.
+To avoid this, use :environment =&gt; nil for <b>no</b> extra environment
+settings, or :environment =&gt; {'LC_ALL'=&gt;nil, ...} to set other
+environment settings without changing the locale.</p>
+</li><li>
+<p><tt>timeout</tt>: a Numeric value for the number of seconds to wait on the
+child process before raising an Exception. This is calculated as the total
+amount of time that <a href="ShellOut.html">ShellOut</a> waited on the
+child process without receiving any output (i.e., IO.select returned nil).
+Default is 60 seconds. Note: the stdlib Timeout library is not used.</p>
+</li></ul>
+
+<h3>Examples:</h3>
+
+<p>Invoke find(1) to search for .rb files:</p>
+
+<pre>find = Mixlib::ShellOut.new(&quot;find . -name '*.rb'&quot;)
+find.run_command
+# If all went well, the results are on +stdout+
+puts find.stdout
+# find(1) prints diagnostic info to STDERR:
+puts &quot;error messages&quot; + find.stderr
+# Raise an exception if it didn't exit with 0
+find.error!</pre>
+
+<p>Run a command as the <tt>www</tt> user with no extra ENV settings from
+<tt>/tmp</tt></p>
+
+<pre>cmd = Mixlib::ShellOut.new(&quot;apachectl&quot;, &quot;start&quot;, :user =&gt; 'www', :env =&gt; nil, :cwd =&gt; '/tmp')
+cmd.run_command # etc.</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">command_args</span>)
+  <span class="ruby-ivar">@stdout</span>, <span class="ruby-ivar">@stderr</span> = <span class="ruby-string">''</span>, <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@live_stream</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@input</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@log_level</span> = <span class="ruby-value">:debug</span>
+  <span class="ruby-ivar">@log_tag</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@environment</span> = <span class="ruby-constant">DEFAULT_ENVIRONMENT</span>
+  <span class="ruby-ivar">@cwd</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@valid_exit_codes</span> = [<span class="ruby-value">0</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">parse_options</span>(<span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">pop</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@command</span> = <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">command_args</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="error-21-method" class="method-detail ">
+          <a name="method-i-error-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">error!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks the <tt>exitstatus</tt> against the set of
+<tt>valid_exit_codes</tt>. If <tt>exitstatus</tt> is not in the list of
+<tt>valid_exit_codes</tt>, calls <tt>invalid!</tt>, which raises an
+Exception.</p>
+
+<h3>Returns</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>nil:</p></td>
+<td>
+<p>always returns nil when it does not raise</p>
+</td></tr></table>
+
+<h3>Raises</h3>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>::ShellCommandFailed:</p></td>
+<td>
+<p>via <tt>invalid!</tt></p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="error-21-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">error!</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Array</span>(<span class="ruby-identifier">valid_exit_codes</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">exitstatus</span>)
+    <span class="ruby-identifier">invalid!</span>(<span class="ruby-node">&quot;Expected process to exit with #{valid_exit_codes.inspect}, but received '#{exitstatus}'&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- error-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- error-21-method -->
+
+      
+        <div id="exitstatus-method" class="method-detail ">
+          <a name="method-i-exitstatus"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exitstatus</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The exit status of the subprocess. Will be nil if the command is still
+running or died without setting an exit status (e.g., terminated by `kill
+-9`).</p>
+            
+
+            
+            <div class="method-source-code" id="exitstatus-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exitstatus</span>
+  <span class="ruby-ivar">@status</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@status</span>.<span class="ruby-identifier">exitstatus</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exitstatus-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exitstatus-method -->
+
+      
+        <div id="format_for_exception-method" class="method-detail ">
+          <a name="method-i-format_for_exception"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format_for_exception</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a String showing the output of the command, including a banner
+showing the exact command executed. Used by <tt>invalid!</tt> to show
+command results when the command exited with an unexpected status.</p>
+            
+
+            
+            <div class="method-source-code" id="format_for_exception-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format_for_exception</span>
+  <span class="ruby-identifier">msg</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;---- Begin output of #{command} ----\n&quot;</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;STDOUT: #{stdout.strip}\n&quot;</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;STDERR: #{stderr.strip}\n&quot;</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;---- End output of #{command} ----\n&quot;</span>
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Ran #{command} returned #{status.exitstatus}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">msg</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format_for_exception-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format_for_exception-method -->
+
+      
+        <div id="gid-method" class="method-detail ">
+          <a name="method-i-gid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gid</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The gid that the subprocess will switch to. If the group attribute is given
+as a group name, it is converted to a gid by Etc.getgrnam</p>
+            
+
+            
+            <div class="method-source-code" id="gid-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gid</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">group</span>
+  <span class="ruby-identifier">group</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">group</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getgrnam</span>(<span class="ruby-identifier">group</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">gid</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gid-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-node">&quot;&lt;#{self.class.name}##{object_id}: command: '#@command' process_status: #{@status.inspect} &quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-node">&quot;stdout: '#{stdout.strip}' stderr: '#{stderr.strip}' child_pid: #{@child_pid.inspect} &quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-node">&quot;environment: #{@environment.inspect} timeout: #{timeout} user: #@user group: #@group working_dir: #@cwd &gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="invalid-21-method" class="method-detail ">
+          <a name="method-i-invalid-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">invalid!</span><span
+              class="method-args">(msg=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Raises a <a href="ShellOut/ShellCommandFailed.html">ShellCommandFailed</a>
+exception, appending the command’s stdout, stderr, and exitstatus to the
+exception message.</p>
+
+<h3>Arguments</h3>
+
+<p><tt>msg</tt>:  A String to use as the basis of the exception message. The
+default explanation is very generic, providing a more informative message
+is highly encouraged.</p>
+
+<h3>Raises</h3>
+
+<p><a href="ShellOut/ShellCommandFailed.html">ShellCommandFailed</a>  always</p>
+            
+
+            
+            <div class="method-source-code" id="invalid-21-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invalid!</span>(<span class="ruby-identifier">msg</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;Command produced unexpected results&quot;</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ShellCommandFailed</span>, <span class="ruby-identifier">msg</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">format_for_exception</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- invalid-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- invalid-21-method -->
+
+      
+        <div id="run_command-method" class="method-detail ">
+          <a name="method-i-run_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Run the command, writing the command’s standard out and standard error to
+<tt>stdout</tt> and <tt>stderr</tt>, and saving its exit status object to
+<tt>status</tt></p>
+
+<h3>Returns</h3>
+
+<p>returns   <tt>self</tt>; <tt>stdout</tt>, <tt>stderr</tt>, <tt>status</tt>,
+and <tt>exitstatus</tt> will be populated with results of the command</p>
+
+<h3>Raises</h3>
+<ul><li>
+<p>Errno::EACCES  when you are not privileged to execute the command</p>
+</li><li>
+<p>Errno::ENOENT  when the command is not available on the system (or not in
+the current $PATH)</p>
+</li><li>
+<p><a href="ShellOut/CommandTimeout.html">CommandTimeout</a>  when the command
+does not complete within <tt>timeout</tt> seconds (default: 60s)</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="run_command-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run_command</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">logger</span>
+    <span class="ruby-identifier">log_message</span> = (<span class="ruby-identifier">log_tag</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#@log_tag &quot;</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;sh(#@command)&quot;</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">log_level</span>, <span class="ruby-identifier">log_message</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_command-method -->
+
+      
+        <div id="timeout-method" class="method-detail ">
+          <a name="method-i-timeout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">timeout</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="timeout-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">timeout</span>
+  <span class="ruby-ivar">@timeout</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_READ_TIMEOUT</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- timeout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- timeout-method -->
+
+      
+        <div id="uid-method" class="method-detail ">
+          <a name="method-i-uid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uid</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The uid that the subprocess will switch to. If the user attribute was given
+as a username, it is converted to a uid by Etc.getpwnam</p>
+            
+
+            
+            <div class="method-source-code" id="uid-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uid</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getpwnam</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">uid</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uid-method -->
+
+      
+        <div id="umask-3D-method" class="method-detail ">
+          <a name="method-i-umask-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">umask=</span><span
+              class="method-args">(new_umask)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the umask that the subprocess will have. If given as a string, it will
+be converted to an integer by String#oct.</p>
+            
+
+            
+            <div class="method-source-code" id="umask-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">umask=</span>(<span class="ruby-identifier">new_umask</span>)
+  <span class="ruby-ivar">@umask</span> = (<span class="ruby-identifier">new_umask</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:oct</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">new_umask</span>.<span class="ruby-identifier">oct</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">new_umask</span>.<span class="ruby-identifier">to_i</span>) &amp; <span class="ruby-value">007777</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- umask-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- umask-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

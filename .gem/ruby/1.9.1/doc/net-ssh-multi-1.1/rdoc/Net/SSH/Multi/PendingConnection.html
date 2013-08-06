@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Net::SSH::Multi::PendingConnection</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/net/ssh/multi/pending_connection_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/net/ssh/multi/pending_connection.rb">lib/net/ssh/multi/pending_connection.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-busy-3F">#busy?</a></li>
+          
+          <li><a href="#method-i-channels">#channels</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-listeners">#listeners</a></li>
+          
+          <li><a href="#method-i-open_channel">#open_channel</a></li>
+          
+          <li><a href="#method-i-postprocess">#postprocess</a></li>
+          
+          <li><a href="#method-i-preprocess">#preprocess</a></li>
+          
+          <li><a href="#method-i-replace_with">#replace_with</a></li>
+          
+          <li><a href="#method-i-send_global_request">#send_global_request</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="../../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Net.html">Net</a></li>
+        
+          <li><a href="../../../Net/SSH.html">Net::SSH</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi.html">Net::SSH::Multi</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Channel.html">Net::SSH::Multi::Channel</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ChannelProxy.html">Net::SSH::Multi::ChannelProxy</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/DynamicServer.html">Net::SSH::Multi::DynamicServer</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/PendingConnection.html">Net::SSH::Multi::PendingConnection</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Server.html">Net::SSH::Multi::Server</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/ServerList.html">Net::SSH::Multi::ServerList</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Session.html">Net::SSH::Multi::Session</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/SessionActions.html">Net::SSH::Multi::SessionActions</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Subsession.html">Net::SSH::Multi::Subsession</a></li>
+        
+          <li><a href="../../../Net/SSH/Multi/Version.html">Net::SSH::Multi::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Net::SSH::Multi::PendingConnection</h1>
+
+    <div id="description" class="description">
+      
+<p>A <a href="PendingConnection.html">PendingConnection</a> instance mimics a
+Net::SSH::Connection::Session instance, without actually being an open
+connection to a server. It is used by <a
+href="Session.html">Net::SSH::Multi::Session</a> when a concurrent
+connection limit is in effect, so that a server can hang on to a
+“connection” that isn’t really a connection.</p>
+
+<p>Any requests against this connection (like <a
+href="PendingConnection.html#method-i-open_channel">open_channel</a> or <a
+href="PendingConnection.html#method-i-send_global_request">send_global_request</a>)
+are not actually sent, but are added to a list of recordings. When the real
+session is opened and replaces this pending connection, all recorded
+actions will be replayed against that session.</p>
+
+<p>You’ll never need to initialize one of these directly, and (if all goes
+well!) should never even notice that one of these is in use. <a
+href="Session.html">Net::SSH::Multi::Session</a> will instantiate these as
+needed, and only when there is a concurrent connection limit.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="server-attribute-method" class="method-detail">
+          <a name="server"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">server</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The <a href="Server.html">Net::SSH::Multi::Server</a> object that “owns”
+this pending connection.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(server)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Instantiates a new pending connection for the given <a
+href="Server.html">Net::SSH::Multi::Server</a> object.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">server</span>)
+  <span class="ruby-ivar">@server</span> = <span class="ruby-identifier">server</span>
+  <span class="ruby-ivar">@recordings</span> = []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="busy-3F-method" class="method-detail ">
+          <a name="method-i-busy-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">busy?</span><span
+              class="method-args">(include_invisible=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Always returns <tt>true</tt>, so that the pending connection looks active
+until it can be truly opened and replaced with a real connection.</p>
+            
+
+            
+            <div class="method-source-code" id="busy-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">busy?</span>(<span class="ruby-identifier">include_invisible</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- busy-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- busy-3F-method -->
+
+      
+        <div id="channels-method" class="method-detail ">
+          <a name="method-i-channels"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">channels</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an empty array, since a pending connection cannot have any real
+channels.</p>
+            
+
+            
+            <div class="method-source-code" id="channels-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">channels</span>
+  []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- channels-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- channels-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Does nothing, except to make a pending connection quack like a real
+connection.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="listeners-method" class="method-detail ">
+          <a name="method-i-listeners"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">listeners</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an empty hash, since a pending connection has no real listeners.</p>
+            
+
+            
+            <div class="method-source-code" id="listeners-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">listeners</span>
+  {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- listeners-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- listeners-method -->
+
+      
+        <div id="open_channel-method" class="method-detail ">
+          <a name="method-i-open_channel"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open_channel</span><span
+              class="method-args">(type="session", *extras, &on_confirm)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Records that a channel open request has been made, and returns a new <a
+href="ChannelProxy.html">Net::SSH::Multi::ChannelProxy</a> object to
+represent the (as yet unopened) channel.</p>
+            
+
+            
+            <div class="method-source-code" id="open_channel-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_channel</span>(<span class="ruby-identifier">type</span>=<span class="ruby-string">&quot;session&quot;</span>, *<span class="ruby-identifier">extras</span>, &amp;<span class="ruby-identifier">on_confirm</span>)
+  <span class="ruby-identifier">channel</span> = <span class="ruby-constant">ChannelProxy</span>.<span class="ruby-identifier">new</span>(&amp;<span class="ruby-identifier">on_confirm</span>)
+  <span class="ruby-ivar">@recordings</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ChannelOpenRecording</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">extras</span>, <span class="ruby-identifier">channel</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">channel</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open_channel-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open_channel-method -->
+
+      
+        <div id="postprocess-method" class="method-detail ">
+          <a name="method-i-postprocess"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">postprocess</span><span
+              class="method-args">(readers, writers)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns <tt>true</tt>, and does nothing else.</p>
+            
+
+            
+            <div class="method-source-code" id="postprocess-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postprocess</span>(<span class="ruby-identifier">readers</span>, <span class="ruby-identifier">writers</span>)
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- postprocess-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- postprocess-method -->
+
+      
+        <div id="preprocess-method" class="method-detail ">
+          <a name="method-i-preprocess"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">preprocess</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns <tt>true</tt>, and does nothing else.</p>
+            
+
+            
+            <div class="method-source-code" id="preprocess-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">preprocess</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- preprocess-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- preprocess-method -->
+
+      
+        <div id="replace_with-method" class="method-detail ">
+          <a name="method-i-replace_with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">replace_with</span><span
+              class="method-args">(session)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Instructs the pending session to replay all of its recordings against the
+given <tt>session</tt>, and to then replace itself with the given session.</p>
+            
+
+            
+            <div class="method-source-code" id="replace_with-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">replace_with</span>(<span class="ruby-identifier">session</span>)
+  <span class="ruby-ivar">@recordings</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">recording</span><span class="ruby-operator">|</span> <span class="ruby-identifier">recording</span>.<span class="ruby-identifier">replay_on</span>(<span class="ruby-identifier">session</span>) }
+  <span class="ruby-ivar">@server</span>.<span class="ruby-identifier">replace_session</span>(<span class="ruby-identifier">session</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- replace_with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- replace_with-method -->
+
+      
+        <div id="send_global_request-method" class="method-detail ">
+          <a name="method-i-send_global_request"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">send_global_request</span><span
+              class="method-args">(type, *extra, &callback)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Records that a global request has been made. The request is not actually
+sent, and won’t be until <a
+href="PendingConnection.html#method-i-replace_with">replace_with</a> is
+called.</p>
+            
+
+            
+            <div class="method-source-code" id="send_global_request-source">
+<pre>
+<span class="ruby-comment"># File lib/net/ssh/multi/pending_connection.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_global_request</span>(<span class="ruby-identifier">type</span>, *<span class="ruby-identifier">extra</span>, &amp;<span class="ruby-identifier">callback</span>)
+  <span class="ruby-ivar">@recordings</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">SendGlobalRequestRecording</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">extra</span>, <span class="ruby-identifier">callback</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- send_global_request-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- send_global_request-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

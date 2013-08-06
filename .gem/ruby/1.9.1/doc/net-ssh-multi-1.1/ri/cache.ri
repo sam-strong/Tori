@@ -1,0 +1,18 @@
+{:ancestors{I"#Net::SSH::Multi::DynamicServer:EF[I"Object;FI" Net::SSH::Multi::Subsession;F[I"$Net::SSH::Multi::SessionActions;FI"Object;FI"Net::SSH::Multi::Version;F[I"Net::SSH::Version;FI" Net::SSH::Multi::ServerList;F[I"Enumerable;FI"Object;FI""Net::SSH::Multi::ChannelProxy;F[I"Object;FI"'Net::SSH::Multi::PendingConnection;F[I"Object;FI"Net::SSH::Multi::Server;F[I"Comparable;FI"Object;FI"Net::SSH::Multi::Session;F[@I"Object;FI"Net::SSH::Multi::Channel;F[I"Enumerable;FI"Object;F:attributes{@[I"attr_reader callback;FI"attr_reader master;FI"attr_reader options;F@
+[I"attr_reader master;FI"attr_reader servers;F@[I"attr_reader on_confirm;F@[I"attr_reader server;FI"Net::SSH::Multi::Server;F[
+I"attr_reader gateway;FI"attr_reader host;FI"attr_reader master;FI"attr_reader options;FI"attr_reader user;F@[I")attr_accessor concurrent_connections;FI"attr_accessor default_user;FI"attr_accessor on_error;FI" attr_reader default_gateway;FI"attr_reader groups;FI"attr_reader server_list;F@"[I"attr_reader channels;FI"attr_reader connection;FI"attr_reader properties;F:class_methods{@[I"new;F@
+[I"new;F@[I"new;F@[I"new;F@[I"new;FI"Net::SSH::Multi::Server;F[I"new;F@[I"new;F@"[I"new;FI"Net::SSH::Multi;F[I"
+start;F:encodingIu:Encoding
+UTF-8;F:instance_methods{@[I"[];FI"[]=;FI"callback;FI"	each;FI"evaluate!;FI"master;FI"options;FI"to_ary;F@
+[	I"
+first;FI"master;FI"servers;FI"
+slice;F@[I"add;FI"concat;FI"	each;FI"flatten;FI"select;FI"to_ary;F@[I"delegate_to;FI"method_missing;FI"on_confirm;F@[I"
+busy?;FI"channels;FI"
+close;FI"listeners;FI"open_channel;FI"postprocess;FI"preprocess;FI"replace_with;FI"send_global_request;FI"server;FI"Net::SSH::Multi::Server;F[I"<=>;FI"[];FI"[]=;FI"
+busy?;FI"
+close;FI"
+fail!;FI"failed?;FI"gateway;FI"	hash;FI"	host;FI"inspect;FI"master;FI"options;FI"	port;FI"session;FI"	to_s;FI"	user;F@[I"
+close;FI"concurrent_connections;FI"default_gateway;FI"default_user;FI"
+group;FI"groups;FI"	loop;FI"loop_forever;FI"on;FI"on_error;FI"process;FI"server_list;FI"servers;FI"servers_for;FI"use;FI"via;FI"	with;F@"[I"[];FI"[]=;FI"active?;FI"channels;FI"
+close;FI"connection;FI"	each;FI"	eof!;FI"	exec;FI"on_close;FI"on_data;FI"on_eof;FI"on_extended_data;FI"on_open_failed;FI"on_process;FI"on_request;FI"properties;FI"request_pty;FI"send_data;FI"	wait;FI"$Net::SSH::Multi::SessionActions;F[I"
+busy?;FI"connect!;FI"	exec;FI"master;FI"open_channel;FI"send_global_request;FI"sessions;F:modules[I"Net;FI"Net::SSH;FI"Net::SSH::Multi;FI"Net::SSH::Multi::Channel;FI""Net::SSH::Multi::ChannelProxy;FI"#Net::SSH::Multi::DynamicServer;FI"'Net::SSH::Multi::PendingConnection;FI"Net::SSH::Multi::Server;FI" Net::SSH::Multi::ServerList;FI"Net::SSH::Multi::Session;F@I" Net::SSH::Multi::Subsession;FI"Net::SSH::Multi::Version;F

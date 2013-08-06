@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"server:EFI".Net::SSH::Multi::PendingConnection#server;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LThe Net::SSH::Multi::Server object that "owns" this pending connection.;T:
+@file0FI",lib/net/ssh/multi/pending_connection.rb;T

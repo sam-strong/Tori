@@ -1,0 +1,16 @@
+Wed, 19 Jun 2013 10:08:39 +0000
+lib/highline.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/simulate.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/style.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/string_extensions.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/color_scheme.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/question.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/system_extensions.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/menu.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/import.rb	Wed, 19 Jun 2013 10:06:38 +0000
+lib/highline/compatibility.rb	Wed, 19 Jun 2013 10:06:38 +0000
+README.rdoc	Wed, 19 Jun 2013 10:06:38 +0000
+INSTALL	Wed, 19 Jun 2013 10:06:38 +0000
+TODO	Wed, 19 Jun 2013 10:06:38 +0000
+CHANGELOG	Wed, 19 Jun 2013 10:06:38 +0000
+LICENSE	Wed, 19 Jun 2013 10:06:38 +0000

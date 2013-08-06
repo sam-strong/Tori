@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: README.rdoc [net-ssh-multi-1.1 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Net.html">Net</a></li>
+        
+          <li><a href="./Net/SSH.html">Net::SSH</a></li>
+        
+          <li><a href="./Net/SSH/Multi.html">Net::SSH::Multi</a></li>
+        
+          <li><a href="./Net/SSH/Multi/Channel.html">Net::SSH::Multi::Channel</a></li>
+        
+          <li><a href="./Net/SSH/Multi/ChannelProxy.html">Net::SSH::Multi::ChannelProxy</a></li>
+        
+          <li><a href="./Net/SSH/Multi/DynamicServer.html">Net::SSH::Multi::DynamicServer</a></li>
+        
+          <li><a href="./Net/SSH/Multi/PendingConnection.html">Net::SSH::Multi::PendingConnection</a></li>
+        
+          <li><a href="./Net/SSH/Multi/Server.html">Net::SSH::Multi::Server</a></li>
+        
+          <li><a href="./Net/SSH/Multi/ServerList.html">Net::SSH::Multi::ServerList</a></li>
+        
+          <li><a href="./Net/SSH/Multi/Session.html">Net::SSH::Multi::Session</a></li>
+        
+          <li><a href="./Net/SSH/Multi/SessionActions.html">Net::SSH::Multi::SessionActions</a></li>
+        
+          <li><a href="./Net/SSH/Multi/Subsession.html">Net::SSH::Multi::Subsession</a></li>
+        
+          <li><a href="./Net/SSH/Multi/Version.html">Net::SSH::Multi::Version</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<h1><a href="Net/SSH/Multi.html">Net::SSH::Multi</a></h1>
+<ul><li>
+<p><a
+href="http://net-ssh.rubyforge.org/multi">net-ssh.rubyforge.org/multi</a></p>
+</li></ul>
+
+<h2>DESCRIPTION:</h2>
+
+<p><a href="Net/SSH/Multi.html">Net::SSH::Multi</a> is a library for
+controlling multiple <a href="Net/SSH.html">Net::SSH</a> connections via a
+single interface. It exposes an API similar to that of
+Net::SSH::Connection::Session and Net::SSH::Connection::Channel, making it
+simpler to adapt programs designed for single connections to be used with
+multiple connections.</p>
+
+<p>This library is particularly useful for automating repetitive tasks that
+must be performed on multiple machines. It executes the commands in
+parallel, and allows commands to be executed on subsets of servers (defined
+by groups).</p>
+
+<h2>FEATURES:</h2>
+<ul><li>
+<p>Easily manage multiple connections</p>
+</li><li>
+<p>Open channels, spawn processes, etc. on multiple connections in parallel</p>
+</li><li>
+<p>Transparently limit concurrent connections when dealing with large numbers
+of servers (<a
+href="Net/SSH/Multi/Session.html#attribute-i-concurrent_connections">Net::SSH::Multi::Session#concurrent_connections</a>)</p>
+</li><li>
+<p>Specify a default gateway machine through which connections should be
+tunneled, or even specify a different gateway machine for each server</p>
+</li></ul>
+
+<h2>SYNOPSIS:</h2>
+
+<p>In a nutshell:</p>
+
+<pre>require 'net/ssh/multi'
+
+Net::SSH::Multi.start do |session|
+  # access servers via a gateway
+  session.via 'gateway', 'gateway-user'
+
+  # define the servers we want to use
+  session.use 'user1@host1'
+  session.use 'user2@host2'
+
+  # define servers in groups for more granular access
+  session.group :app do
+    session.use 'user@app1'
+    session.use 'user@app2'
+  end
+
+  # execute commands on all servers
+  session.exec &quot;uptime&quot;
+
+  # execute commands on a subset of servers
+  session.with(:app).exec &quot;hostname&quot;
+
+  # run the aggregated event loop
+  session.loop
+end</pre>
+
+<p>See <a href="Net/SSH/Multi/Session.html">Net::SSH::Multi::Session</a> for
+more documentation.</p>
+
+<h2>REQUIREMENTS:</h2>
+<ul><li>
+<p>net-ssh (version 2)</p>
+</li><li>
+<p>net-ssh-gateway</p>
+</li></ul>
+
+<p>If you want to run the tests or use any of the Rake tasks, you’ll need:</p>
+<ul><li>
+<p>Echoe (for the Rakefile)</p>
+</li><li>
+<p>Mocha (for the tests)</p>
+</li></ul>
+
+<h2>INSTALL:</h2>
+<ul><li>
+<p>gem install net-ssh-multi (might need sudo privileges)</p>
+</li></ul>
+
+<h2>LICENSE:</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright © 2008 Jamis Buck &lt;jamis@37signals.com&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the ‘Software’),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.</p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

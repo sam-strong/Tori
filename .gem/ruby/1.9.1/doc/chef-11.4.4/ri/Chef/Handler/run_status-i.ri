@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"run_status:EFI"Chef::Handler#run_status;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"CThe Chef::RunStatus object containing data about the Chef run.;T:
+@file0FI"lib/chef/handler.rb;T

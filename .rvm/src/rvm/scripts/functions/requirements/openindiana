@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+requirements_openindiana_lib_installed()
+{
+  pkg info "$1" > /dev/null || return $?
+}
+
+requirements_openindiana_libs_install()
+{
+  __rvm_try_sudo pkg install "$@" || return $?
+}
+
+requirements_openindiana_define()
+{
+  case "$1" in
+    (rvm)
+      requirements_check bash curl text/gnu-patch
+      ;;
+    (jruby*head)
+      requirements_check jdk apache-ant git
+      ;;
+    (jruby*)
+      requirements_check jdk
+      ;;
+    (ir*)
+      requirements_check mono
+      ;;
+    (opal)
+      requirements_check runtime/javascript/nodejs
+      ;;
+    (*-head)
+      requirements_check text/gnu-patch runtime/gcc system/header system/library/math/header-math file/gnu-coreutils git
+      ;;
+    (*)
+      requirements_check text/gnu-patch runtime/gcc system/header system/library/math/header-math file/gnu-coreutils
+      ;;
+  esac
+}

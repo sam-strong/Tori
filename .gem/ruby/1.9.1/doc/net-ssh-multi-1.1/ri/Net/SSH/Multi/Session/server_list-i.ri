@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"server_list:EFI")Net::SSH::Multi::Session#server_list;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=The Net::SSH::Multi::ServerList managed by this session.;T:
+@file0FI"!lib/net/ssh/multi/session.rb;T

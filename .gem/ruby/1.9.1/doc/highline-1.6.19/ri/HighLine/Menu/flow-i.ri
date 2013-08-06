@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	flow:EFI"HighLine::Menu#flow;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThis attribute is passed directly on as the mode to HighLine.list() by;TI"Gall the preset layouts.  See that method for appropriate settings.;T:
+@file0FI"lib/highline/menu.rb;T

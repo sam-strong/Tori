@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"force_override:EFI")Chef::Node::Attribute#force_override;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"8return the force override level attribute component;T:
+@file0FI"lib/chef/node/attribute.rb;T

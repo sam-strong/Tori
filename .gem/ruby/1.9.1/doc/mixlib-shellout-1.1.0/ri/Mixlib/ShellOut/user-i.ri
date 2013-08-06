@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	user:EFI"Mixlib::ShellOut#user;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IUser the command will run as. Normally set via options passed to new;T:
+@file0FI"lib/mixlib/shellout.rb;T

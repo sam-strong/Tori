@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mixlib::ShellOut::Windows::Utils</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/mixlib/shellout/windows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/windows.rb">lib/mixlib/shellout/windows.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-find_executable">::find_executable</a></li>
+          
+          <li><a href="#method-c-pathext">::pathext</a></li>
+          
+          <li><a href="#method-c-should_run_under_cmd-3F">::should_run_under_cmd?</a></li>
+          
+          <li><a href="#method-c-which">::which</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../LICENSE.html">LICENSE</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut.html">Mixlib::ShellOut</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/CommandTimeout.html">Mixlib::ShellOut::CommandTimeout</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/InvalidCommandOption.html">Mixlib::ShellOut::InvalidCommandOption</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/ShellCommandFailed.html">Mixlib::ShellOut::ShellCommandFailed</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/Windows/ThingThatLooksSortOfLikeAProcessStatus.html">Mixlib::ShellOut::Windows::ThingThatLooksSortOfLikeAProcessStatus</a></li>
+        
+          <li><a href="../../../Mixlib/ShellOut/Windows/Utils.html">Mixlib::ShellOut::Windows::Utils</a></li>
+        
+          <li><a href="../../../Windows.html">Windows</a></li>
+        
+          <li><a href="../../../Windows/Process.html">Windows::Process</a></li>
+        
+          <li><a href="../../../Process.html">Process</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mixlib::ShellOut::Windows::Utils</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="find_executable-method" class="method-detail ">
+          <a name="method-c-find_executable"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_executable</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="../Windows.html">Windows</a> has a different notion of what
+"executable" means The OS will search through valid the extensions and look
+for a binary there.</p>
+            
+
+            
+            <div class="method-source-code" id="find_executable-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_executable</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">path</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span> <span class="ruby-identifier">path</span>
+
+  <span class="ruby-identifier">pathext</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ext</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exe</span> = <span class="ruby-node">&quot;#{path}#{ext}&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">exe</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span> <span class="ruby-identifier">exe</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_executable-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_executable-method -->
+
+      
+        <div id="pathext-method" class="method-detail ">
+          <a name="method-c-pathext"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pathext</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pathext-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pathext</span>
+  <span class="ruby-ivar">@pathext</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATHEXT'</span>] <span class="ruby-operator">?</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATHEXT'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">';'</span>) <span class="ruby-operator">+</span> [<span class="ruby-string">''</span>] <span class="ruby-operator">:</span> [<span class="ruby-string">''</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pathext-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pathext-method -->
+
+      
+        <div id="should_run_under_cmd-3F-method" class="method-detail ">
+          <a name="method-c-should_run_under_cmd-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">should_run_under_cmd?</span><span
+              class="method-args">(command)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>api: semi-private If there are special characters parsable by cmd.exe (such
+as file redirection), then this method should return true.</p>
+
+<p>This parser is based on <a
+href="https://github.com/ruby/ruby/blob/9073db5cb1d3173aff62be5b48d00f0fb2890991/win32/win32.c#L1437">github.com/ruby/ruby/blob/9073db5cb1d3173aff62be5b48d00f0fb2890991/win32/win32.c#L1437</a></p>
+            
+
+            
+            <div class="method-source-code" id="should_run_under_cmd-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">should_run_under_cmd?</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^@/</span>
+
+  <span class="ruby-identifier">quote</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">env</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">env_first_char</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-identifier">command</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">each_char</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">c</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;'&quot;</span>, <span class="ruby-string">'&quot;'</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">quote</span>)
+        <span class="ruby-identifier">quote</span> = <span class="ruby-identifier">c</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">quote</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">c</span>
+        <span class="ruby-identifier">quote</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'&gt;'</span>, <span class="ruby-string">'&lt;'</span>, <span class="ruby-string">'|'</span>, <span class="ruby-string">'&amp;'</span>, <span class="ruby-string">&quot;\n&quot;</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">quote</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'%'</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">env</span>
+      <span class="ruby-identifier">env</span> = <span class="ruby-identifier">env_first_char</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">env</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">env_first_char</span>
+        <span class="ruby-identifier">env_first_char</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">env</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/[A-Za-z_]/</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">env</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/[A-Za-z1-9_]/</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- should_run_under_cmd-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- should_run_under_cmd-3F-method -->
+
+      
+        <div id="which-method" class="method-detail ">
+          <a name="method-c-which"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">which</span><span
+              class="method-args">(cmd)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>which() mimicks the <a href="../Unix.html">Unix</a> which command FIXME: it
+is not working</p>
+            
+
+            
+            <div class="method-source-code" id="which-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows.rb, line 277</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">which</span>(<span class="ruby-identifier">cmd</span>)
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATH'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exe</span> = <span class="ruby-identifier">find_executable</span>(<span class="ruby-node">&quot;#{path}/#{cmd}&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">exe</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exe</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- which-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- which-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

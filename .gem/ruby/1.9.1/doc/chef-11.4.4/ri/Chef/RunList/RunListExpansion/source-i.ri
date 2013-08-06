@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"source:EFI"+Chef::RunList::RunListExpansion#source;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GThe data source passed to the constructor. Not used in this class.;TI"IIn subclasses, this is a couchdb or Chef::REST object pre-configured;TI"0to fetch roles from their correct location.;T:
+@file0FI",lib/chef/run_list/run_list_expansion.rb;T

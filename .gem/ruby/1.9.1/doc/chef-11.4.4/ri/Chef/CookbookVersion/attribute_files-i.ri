@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"attribute_files:EFI"*Chef::CookbookVersion#attribute_files;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"?attribute_filenames also has a setter that has non-default;TI"functionality.;T:
+@file0FI"!lib/chef/cookbook_version.rb;T

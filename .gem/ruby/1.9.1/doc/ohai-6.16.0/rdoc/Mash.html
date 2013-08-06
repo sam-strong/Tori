@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mash</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/ohai/mash_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ohai/mash.rb">lib/ohai/mash.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Hash</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-from_hash">::from_hash</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
+          
+          <li><a href="#method-i-convert_key">#convert_key</a></li>
+          
+          <li><a href="#method-i-convert_value">#convert_value</a></li>
+          
+          <li><a href="#method-i-default">#default</a></li>
+          
+          <li><a href="#method-i-delete">#delete</a></li>
+          
+          <li><a href="#method-i-except">#except</a></li>
+          
+          <li><a href="#method-i-fetch">#fetch</a></li>
+          
+          <li><a href="#method-i-has_key-3F">#has_key?</a></li>
+          
+          <li><a href="#method-i-include-3F">#include?</a></li>
+          
+          <li><a href="#method-i-key-3F">#key?</a></li>
+          
+          <li><a href="#method-i-member-3F">#member?</a></li>
+          
+          <li><a href="#method-i-merge">#merge</a></li>
+          
+          <li><a href="#method-i-merge-21">#merge!</a></li>
+          
+          <li><a href="#method-i-regular_update">#regular_update</a></li>
+          
+          <li><a href="#method-i-regular_writer">#regular_writer</a></li>
+          
+          <li><a href="#method-i-stringify_keys-21">#stringify_keys!</a></li>
+          
+          <li><a href="#method-i-symbolize_keys">#symbolize_keys</a></li>
+          
+          <li><a href="#method-i-to_hash">#to_hash</a></li>
+          
+          <li><a href="#method-i-update">#update</a></li>
+          
+          <li><a href="#method-i-values_at">#values_at</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Ohai.html">Ohai</a></li>
+        
+          <li><a href="./Ohai/Application.html">Ohai::Application</a></li>
+        
+          <li><a href="./Ohai/Config.html">Ohai::Config</a></li>
+        
+          <li><a href="./Ohai/Exceptions.html">Ohai::Exceptions</a></li>
+        
+          <li><a href="./Ohai/Exceptions/Exec.html">Ohai::Exceptions::Exec</a></li>
+        
+          <li><a href="./Ohai/Log.html">Ohai::Log</a></li>
+        
+          <li><a href="./Ohai/Mixin.html">Ohai::Mixin</a></li>
+        
+          <li><a href="./Ohai/Mixin/Command.html">Ohai::Mixin::Command</a></li>
+        
+          <li><a href="./Ohai/Mixin/Ec2Metadata.html">Ohai::Mixin::Ec2Metadata</a></li>
+        
+          <li><a href="./Ohai/Mixin/FromFile.html">Ohai::Mixin::FromFile</a></li>
+        
+          <li><a href="./Ohai/System.html">Ohai::System</a></li>
+        
+          <li><a href="./DMI.html">DMI</a></li>
+        
+          <li><a href="./Mash.html">Mash</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mash</h1>
+
+    <div id="description" class="description">
+      
+<p>This class has dubious semantics and we only have it so that people can
+write <a href="http://:key">params</a> instead of <a
+href="http://'key'">params</a>.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="from_hash-method" class="method-detail ">
+          <a name="method-c-from_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">from_hash</span><span
+              class="method-args">(hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [Mash] Convert a Hash into a <a href="Mash.html">Mash</a> The input
+Hash’s default value is maintained</p>
+            
+
+            
+            <div class="method-source-code" id="from_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">from_hash</span>(<span class="ruby-identifier">hash</span>)
+  <span class="ruby-identifier">mash</span> = <span class="ruby-constant">Mash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hash</span>)
+  <span class="ruby-identifier">mash</span>.<span class="ruby-identifier">default</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">default</span>
+  <span class="ruby-identifier">mash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- from_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- from_hash-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(constructor = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param constructor&lt;Object&gt;</p>
+
+<pre>The default value for the mash. Defaults to an empty hash.</pre>
+
+<p>@details [Alternatives]</p>
+
+<pre>If constructor is a Hash, a new mash will be created based on the keys of
+the hash and no default value will be set.</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">constructor</span> = {})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">constructor</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-keyword">super</span>()
+    <span class="ruby-identifier">update</span>(<span class="ruby-identifier">constructor</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>(<span class="ruby-identifier">constructor</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-3D-method" class="method-detail ">
+          <a name="method-i-5B-5D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]=</span><span
+              class="method-args">(key, value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt; The key to set. @param value&lt;Object&gt;</p>
+
+<pre>The value to set the key to.</pre>
+
+<p>@see <a href="Mash.html#method-i-convert_key">Mash#convert_key</a> @see <a
+href="Mash.html#method-i-convert_value">Mash#convert_value</a></p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">regular_writer</span>(<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>), <span class="ruby-identifier">convert_value</span>(<span class="ruby-identifier">value</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Mash.html#method-i-regular_writer">regular_writer</a>
+          </div>
+          
+
+          
+        </div><!-- 5B-5D-3D-method -->
+
+      
+        <div id="default-method" class="method-detail ">
+          <a name="method-i-default"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default</span><span
+              class="method-args">(key = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt; The default value for the mash. Defaults to nil.</p>
+
+<p>@details [Alternatives]</p>
+
+<pre>If key is a Symbol and it is a key in the mash, then the default value will
+be set to the value matching the key.</pre>
+            
+
+            
+            <div class="method-source-code" id="default-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default</span>(<span class="ruby-identifier">key</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default-method -->
+
+      
+        <div id="delete-method" class="method-detail ">
+          <a name="method-i-delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt;</p>
+
+<pre>The key to delete from the mash.\</pre>
+            
+
+            
+            <div class="method-source-code" id="delete-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete-method -->
+
+      
+        <div id="except-method" class="method-detail ">
+          <a name="method-i-except"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">except</span><span
+              class="method-args">(*keys)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param *rejected&lt;Array[(<a href="String.html">String</a>, Symbol)] The
+mash keys to exclude.</p>
+
+<p>@return [Mash] A new mash without the selected keys.</p>
+
+<p>@example</p>
+
+<pre>{ :one =&gt; 1, :two =&gt; 2, :three =&gt; 3 }.except(:one)
+  #=&gt; { &quot;two&quot; =&gt; 2, &quot;three&quot; =&gt; 3 }</pre>
+            
+
+            
+            <div class="method-source-code" id="except-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">except</span>(*<span class="ruby-identifier">keys</span>)
+  <span class="ruby-keyword">super</span>(*<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">k</span>)})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- except-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- except-method -->
+
+      
+        <div id="fetch-method" class="method-detail ">
+          <a name="method-i-fetch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch</span><span
+              class="method-args">(key, *extras)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt; The key to fetch. This will be run through
+convert_key. @param *extras&lt;Array&gt; Default value.</p>
+
+<p>@return [Object] The value at key or the default value.</p>
+            
+
+            
+            <div class="method-source-code" id="fetch-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">key</span>, *<span class="ruby-identifier">extras</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>), *<span class="ruby-identifier">extras</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fetch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch-method -->
+
+      
+        <div id="has_key-3F-method" class="method-detail method-alias">
+          <a name="method-i-has_key-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_key?</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-key-3F">key?</a>
+          </div>
+          
+        </div><!-- has_key-3F-method -->
+
+      
+        <div id="include-3F-method" class="method-detail method-alias">
+          <a name="method-i-include-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">include?</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>def include? def has_key? def member?</p>
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-key-3F">key?</a>
+          </div>
+          
+        </div><!-- include-3F-method -->
+
+      
+        <div id="key-3F-method" class="method-detail ">
+          <a name="method-i-key-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">key?</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt; The key to check for. This will be run through
+convert_key.</p>
+
+<p>@return [Boolean] True if the key exists in the mash.</p>
+            
+
+            
+            <div class="method-source-code" id="key-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">key?</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- key-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Mash.html#method-i-include-3F">include?</a>, <a href="Mash.html#method-i-has_key-3F">has_key?</a>, <a href="Mash.html#method-i-member-3F">member?</a>
+          </div>
+          
+
+          
+        </div><!-- key-3F-method -->
+
+      
+        <div id="member-3F-method" class="method-detail method-alias">
+          <a name="method-i-member-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">member?</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-key-3F">key?</a>
+          </div>
+          
+        </div><!-- member-3F-method -->
+
+      
+        <div id="merge-method" class="method-detail ">
+          <a name="method-i-merge"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge</span><span
+              class="method-args">(hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param hash&lt;Hash&gt; The hash to merge with the mash.</p>
+
+<p>@return [Mash] A new mash with the hash values merged in.</p>
+            
+
+            
+            <div class="method-source-code" id="merge-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">hash</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge-method -->
+
+      
+        <div id="merge-21-method" class="method-detail method-alias">
+          <a name="method-i-merge-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge!</span><span
+              class="method-args">(other_hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-update">update</a>
+          </div>
+          
+        </div><!-- merge-21-method -->
+
+      
+        <div id="regular_update-method" class="method-detail method-alias">
+          <a name="method-i-regular_update"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">regular_update</span><span
+              class="method-args">(other_hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-update">update</a>
+          </div>
+          
+        </div><!-- regular_update-method -->
+
+      
+        <div id="regular_writer-method" class="method-detail method-alias">
+          <a name="method-i-regular_writer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">regular_writer</span><span
+              class="method-args">(key, value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Mash.html#method-i-5B-5D-3D">[]=</a>
+          </div>
+          
+        </div><!-- regular_writer-method -->
+
+      
+        <div id="stringify_keys-21-method" class="method-detail ">
+          <a name="method-i-stringify_keys-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stringify_keys!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Used to provide the same interface as Hash.</p>
+
+<p>@return [Mash] This mash unchanged.</p>
+            
+
+            
+            <div class="method-source-code" id="stringify_keys-21-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stringify_keys!</span>; <span class="ruby-keyword">self</span> <span class="ruby-keyword">end</span></pre>
+            </div><!-- stringify_keys-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stringify_keys-21-method -->
+
+      
+        <div id="symbolize_keys-method" class="method-detail ">
+          <a name="method-i-symbolize_keys"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">symbolize_keys</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [Hash] The mash as a Hash with symbolized keys.</p>
+            
+
+            
+            <div class="method-source-code" id="symbolize_keys-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">symbolize_keys</span>
+  <span class="ruby-identifier">h</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">default</span>)
+  <span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">val</span> }
+  <span class="ruby-identifier">h</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- symbolize_keys-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- symbolize_keys-method -->
+
+      
+        <div id="to_hash-method" class="method-detail ">
+          <a name="method-i-to_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_hash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@return [Hash] The mash as a Hash with string keys.</p>
+            
+
+            
+            <div class="method-source-code" id="to_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hash</span>
+  <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">default</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_hash-method -->
+
+      
+        <div id="update-method" class="method-detail ">
+          <a name="method-i-update"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update</span><span
+              class="method-args">(other_hash)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param other_hash&lt;Hash&gt;</p>
+
+<pre>A hash to update values in the mash with. The keys and the values will be
+converted to Mash format.</pre>
+
+<p>@return [Mash] The updated mash.</p>
+            
+
+            
+            <div class="method-source-code" id="update-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">other_hash</span>)
+  <span class="ruby-identifier">other_hash</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">regular_writer</span>(<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>), <span class="ruby-identifier">convert_value</span>(<span class="ruby-identifier">value</span>)) }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Mash.html#method-i-regular_update">regular_update</a>, <a href="Mash.html#method-i-merge-21">merge!</a>
+          </div>
+          
+
+          
+        </div><!-- update-method -->
+
+      
+        <div id="values_at-method" class="method-detail ">
+          <a name="method-i-values_at"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">values_at</span><span
+              class="method-args">(*indices)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param *indices&lt;Array&gt;</p>
+
+<pre>The keys to retrieve values for. These will be run through +convert_key+.</pre>
+
+<p>@return [Array] The values at each of the provided keys</p>
+            
+
+            
+            <div class="method-source-code" id="values_at-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">indices</span>)
+  <span class="ruby-identifier">indices</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>)]}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- values_at-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- values_at-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="convert_key-method" class="method-detail ">
+          <a name="method-i-convert_key"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convert_key</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param key&lt;Object&gt; The key to convert.</p>
+
+<p>@param [Object]</p>
+
+<pre>The converted key. If the key was a symbol, it will be converted to a
+string.</pre>
+
+<p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="convert_key-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_key</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-identifier">key</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convert_key-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convert_key-method -->
+
+      
+        <div id="convert_value-method" class="method-detail ">
+          <a name="method-i-convert_value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convert_value</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param value&lt;Object&gt; The value to convert.</p>
+
+<p>@return [Object]</p>
+
+<pre>The converted value. A Hash or an Array of hashes, will be converted to
+their Mash equivalents.</pre>
+
+<p>@api private</p>
+            
+
+            
+            <div class="method-source-code" id="convert_value-source">
+<pre>
+<span class="ruby-comment"># File lib/ohai/mash.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_value</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-constant">Mash</span>.<span class="ruby-identifier">from_hash</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">value</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">convert_value</span>(<span class="ruby-identifier">e</span>) }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convert_value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convert_value-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

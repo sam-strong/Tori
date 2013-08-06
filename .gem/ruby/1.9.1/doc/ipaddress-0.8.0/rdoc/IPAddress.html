@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: IPAddress</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/ipaddress/ipv4_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress/ipv4.rb">lib/ipaddress/ipv4.rb</a></li>
+          
+            <li><a href="./lib/ipaddress/prefix_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress/prefix.rb">lib/ipaddress/prefix.rb</a></li>
+          
+            <li><a href="./lib/ipaddress/ipv6_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress/ipv6.rb">lib/ipaddress/ipv6.rb</a></li>
+          
+            <li><a href="./lib/ipaddress_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress.rb">lib/ipaddress.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="IPAddress/IPAddress.html">IPAddress::IPAddress</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="IPAddress/IPv4.html">IPAddress::IPv4</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="IPAddress/IPv6.html">IPAddress::IPv6</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="IPAddress/Prefix.html">IPAddress::Prefix</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="IPAddress/Prefix128.html">IPAddress::Prefix128</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="IPAddress/Prefix32.html">IPAddress::Prefix32</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-valid-3F">::valid?</a></li>
+          
+          <li><a href="#method-c-valid_ipv4-3F">::valid_ipv4?</a></li>
+          
+          <li><a href="#method-c-valid_ipv4_netmask-3F">::valid_ipv4_netmask?</a></li>
+          
+          <li><a href="#method-c-valid_ipv6-3F">::valid_ipv6?</a></li>
+          
+          <li><a href="#method-i-ipv4-3F">#ipv4?</a></li>
+          
+          <li><a href="#method-i-ipv6-3F">#ipv6?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./IPAddress.html">IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress.html">IPAddress::IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress.html">IPAddress::IPAddress::IPAddress</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6.html">IPAddress::IPAddress::IPAddress::IPv6</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Loopback.html">IPAddress::IPAddress::IPAddress::IPv6::Loopback</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Mapped.html">IPAddress::IPAddress::IPAddress::IPv6::Mapped</a></li>
+        
+          <li><a href="./IPAddress/IPAddress/IPAddress/IPv6/Unspecified.html">IPAddress::IPAddress::IPAddress::IPv6::Unspecified</a></li>
+        
+          <li><a href="./IPAddress/IPv4.html">IPAddress::IPv4</a></li>
+        
+          <li><a href="./IPAddress/IPv6.html">IPAddress::IPv6</a></li>
+        
+          <li><a href="./IPAddress/Prefix.html">IPAddress::Prefix</a></li>
+        
+          <li><a href="./IPAddress/Prefix128.html">IPAddress::Prefix128</a></li>
+        
+          <li><a href="./IPAddress/Prefix32.html">IPAddress::Prefix32</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">IPAddress</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="AUTHORS">AUTHORS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GEM">GEM</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NAME">NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="valid-3F-method" class="method-detail ">
+          <a name="method-c-valid-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid?</span><span
+              class="method-args">(addr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if the given string is a valid IP address, either <a
+href="IPAddress/IPv4.html">IPv4</a> or <a
+href="IPAddress/IPv6.html">IPv6</a></p>
+
+<p>Example:</p>
+
+<pre>IPAddress::valid? &quot;2002::1&quot;
+  #=&gt; true
+
+IPAddress::valid? &quot;10.0.0.256&quot;   
+  #=&gt; false</pre>
+            
+
+            
+            <div class="method-source-code" id="valid-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-identifier">addr</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">valid_ipv6?</span>(<span class="ruby-identifier">addr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid-3F-method -->
+
+      
+        <div id="valid_ipv4-3F-method" class="method-detail ">
+          <a name="method-c-valid_ipv4-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid_ipv4?</span><span
+              class="method-args">(addr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if the given string is a valid <a
+href="IPAddress/IPv4.html">IPv4</a> address</p>
+
+<p>Example:</p>
+
+<pre>IPAddress::valid_ipv4? &quot;2002::1&quot;
+  #=&gt; false
+
+IPAddress::valid_ipv4? &quot;172.16.10.1&quot;
+  #=&gt; true</pre>
+            
+
+            
+            <div class="method-source-code" id="valid_ipv4-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">captures</span>.<span class="ruby-identifier">all?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">256</span>}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid_ipv4-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid_ipv4-3F-method -->
+
+      
+        <div id="valid_ipv4_netmask-3F-method" class="method-detail ">
+          <a name="method-c-valid_ipv4_netmask-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid_ipv4_netmask?</span><span
+              class="method-args">(addr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if the argument is a valid <a href="IPAddress/IPv4.html">IPv4</a>
+netmask expressed in dotted decimal format.</p>
+
+<pre>IPAddress.valid_ipv4_netmask? &quot;255.255.0.0&quot;
+  #=&gt; true</pre>
+            
+
+            
+            <div class="method-source-code" id="valid_ipv4_netmask-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid_ipv4_netmask?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-identifier">arr</span> = <span class="ruby-identifier">addr</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_i</span>}.<span class="ruby-identifier">pack</span>(<span class="ruby-string">&quot;CCCC&quot;</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&quot;B*&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/01/</span>)
+  <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-identifier">addr</span>)
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid_ipv4_netmask-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid_ipv4_netmask-3F-method -->
+
+      
+        <div id="valid_ipv6-3F-method" class="method-detail ">
+          <a name="method-c-valid_ipv6-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid_ipv6?</span><span
+              class="method-args">(addr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if the given string is a valid <a
+href="IPAddress/IPv6.html">IPv6</a> address</p>
+
+<p>Example:</p>
+
+<pre>IPAddress::valid_ipv6? &quot;2002::1&quot;
+  #=&gt; true
+
+IPAddress::valid_ipv6? &quot;2002::DEAD::BEEF&quot;
+  #=&gt; false</pre>
+            
+
+            
+            <div class="method-source-code" id="valid_ipv6-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid_ipv6?</span>(<span class="ruby-identifier">addr</span>)
+  <span class="ruby-comment"># IPv6 (normal)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*)?\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*)?\Z/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span>
+  <span class="ruby-comment"># IPv6 (IPv4 compat)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-node">$'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:)?/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-node">$'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-regexp">/\A::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*:)?/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid_ipv4?</span>(<span class="ruby-node">$'</span>)
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid_ipv6-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid_ipv6-3F-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="ipv4-3F-method" class="method-detail ">
+          <a name="method-i-ipv4-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ipv4?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the object is an <a href="IPAddress/IPv4.html">IPv4</a> address</p>
+
+<pre>ip = IPAddress(&quot;192.168.10.100/24&quot;)
+
+ip.ipv4?
+  #-&gt; true</pre>
+            
+
+            
+            <div class="method-source-code" id="ipv4-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ipv4?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">IPAddress</span><span class="ruby-operator">::</span><span class="ruby-constant">IPv4</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ipv4-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ipv4-3F-method -->
+
+      
+        <div id="ipv6-3F-method" class="method-detail ">
+          <a name="method-i-ipv6-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ipv6?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the object is an <a href="IPAddress/IPv6.html">IPv6</a> address</p>
+
+<pre>ip = IPAddress(&quot;192.168.10.100/24&quot;)
+
+ip.ipv6?
+  #-&gt; false</pre>
+            
+
+            
+            <div class="method-source-code" id="ipv6-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ipv6?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">IPAddress</span><span class="ruby-operator">::</span><span class="ruby-constant">IPv6</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ipv6-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ipv6-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

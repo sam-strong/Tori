@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: IPAddress::IPAddress::IPAddress::IPv6::Loopback</title>
+
+  <link rel="stylesheet" href="../../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../../index.html">Home</a>
+          <a href="../../../../index.html#classes">Classes</a>
+          <a href="../../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../../lib/ipaddress/ipv6_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ipaddress/ipv6.rb">lib/ipaddress/ipv6.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">IPAddress::IPAddress::IPv6</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../../IPAddress.html">IPAddress</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress.html">IPAddress::IPAddress</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress/IPAddress.html">IPAddress::IPAddress::IPAddress</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress/IPAddress/IPv6.html">IPAddress::IPAddress::IPAddress::IPv6</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress/IPAddress/IPv6/Loopback.html">IPAddress::IPAddress::IPAddress::IPv6::Loopback</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress/IPAddress/IPv6/Mapped.html">IPAddress::IPAddress::IPAddress::IPv6::Mapped</a></li>
+        
+          <li><a href="../../../../IPAddress/IPAddress/IPAddress/IPv6/Unspecified.html">IPAddress::IPAddress::IPAddress::IPv6::Unspecified</a></li>
+        
+          <li><a href="../../../../IPAddress/IPv4.html">IPAddress::IPv4</a></li>
+        
+          <li><a href="../../../../IPAddress/IPv6.html">IPAddress::IPv6</a></li>
+        
+          <li><a href="../../../../IPAddress/Prefix.html">IPAddress::Prefix</a></li>
+        
+          <li><a href="../../../../IPAddress/Prefix128.html">IPAddress::Prefix128</a></li>
+        
+          <li><a href="../../../../IPAddress/Prefix32.html">IPAddress::Prefix32</a></li>
+        
+          <li><a href="../../../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">IPAddress::IPAddress::IPAddress::IPv6::Loopback</h1>
+
+    <div id="description" class="description">
+      
+<pre>The loopback  address is a unicast localhost address. If an</pre>
+
+<p>application in a host sends packets to this address, the <a
+href="../IPv6.html">IPv6</a> stack will loop these packets back on the same
+virtual interface.</p>
+
+<p><a href="Loopback.html">Loopback</a> addresses are expressed in the
+following form:</p>
+
+<pre>::1</pre>
+
+<p>or, with their appropriate prefix,</p>
+
+<pre>::1/128</pre>
+
+<p>As for the unspecified addresses, <a href="../IPv6.html">IPv6</a> loopbacks
+can be created with <a href="../../IPAddress.html">IPAddress</a> calling
+their own class:</p>
+
+<pre>ip = IPAddress::IPv6::Loopback.new
+
+ip.to_string
+  #=&gt; &quot;::1/128&quot;</pre>
+
+<p>or by using the wrapper:</p>
+
+<pre>ip = IPAddress &quot;::1&quot;
+
+ip.to_string
+  #=&gt; &quot;::1/128&quot;</pre>
+
+<p>Checking if an address is loopback is easy with the IPv6#loopback? method:</p>
+
+<pre>ip.loopback?
+  #=&gt; true</pre>
+
+<p>The <a href="../IPv6.html">IPv6</a> loopback address corresponds to
+127.0.0.1 in <a href="../../../IPv4.html">IPv4</a>.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates a new <a href="../IPv6.html">IPv6</a> unspecified address</p>
+
+<pre>ip = IPAddress::IPv6::Loopback.new
+
+ip.to_string
+  #=&gt; &quot;::1/128&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ipaddress/ipv6.rb, line 745</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@address</span> = (<span class="ruby-string">&quot;0000:&quot;</span>*<span class="ruby-value">7</span>)<span class="ruby-operator">+</span><span class="ruby-string">&quot;0001&quot;</span>
+  <span class="ruby-ivar">@groups</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">7</span>,<span class="ruby-value">0</span>).<span class="ruby-identifier">push</span>(<span class="ruby-value">1</span>) 
+  <span class="ruby-ivar">@prefix</span> = <span class="ruby-constant">Prefix128</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">128</span>)
+  <span class="ruby-ivar">@compressed</span> = <span class="ruby-identifier">compress_address</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

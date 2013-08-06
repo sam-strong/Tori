@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"timeout:EFI"Mixlib::ShellOut#timeout;FI"W;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MThe maximum time this command is allowed to run. Usually set via options;TI"to new;T:
+@file0FI"lib/mixlib/shellout.rb;T

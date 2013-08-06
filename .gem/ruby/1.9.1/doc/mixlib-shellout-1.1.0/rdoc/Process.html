@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Process</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/mixlib/shellout/windows/core_ext_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/windows/core_ext.rb">lib/mixlib/shellout/windows/core_ext.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-create">::create</a></li>
+          
+          <li><a href="#method-c-raise_last_error">::raise_last_error</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="./Mixlib/ShellOut.html">Mixlib::ShellOut</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/CommandTimeout.html">Mixlib::ShellOut::CommandTimeout</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/InvalidCommandOption.html">Mixlib::ShellOut::InvalidCommandOption</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/ShellCommandFailed.html">Mixlib::ShellOut::ShellCommandFailed</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/Windows/ThingThatLooksSortOfLikeAProcessStatus.html">Mixlib::ShellOut::Windows::ThingThatLooksSortOfLikeAProcessStatus</a></li>
+        
+          <li><a href="./Mixlib/ShellOut/Windows/Utils.html">Mixlib::ShellOut::Windows::Utils</a></li>
+        
+          <li><a href="./Windows.html">Windows</a></li>
+        
+          <li><a href="./Windows/Process.html">Windows::Process</a></li>
+        
+          <li><a href="./Process.html">Process</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Process</h1>
+
+    <div id="description" class="description">
+      
+<p>Override Win32::Process.create to take a proper environment hash so that
+variables can contain semicolons (submitted patch to owner)</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ERROR_CODE_MAP">ERROR_CODE_MAP</a></dt>
+          
+          <dd class="description"><p>List from ruby/win32/win32.c</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="create-method" class="method-detail ">
+          <a name="method-c-create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create</span><span
+              class="method-args">(args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows/core_ext.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">'Expecting hash-style keyword arguments'</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">valid_keys</span> = <span class="ruby-node">%
+    app_name command_line inherit creation_flags cwd environment
+    startup_info thread_inherit process_inherit close_handles with_logon
+    domain password
+  /</span>
+
+  <span class="ruby-identifier">valid_si_keys</span> = <span class="ruby-string">%
+    startf_flags desktop title x y x_size y_size x_count_chars
+    y_count_chars fill_attribute sw_flags stdin stdout stderr
+  /</span>
+
+  <span class="ruby-comment"># Set default values</span>
+  <span class="ruby-identifier">hash</span> = {
+    <span class="ruby-string">'app_name'</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-string">'creation_flags'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+    <span class="ruby-string">'close_handles'</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>
+  }
+
+  <span class="ruby-comment"># Validate the keys, and convert symbols and case to lowercase strings.</span>
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid_keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;invalid key '#{key}'&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">val</span>
+  }
+
+  <span class="ruby-identifier">si_hash</span> = {}
+
+  <span class="ruby-comment"># If the startup_info key is present, validate its subkeys</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'startup_info'</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-string">'startup_info'</span>].<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid_si_keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;invalid startup_info key '#{key}'&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">val</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># The +command_line+ key is mandatory unless the +app_name+ key</span>
+  <span class="ruby-comment"># is specified.</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'command_line'</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>]
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'command_line'</span>] = <span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>]
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>] = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">'command_line or app_name must be specified'</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># The environment string should be passed as an array of A=B paths, or</span>
+  <span class="ruby-comment"># as a string of ';' separated paths.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'environment'</span>]
+    <span class="ruby-identifier">env</span> = <span class="ruby-identifier">hash</span>[<span class="ruby-string">'environment'</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">env</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:join</span>)
+      <span class="ruby-comment"># Backwards compat for ; separated paths</span>
+      <span class="ruby-identifier">env</span> = <span class="ruby-identifier">hash</span>[<span class="ruby-string">'environment'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># The argument format is a series of null-terminated strings, with an additional null terminator.</span>
+    <span class="ruby-identifier">env</span> = <span class="ruby-identifier">env</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\00&quot;&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\00&quot;&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'with_logon'</span>]
+      <span class="ruby-identifier">env</span> = <span class="ruby-identifier">env</span>.<span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">e</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">env</span> = [<span class="ruby-identifier">env</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'p*'</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">env</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">startinfo</span> = [<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">startinfo</span> = <span class="ruby-identifier">startinfo</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-string">'LLLLLLLLLLLLSSLLLL'</span>)
+  <span class="ruby-identifier">procinfo</span>  = [<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'LLLL'</span>)
+
+  <span class="ruby-comment"># Process SECURITY_ATTRIBUTE structure</span>
+  <span class="ruby-identifier">process_security</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'process_inherit'</span>]
+    <span class="ruby-identifier">process_security</span> = [<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'LLL'</span>)
+    <span class="ruby-identifier">process_security</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] = [<span class="ruby-value">12</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-comment"># sizeof(SECURITY_ATTRIBUTE)</span>
+    <span class="ruby-identifier">process_security</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>] = [<span class="ruby-value">1</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>)  <span class="ruby-comment"># TRUE</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Thread SECURITY_ATTRIBUTE structure</span>
+  <span class="ruby-identifier">thread_security</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'thread_inherit'</span>]
+    <span class="ruby-identifier">thread_security</span> = [<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'LLL'</span>)
+    <span class="ruby-identifier">thread_security</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] = [<span class="ruby-value">12</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-comment"># sizeof(SECURITY_ATTRIBUTE)</span>
+    <span class="ruby-identifier">thread_security</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>] = [<span class="ruby-value">1</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>)  <span class="ruby-comment"># TRUE</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Automatically handle stdin, stdout and stderr as either IO objects</span>
+  <span class="ruby-comment"># or file descriptors.  This won't work for StringIO, however.</span>
+  [<span class="ruby-string">'stdin'</span>, <span class="ruby-string">'stdout'</span>, <span class="ruby-string">'stderr'</span>].<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">io</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">io</span>].<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:fileno</span>)
+        <span class="ruby-identifier">handle</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">io</span>].<span class="ruby-identifier">fileno</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">handle</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">io</span>])
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">handle</span> <span class="ruby-operator">==</span> <span class="ruby-constant">INVALID_HANDLE_VALUE</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">get_last_error</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># Most implementations of Ruby on Windows create inheritable</span>
+      <span class="ruby-comment"># handles by default, but some do not. RF bug #26988.</span>
+      <span class="ruby-identifier">bool</span> = <span class="ruby-constant">SetHandleInformation</span>(
+        <span class="ruby-identifier">handle</span>,
+        <span class="ruby-constant">HANDLE_FLAG_INHERIT</span>,
+        <span class="ruby-constant">HANDLE_FLAG_INHERIT</span>
+      )
+
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">get_last_error</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">bool</span>
+
+      <span class="ruby-identifier">si_hash</span>[<span class="ruby-identifier">io</span>] = <span class="ruby-identifier">handle</span>
+      <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'startf_flags'</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'startf_flags'</span>] <span class="ruby-operator">|=</span> <span class="ruby-constant">STARTF_USESTDHANDLES</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'inherit'</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-comment"># The bytes not covered here are reserved (null)</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">si_hash</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>]  = [<span class="ruby-identifier">startinfo</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>)
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>]  = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'desktop'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'p*'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'desktop'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">12</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'title'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'p*'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'title'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">16</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">20</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">24</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x_size'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x_size'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">28</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y_size'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y_size'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">32</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x_count_chars'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'x_count_chars'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">36</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y_count_chars'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'y_count_chars'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">40</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'fill_attribute'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'fill_attribute'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">44</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'startf_flags'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'startf_flags'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">48</span>,<span class="ruby-value">2</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'sw_flags'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'S'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'sw_flags'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">56</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stdin'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stdin'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">60</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stdout'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stdout'</span>]
+    <span class="ruby-identifier">startinfo</span>[<span class="ruby-value">64</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stderr'</span>]].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'L'</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">si_hash</span>[<span class="ruby-string">'stderr'</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'with_logon'</span>]
+    <span class="ruby-identifier">logon</span>  = <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'with_logon'</span>])
+    <span class="ruby-identifier">domain</span> = <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'domain'</span>])
+    <span class="ruby-identifier">app</span>    = <span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>])
+    <span class="ruby-identifier">cmd</span>    = <span class="ruby-identifier">hash</span>[<span class="ruby-string">'command_line'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'command_line'</span>])
+    <span class="ruby-identifier">cwd</span>    = <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'cwd'</span>])
+    <span class="ruby-identifier">passwd</span> = <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-string">'password'</span>])
+
+    <span class="ruby-identifier">hash</span>[<span class="ruby-string">'creation_flags'</span>] <span class="ruby-operator">|=</span> <span class="ruby-constant">CREATE_UNICODE_ENVIRONMENT</span>
+
+    <span class="ruby-identifier">process_ran</span> = <span class="ruby-constant">CreateProcessWithLogonW</span>(
+      <span class="ruby-identifier">logon</span>,                  <span class="ruby-comment"># User</span>
+      <span class="ruby-identifier">domain</span>,                 <span class="ruby-comment"># Domain</span>
+      <span class="ruby-identifier">passwd</span>,                 <span class="ruby-comment"># Password</span>
+      <span class="ruby-constant">LOGON_WITH_PROFILE</span>,     <span class="ruby-comment"># Logon flags</span>
+      <span class="ruby-identifier">app</span>,                    <span class="ruby-comment"># App name</span>
+      <span class="ruby-identifier">cmd</span>,                    <span class="ruby-comment"># Command line</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'creation_flags'</span>], <span class="ruby-comment"># Creation flags</span>
+      <span class="ruby-identifier">env</span>,                    <span class="ruby-comment"># Environment</span>
+      <span class="ruby-identifier">cwd</span>,                    <span class="ruby-comment"># Working directory</span>
+      <span class="ruby-identifier">startinfo</span>,              <span class="ruby-comment"># Startup Info</span>
+      <span class="ruby-identifier">procinfo</span>                <span class="ruby-comment"># Process Info</span>
+    )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">process_ran</span> = <span class="ruby-constant">CreateProcess</span>(
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'app_name'</span>],       <span class="ruby-comment"># App name</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'command_line'</span>],   <span class="ruby-comment"># Command line</span>
+      <span class="ruby-identifier">process_security</span>,       <span class="ruby-comment"># Process attributes</span>
+      <span class="ruby-identifier">thread_security</span>,        <span class="ruby-comment"># Thread attributes</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'inherit'</span>],        <span class="ruby-comment"># Inherit handles?</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'creation_flags'</span>], <span class="ruby-comment"># Creation flags</span>
+      <span class="ruby-identifier">env</span>,                    <span class="ruby-comment"># Environment</span>
+      <span class="ruby-identifier">hash</span>[<span class="ruby-string">'cwd'</span>],            <span class="ruby-comment"># Working directory</span>
+      <span class="ruby-identifier">startinfo</span>,              <span class="ruby-comment"># Startup Info</span>
+      <span class="ruby-identifier">procinfo</span>                <span class="ruby-comment"># Process Info</span>
+    )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># TODO: Close stdin, stdout and stderr handles in the si_hash unless</span>
+  <span class="ruby-comment"># they're pointing to one of the standard handles already. [Maybe]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">process_ran</span>
+    <span class="ruby-identifier">raise_last_error</span>(<span class="ruby-string">&quot;CreateProcess()&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Automatically close the process and thread handles in the</span>
+  <span class="ruby-comment"># PROCESS_INFORMATION struct unless explicitly told not to.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'close_handles'</span>]
+    <span class="ruby-constant">CloseHandle</span>(<span class="ruby-identifier">procinfo</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>)
+    <span class="ruby-constant">CloseHandle</span>(<span class="ruby-identifier">procinfo</span>[<span class="ruby-value">4</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">ProcessInfo</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-identifier">procinfo</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>, <span class="ruby-comment"># hProcess</span>
+    <span class="ruby-identifier">procinfo</span>[<span class="ruby-value">4</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>, <span class="ruby-comment"># hThread</span>
+    <span class="ruby-identifier">procinfo</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span>, <span class="ruby-comment"># hProcessId</span>
+    <span class="ruby-identifier">procinfo</span>[<span class="ruby-value">12</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>).<span class="ruby-identifier">first</span> <span class="ruby-comment"># hThreadId</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create-method -->
+
+      
+        <div id="raise_last_error-method" class="method-detail ">
+          <a name="method-c-raise_last_error"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">raise_last_error</span><span
+              class="method-args">(operation)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="raise_last_error-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows/core_ext.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">raise_last_error</span>(<span class="ruby-identifier">operation</span>)
+  <span class="ruby-identifier">error_string</span> = <span class="ruby-node">&quot;#{operation} failed: #{get_last_error}&quot;</span>
+  <span class="ruby-identifier">last_error_code</span> = <span class="ruby-constant">GetLastError</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">ERROR_CODE_MAP</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">last_error_code</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ERROR_CODE_MAP</span>[<span class="ruby-identifier">last_error_code</span>], <span class="ruby-identifier">error_string</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">error_string</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- raise_last_error-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- raise_last_error-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"default:EFI""Chef::Node::Attribute#default;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":return the cookbook level default attribute component;T:
+@file0FI"lib/chef/node/attribute.rb;T

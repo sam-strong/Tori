@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"$delayed_notification_collection:EFI"5Chef::RunContext#delayed_notification_collection;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"JA Hash containing the delayed (end of run) notifications triggered by;TI"9resources during the converge phase of the chef run.;T:
+@file0FI"lib/chef/run_context.rb;T

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mixlib::ShellOut::Windows</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/mixlib/shellout/windows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mixlib/shellout/windows.rb">lib/mixlib/shellout/windows.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Windows/Utils.html">Mixlib::ShellOut::Windows::Utils</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Windows/ThingThatLooksSortOfLikeAProcessStatus.html">Mixlib::ShellOut::Windows::ThingThatLooksSortOfLikeAProcessStatus</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-run_command">#run_command</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">::Windows::Handle</span></li>
+        
+        
+        
+          <li><a class="include" href="../../Windows/Process.html">Windows::Process</a></li>
+        
+        
+        
+          <li><span class="include">::Windows::Synchronize</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Mixlib.html">Mixlib</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut.html">Mixlib::ShellOut</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/CommandTimeout.html">Mixlib::ShellOut::CommandTimeout</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/InvalidCommandOption.html">Mixlib::ShellOut::InvalidCommandOption</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/ShellCommandFailed.html">Mixlib::ShellOut::ShellCommandFailed</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/Unix.html">Mixlib::ShellOut::Unix</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/Windows.html">Mixlib::ShellOut::Windows</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/Windows/ThingThatLooksSortOfLikeAProcessStatus.html">Mixlib::ShellOut::Windows::ThingThatLooksSortOfLikeAProcessStatus</a></li>
+        
+          <li><a href="../../Mixlib/ShellOut/Windows/Utils.html">Mixlib::ShellOut::Windows::Utils</a></li>
+        
+          <li><a href="../../Windows.html">Windows</a></li>
+        
+          <li><a href="../../Windows/Process.html">Windows::Process</a></li>
+        
+          <li><a href="../../Process.html">Process</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mixlib::ShellOut::Windows</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="IS_BATCH_FILE">IS_BATCH_FILE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TIME_SLICE">TIME_SLICE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="run_command-method" class="method-detail ">
+          <a name="method-i-run_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run_command</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="run_command-source">
+<pre>
+<span class="ruby-comment"># File lib/mixlib/shellout/windows.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run_command</span>
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Create pipes to capture stdout and stderr,</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-identifier">stdout_read</span>, <span class="ruby-identifier">stdout_write</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">pipe</span>
+  <span class="ruby-identifier">stderr_read</span>, <span class="ruby-identifier">stderr_write</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">pipe</span>
+  <span class="ruby-identifier">stdin_read</span>, <span class="ruby-identifier">stdin_write</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">pipe</span>
+  <span class="ruby-identifier">open_streams</span> = [ <span class="ruby-identifier">stdout_read</span>, <span class="ruby-identifier">stderr_read</span> ]
+
+  <span class="ruby-keyword">begin</span>
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Set cwd, environment, appname, etc.</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">app_name</span>, <span class="ruby-identifier">command_line</span> = <span class="ruby-identifier">command_to_run</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">command</span>)
+    <span class="ruby-identifier">create_process_args</span> = {
+      <span class="ruby-value">:app_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">app_name</span>,
+      <span class="ruby-value">:command_line</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">command_line</span>,
+      <span class="ruby-value">:startup_info</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-value">:stdout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stdout_write</span>,
+        <span class="ruby-value">:stderr</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stderr_write</span>,
+        <span class="ruby-value">:stdin</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stdin_read</span>
+      },
+      <span class="ruby-value">:environment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">inherit_environment</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{k}=#{v}&quot;</span> },
+      <span class="ruby-value">:close_handles</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    }
+    <span class="ruby-identifier">create_process_args</span>[<span class="ruby-value">:cwd</span>] = <span class="ruby-identifier">cwd</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cwd</span>
+
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Start the process</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">process</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">create_process_args</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-comment"># Start pushing data into input</span>
+      <span class="ruby-identifier">stdin_write</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">input</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">input</span>
+
+      <span class="ruby-comment"># Close pipe to kick things off</span>
+      <span class="ruby-identifier">stdin_write</span>.<span class="ruby-identifier">close</span>
+
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># Wait for the process to finish, consuming output as we go</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-identifier">start_wait</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">wait_status</span> = <span class="ruby-constant">WaitForSingleObject</span>(<span class="ruby-identifier">process</span>.<span class="ruby-identifier">process_handle</span>, <span class="ruby-value">0</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">wait_status</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">WAIT_OBJECT_0</span>
+          <span class="ruby-comment"># Get process exit code</span>
+          <span class="ruby-identifier">exit_code</span> = [<span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'l'</span>)
+          <span class="ruby-keyword">unless</span> <span class="ruby-constant">GetExitCodeProcess</span>(<span class="ruby-identifier">process</span>.<span class="ruby-identifier">process_handle</span>, <span class="ruby-identifier">exit_code</span>)
+            <span class="ruby-identifier">raise</span> <span class="ruby-identifier">get_last_error</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-ivar">@status</span> = <span class="ruby-constant">ThingThatLooksSortOfLikeAProcessStatus</span>.<span class="ruby-identifier">new</span>
+          <span class="ruby-ivar">@status</span>.<span class="ruby-identifier">exitstatus</span> = <span class="ruby-identifier">exit_code</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'l'</span>).<span class="ruby-identifier">first</span>
+
+          <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">WAIT_TIMEOUT</span>
+          <span class="ruby-comment"># Kill the process</span>
+          <span class="ruby-keyword">if</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start_wait</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeout</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mixlib</span><span class="ruby-operator">::</span><span class="ruby-constant">ShellOut</span><span class="ruby-operator">::</span><span class="ruby-constant">CommandTimeout</span>, <span class="ruby-node">&quot;command timed out:\n#{format_for_exception}&quot;</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">consume_output</span>(<span class="ruby-identifier">open_streams</span>, <span class="ruby-identifier">stdout_read</span>, <span class="ruby-identifier">stderr_read</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown response from WaitForSingleObject(#{process.process_handle}, #{timeout*1000}): #{wait_status}&quot;</span>
+        <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-constant">CloseHandle</span>(<span class="ruby-identifier">process</span>.<span class="ruby-identifier">thread_handle</span>)
+      <span class="ruby-constant">CloseHandle</span>(<span class="ruby-identifier">process</span>.<span class="ruby-identifier">process_handle</span>)
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Consume all remaining data from the pipes until they are closed</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-identifier">stdout_write</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">stderr_write</span>.<span class="ruby-identifier">close</span>
+
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">consume_output</span>(<span class="ruby-identifier">open_streams</span>, <span class="ruby-identifier">stdout_read</span>, <span class="ruby-identifier">stderr_read</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run_command-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

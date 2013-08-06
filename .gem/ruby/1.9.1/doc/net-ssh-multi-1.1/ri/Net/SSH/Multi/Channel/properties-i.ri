@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"properties:EFI"(Net::SSH::Multi::Channel#properties;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LA Hash of custom properties that may be set and queried on this object.;T:
+@file0FI"!lib/net/ssh/multi/channel.rb;T

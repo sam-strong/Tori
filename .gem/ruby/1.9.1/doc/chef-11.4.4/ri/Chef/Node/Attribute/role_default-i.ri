@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"role_default:EFI"'Chef::Node::Attribute#role_default;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6return the role level default attribute component;T:
+@file0FI"lib/chef/node/attribute.rb;T

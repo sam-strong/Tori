@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"validated_files:EFI"0Chef::Cookbook::SyntaxCheck#validated_files;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"EA PersistentSet object that tracks which files have already been;TI"validated.;T:
+@file0FI"&lib/chef/cookbook/syntax_check.rb;T

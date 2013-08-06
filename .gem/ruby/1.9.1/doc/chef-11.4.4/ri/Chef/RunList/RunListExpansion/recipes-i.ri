@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"recipes:EFI",Chef::RunList::RunListExpansion#recipes;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"CA VersionedRecipeList of recipes. Populated only after #expand;TI"is called.;T:
+@file0FI",lib/chef/run_list/run_list_expansion.rb;T
